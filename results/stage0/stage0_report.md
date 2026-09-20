@@ -1,31 +1,31 @@
 # Stage 0 report — i.i.d.-given-server sanity check + noise floor
 
-_generated 2026-09-20T18:27:33+00:00 · trials logged so far: 13_
+_generated 2026-09-20T18:37:56+00:00 · trials logged so far: 23_
 
 **Diagnostic only.** Gates whether Stage 0.5 (retirement positive control) is worth running. Fits on TRAIN, measures noise floor on VALIDATION, never touches TEST.
 
 ## Split (declared once, frozen)
 - train [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018], val [2019, 2020], test [2021, 2022, 2023, 2024] (untouched)
-- 1,444,001 train+val points; serve-win rate by tour {'M': 0.6382, 'W': 0.5676}
+- 1,448,271 train+val points; serve-win rate by tour {'M': 0.6382, 'W': 0.5675}
 
 ## Model
 - i.i.d.-given-server: L2 logistic on serve(player) + return(player) + slam|year|tour
-- C selected on val = 0.1 (grid {'0.1': 0.667913, '0.3': 0.668847, '1.0': 0.669095, '3.0': 0.669487})
-- val log-loss 0.667913 vs constant-rate baseline 0.668662 (lower is better)
-- strongest serve effects: [['R. Federer', 0.65], ['J. Isner', 0.588], ['John Isner', 0.559], ['Serena Williams', 0.554], ['Ivo Karlovic', 0.55]]
+- C selected on val = 0.1 (grid {'0.1': 0.66645, '0.3': 0.666517, '1.0': 0.666543, '3.0': 0.66655})
+- val log-loss 0.66645 vs constant-rate baseline 0.668661 (lower is better)
+- strongest serve effects: [['j isner', 0.548], ['s williams', 0.539], ['r federer', 0.53], ['a roddick', 0.506], ['i karlovic', 0.498]]
 
 ## Diagnostics (train, in-sample; match-clustered 95% CI)
-- **Overdispersion** φ = 1.2413 CI [1.2245, 1.2589] (overdispersed). 36,831 set-blocks, median n=29.0.
-- **Serial dependence** within-game transition ratio = 1.0527 CI [1.051, 1.0546] (runs z = 57.863) — looks like anti-persistence, but see the momentum investigation below: ~95% of it is a scoring-structure artifact of the permutation null. Against an i.i.d.-under-scoring null, the real effect is 1.0026 (≈none).
-- **Asymmetry** block-residual skewness = -0.1768 CI [-0.1985, -0.1548] (left-skewed (directional)).
+- **Overdispersion** φ = 1.2778 CI [1.2594, 1.2957] (overdispersed). 36,977 set-blocks, median n=29.0.
+- **Serial dependence** within-game transition ratio = 1.0527 CI [1.051, 1.0544] (runs z = 57.923) — looks like anti-persistence, but see the momentum investigation below: ~95% of it is a scoring-structure artifact of the permutation null. Against an i.i.d.-under-scoring null, the real effect is 1.0026 (≈none).
+- **Asymmetry** block-residual skewness = -0.1794 CI [-0.2008, -0.158] (left-skewed (directional)).
 
 ## Noise floor (validation, held-out)
-- mean val log-loss 0.667913 CI [0.666501, 0.669275], half-width 0.001387.
+- mean val log-loss 0.66645 CI [0.665013, 0.667789], half-width 0.001388.
 - oracle-detectable (eps,delta) cells: 7 / 9. **Verdict: adequate.**
   - grid: (0.02,0.1)→0.0004; (0.02,0.2)→0.00159*; (0.02,0.3)→0.0036*; (0.05,0.1)→0.00097; (0.05,0.2)→0.00385*; (0.05,0.3)→0.00872*; (0.1,0.1)→0.00183*; (0.1,0.2)→0.00728*; (0.1,0.3)→0.01652*  (* = above noise floor)
 
 ## Momentum investigation (why anti-momentum?)
-- Observed transition ratio 1.0527 vs an i.i.d.-under-scoring null of 1.05 (95% [1.0491, 1.052]). Real effect 1.0026.
+- Observed transition ratio 1.0527 vs an i.i.d.-under-scoring null of 1.0499 (95% [1.0492, 1.0515]). Real effect 1.0026.
 - **ARTIFACT (essentially).** Winning points does NOT build momentum here; the apparent anti-momentum is tennis scoring (deuce forces alternation), not psychology. See momentum_investigation.md. A real momentum test belongs in Stage 1, conditioned on score state.
 
 ## Read-out

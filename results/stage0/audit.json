@@ -1,21 +1,21 @@
 {
-  "utc": "2026-09-20T10:05:29+00:00",
+  "utc": "2026-09-20T18:37:27+00:00",
   "folds_loaded": [
     "train",
     "val"
   ],
-  "n_points": 1444001,
+  "n_points": 1448271,
   "by_fold": {
-    "train": 1119761,
+    "train": 1124031,
     "val": 324240
   },
   "by_tour": {
     "M": 901889,
-    "W": 542112
+    "W": 546382
   },
   "serve_win_rate_by_tour": {
     "M": 0.6382,
-    "W": 0.5676
+    "W": 0.5675
   },
   "n_slam_years": 39,
   "audit_rows": 77,

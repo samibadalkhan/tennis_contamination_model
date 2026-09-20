@@ -130,10 +130,41 @@ def fig_noise_floor():
     fig.savefig(FIG / "3_noise_floor.png"); plt.close(fig)
 
 
+def fig_retirement():
+    """Stage 0.5: retiree serve-win degradation vs ordinary-loser control."""
+    deg = read_json(STAGE0.parent / "stage05" / "degradation.json")
+    if not deg:
+        return
+    figdir = STAGE0.parent / "stage05" / "figures"; figdir.mkdir(parents=True, exist_ok=True)
+    fig, axes = plt.subplots(1, 2, figsize=(9.2, 4.4))
+    for ax, win, title in zip(axes, ("last_set", "last_k"),
+                              ("last set played", "last 15 service points")):
+        w = deg["windows"][win]
+        groups = ["retirees\n(contaminated)", "ordinary\nlosers (control)"]
+        r, c = w["retirement"], w["control_losers"]
+        deltas = [r["mean_degradation"], c["mean_degradation"]]
+        errs = [[r["mean_degradation"] - r["ci95"][0], c["mean_degradation"] - c["ci95"][0]],
+                [r["ci95"][1] - r["mean_degradation"], c["ci95"][1] - c["mean_degradation"]]]
+        ax.bar(groups, deltas, 0.6, color=[VERM, GREY], yerr=errs, capsize=6,
+               edgecolor="white", error_kw=dict(ecolor=INK, lw=1.2))
+        ax.axhline(0, color=INK, lw=1)
+        ax.set_title(title)
+        ax.set_ylabel("serve-win rate drop (baseline − lead-up)")
+        ax.annotate(f"excess = {w['excess_over_control']}\n(n={r['n_matches']} retirements)",
+                    xy=(0.5, 0.93), xycoords="axes fraction", ha="center", va="top",
+                    color=INK, fontsize=9, bbox=dict(boxstyle="round", fc="#fdf3ee", ec="#e7c3ad"))
+    fig.suptitle("Stage 0.5 — retirees' serve degrades ~3× more than ordinary losers (detector fires)",
+                 fontweight="bold")
+    fig.text(0.01, 0.005, "Match-clustered 95% CI. Train+val years, test untouched. Source: results/stage05/degradation.json",
+             fontsize=7, color=GREY)
+    fig.tight_layout(rect=(0, 0.03, 1, 0.96))
+    fig.savefig(figdir / "1_retirement_degradation.png"); plt.close(fig)
+
+
 def run():
     FIG.mkdir(parents=True, exist_ok=True)
-    fig_residuals(); fig_momentum(); fig_noise_floor()
-    print(f"wrote 3 figures to {FIG.relative_to(DATA.parent)}/")
+    fig_residuals(); fig_momentum(); fig_noise_floor(); fig_retirement()
+    print(f"wrote figures to {FIG.relative_to(DATA.parent)}/ and stage05/figures/")
 
 
 if __name__ == "__main__":

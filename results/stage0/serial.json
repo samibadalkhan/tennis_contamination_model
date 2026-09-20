@@ -1,13 +1,13 @@
 {
-  "utc": "2026-09-20T10:10:33+00:00",
+  "utc": "2026-09-20T18:37:37+00:00",
   "statistic": "within-game transition ratio (conditional runs test)",
   "transition_ratio": 1.0527,
   "ci95": [
     1.051,
-    1.0546
+    1.0544
   ],
-  "pooled_runs_test_z": 57.863,
+  "pooled_runs_test_z": 57.923,
   "interpretation": "ratio = observed within-game sign-changes / expected given each game's win total. ratio>1 (z>0) = more alternation than chance = ANTI-persistence; ratio<1 (z<0) = streakier than chance = momentum (the K&M positive-dependence direction). Conditioning on the game total isolates point-to-point dependence (D3) from block overdispersion (D4/D5), which a model-p-centered autocorrelation conflates.",
-  "n_within_game_pairs": 914309,
-  "n_games": 174232
+  "n_within_game_pairs": 917871,
+  "n_games": 174883
 }

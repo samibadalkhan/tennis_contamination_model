@@ -34,12 +34,41 @@ server's perspective, with columns:
 from __future__ import annotations
 
 import re
+import unicodedata
 from pathlib import Path
 
 import pandas as pd
 
 from src import splits
 from src.util import DATA
+
+
+def canonical_name(name) -> str:
+    """Canonical player key that unifies the corpus's inconsistent name formats.
+
+    The slam point-by-point files switched from full names ("Dominic Thiem",
+    used ~2011-2018) to initial+surname ("D. Thiem", ~2019+), which fragments a
+    player across years AND breaks the name-based ATP/WTA join. The lowest common
+    denominator all formats can produce is first-initial + surname, accent- and
+    punctuation-stripped and lowercased:
+
+        "Dominic Thiem"          -> "d thiem"
+        "D. Thiem"               -> "d thiem"
+        "Edouard Roger-Vasselin" -> "e roger-vasselin"
+
+    This is the D6 name-normalization the spec calls out. Residual risk: two
+    distinct players sharing an initial and surname collide (rare in slam
+    singles); callers that join on this key should audit the unmatched/collided
+    set rather than trust it blindly.
+    """
+    if not isinstance(name, str) or not name.strip():
+        return ""
+    s = unicodedata.normalize("NFKD", name).encode("ascii", "ignore").decode()
+    s = s.strip().lower().replace(".", "")
+    parts = s.split()
+    if len(parts) < 2:
+        return s
+    return f"{parts[0][0]} {' '.join(parts[1:])}"
 
 SLAM_DIR = DATA / "slam_pointbypoint"
 
@@ -77,7 +106,9 @@ def _match_meta(slam: str, year: int) -> dict[str, tuple[str, str, str]]:
         ev = getattr(r, "event_name", None)
         if isinstance(ev, str) and ev.strip():
             tour = "M" if "Men" in ev else ("W" if "Women" in ev else tour)
-        out[r.match_id] = (r.player1, r.player2, tour)
+        # Canonical identity unifies the full-name / initial-surname split across
+        # years (see canonical_name); joins to ATP/WTA use the same key.
+        out[r.match_id] = (canonical_name(r.player1), canonical_name(r.player2), tour)
     return out
 
 

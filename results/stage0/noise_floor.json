@@ -1,14 +1,14 @@
 {
-  "utc": "2026-09-20T10:05:45+00:00",
+  "utc": "2026-09-20T18:37:38+00:00",
   "held_out_fold": "val",
-  "mean_val_logloss": 0.667913,
+  "mean_val_logloss": 0.66645,
   "ci95": [
-    0.666501,
-    0.669275
+    0.665013,
+    0.667789
   ],
-  "ci_half_width": 0.001387,
-  "bootstrap_se": 0.000707,
-  "reference_serve_win_prob": 0.6006,
+  "ci_half_width": 0.001388,
+  "bootstrap_se": 0.000697,
+  "reference_serve_win_prob": 0.6012,
   "oracle_effect_grid": [
     {
       "eps": 0.02,

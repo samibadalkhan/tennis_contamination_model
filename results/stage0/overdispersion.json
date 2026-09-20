@@ -1,13 +1,13 @@
 {
-  "utc": "2026-09-20T10:05:42+00:00",
+  "utc": "2026-09-20T18:37:36+00:00",
   "statistic": "pearson_dispersion_phi",
   "interpretation": "phi=1 binomial; phi>1 overdispersed (block variance exceeds binomial). Does NOT by itself separate D4 from D5.",
-  "phi": 1.2413,
+  "phi": 1.2778,
   "ci95": [
-    1.2245,
-    1.2589
+    1.2594,
+    1.2957
   ],
-  "n_blocks": 36831,
+  "n_blocks": 36977,
   "min_block_n": 1,
   "median_block_n": 29.0
 }

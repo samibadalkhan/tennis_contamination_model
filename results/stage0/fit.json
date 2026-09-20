@@ -1,156 +1,156 @@
 {
-  "utc": "2026-09-20T10:05:41+00:00",
+  "utc": "2026-09-20T18:37:35+00:00",
   "model": "i.i.d.-given-server: L2 logistic on serve(player) + return(player) + slam|year|tour",
-  "n_train_points": 1119761,
+  "n_train_points": 1124031,
   "n_val_points": 324240,
-  "n_features": 2217,
+  "n_features": 1589,
   "C_grid_val_logloss": {
-    "0.1": 0.667913,
-    "0.3": 0.668847,
-    "1.0": 0.669095,
-    "3.0": 0.669487
+    "0.1": 0.66645,
+    "0.3": 0.666517,
+    "1.0": 0.666543,
+    "3.0": 0.66655
   },
   "C_selected": 0.1,
-  "val_logloss": 0.667913,
-  "train_logloss": 0.658371,
-  "baseline_val_logloss_constant_rate": 0.668662,
+  "val_logloss": 0.66645,
+  "train_logloss": 0.659072,
+  "baseline_val_logloss_constant_rate": 0.668661,
   "serve_effects": {
     "strongest": [
       [
-        "R. Federer",
-        0.65
+        "j isner",
+        0.548
       ],
       [
-        "J. Isner",
-        0.588
+        "s williams",
+        0.539
       ],
       [
-        "John Isner",
-        0.559
+        "r federer",
+        0.53
       ],
       [
-        "Serena Williams",
-        0.554
+        "a roddick",
+        0.506
       ],
       [
-        "Ivo Karlovic",
-        0.55
+        "i karlovic",
+        0.498
       ],
       [
-        "Roger Federer",
-        0.542
+        "m raonic",
+        0.464
       ],
       [
-        "Juan Martin del Potro",
-        0.51
+        "n djokovic",
+        0.428
       ],
       [
-        "Milos Raonic",
-        0.495
+        "j wilfried tsonga",
+        0.395
       ]
     ],
     "weakest": [
       [
-        "Sara Sorribes Tormo",
-        -0.422
+        "y meusburger",
+        -0.302
       ],
       [
-        "Yvonne Meusburger",
-        -0.421
+        "t fabbiano",
+        -0.301
       ],
       [
-        "Rui Machado",
-        -0.375
+        "s sorribes tormo",
+        -0.295
       ],
       [
-        "Olga Puchkova",
-        -0.373
+        "c scheepers",
+        -0.294
       ],
       [
-        "Y. Bhambri",
-        -0.349
+        "d gimeno-traver",
+        -0.275
       ],
       [
-        "Chanelle Scheepers",
-        -0.344
+        "i falconi",
+        -0.273
       ],
       [
-        "Joao Souza",
-        -0.343
+        "k date-krumm",
+        -0.271
       ],
       [
-        "Di Wu",
-        -0.342
+        "v king",
+        -0.261
       ]
     ]
   },
   "return_effects": {
     "strongest": [
       [
-        "I. Karlovic",
-        0.547
+        "i karlovic",
+        0.37
       ],
       [
-        "Jurgen Zopp",
-        0.483
+        "k de schepper",
+        0.323
       ],
       [
-        "Potito Starace",
-        0.466
+        "d brands",
+        0.281
       ],
       [
-        "Olivier Rochus",
-        0.378
+        "p starace",
+        0.276
       ],
       [
-        "J. Isner",
-        0.368
+        "l hradecka",
+        0.268
       ],
       [
-        "Ivo Karlovic",
-        0.355
+        "n broady",
+        0.264
       ],
       [
-        "Kenny De Schepper",
-        0.355
+        "j isner",
+        0.247
       ],
       [
-        "Albano Olivetti",
-        0.352
+        "j zopp",
+        0.244
       ]
     ],
     "weakest": [
       [
-        "R. Nadal",
-        -0.545
+        "n djokovic",
+        -0.446
       ],
       [
-        "D. Schwartzman",
-        -0.52
+        "r nadal",
+        -0.419
       ],
       [
-        "A. Kerber",
-        -0.479
+        "a murray",
+        -0.396
       ],
       [
-        "S. Halep",
-        -0.476
+        "k clijsters",
+        -0.362
       ],
       [
-        "Novak Djokovic",
-        -0.476
+        "v azarenka",
+        -0.35
       ],
       [
-        "Klara Zakopalova",
-        -0.461
+        "m sharapova",
+        -0.342
       ],
       [
-        "Rafael Nadal",
-        -0.432
+        "j ostapenko",
+        -0.34
       ],
       [
-        "Andy Murray",
-        -0.42
+        "d ferrer",
+        -0.338
       ]
     ]
   },

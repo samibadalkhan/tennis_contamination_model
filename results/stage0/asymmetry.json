@@ -1,12 +1,12 @@
 {
-  "utc": "2026-09-20T10:05:44+00:00",
+  "utc": "2026-09-20T18:37:38+00:00",
   "statistic": "skewness_of_block_z_residuals",
   "interpretation": "left-skew (negative) = excess of worse-than-expected blocks = directional degradation (involuntary-D5-like). symmetric ~0 = D4-consistent (does not kill strategic D5).",
-  "skewness": -0.1768,
+  "skewness": -0.1794,
   "ci95": [
-    -0.1985,
-    -0.1548
+    -0.2008,
+    -0.158
   ],
-  "n_blocks_used": 36723,
+  "n_blocks_used": 36869,
   "min_block_n": 10
 }

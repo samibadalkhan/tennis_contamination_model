@@ -1,0 +1,58 @@
+{
+  "utc": "2026-09-20T18:39:34+00:00",
+  "join": {
+    "retirements_matched": 166,
+    "retirements_unmatched": 97,
+    "completed_matched": 6740,
+    "completed_unmatched": 2495
+  },
+  "windows": {
+    "last_set": {
+      "retirement": {
+        "mean_degradation": 0.1173,
+        "ci95": [
+          0.089,
+          0.1454
+        ],
+        "n_matches": 126,
+        "baseline_serve_rate": 0.547,
+        "leadup_serve_rate": 0.4297
+      },
+      "control_losers": {
+        "mean_degradation": 0.0383,
+        "ci95": [
+          0.0354,
+          0.0412
+        ],
+        "n_matches": 6732,
+        "baseline_serve_rate": 0.5523,
+        "leadup_serve_rate": 0.514
+      },
+      "excess_over_control": 0.079
+    },
+    "last_k": {
+      "retirement": {
+        "mean_degradation": 0.1195,
+        "ci95": [
+          0.0946,
+          0.1432
+        ],
+        "n_matches": 146,
+        "baseline_serve_rate": 0.5551,
+        "leadup_serve_rate": 0.4356
+      },
+      "control_losers": {
+        "mean_degradation": 0.0601,
+        "ci95": [
+          0.0567,
+          0.0637
+        ],
+        "n_matches": 6736,
+        "baseline_serve_rate": 0.5553,
+        "leadup_serve_rate": 0.4952
+      },
+      "excess_over_control": 0.0594
+    }
+  },
+  "verdict": "FIRES: retirees degrade in the lead-up beyond ordinary losers -> the detector works on known-contaminated data; proceed to Stage 1."
+}

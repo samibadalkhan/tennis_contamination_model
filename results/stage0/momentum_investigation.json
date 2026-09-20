@@ -1,59 +1,59 @@
 {
-  "utc": "2026-09-20T18:24:41+00:00",
+  "utc": "2026-09-20T18:37:54+00:00",
   "question": "Stage 0 reported anti-momentum (transition ratio > 1). Real or artifact?",
   "observed_transition_ratio": 1.0527,
-  "iid_under_scoring_null_ratio": 1.05,
+  "iid_under_scoring_null_ratio": 1.0499,
   "iid_null_ratio_ci95": [
-    1.0491,
-    1.052
+    1.0492,
+    1.0515
   ],
   "real_effect_obs_over_null": 1.0026,
   "by_game_length_observed": {
     "4 (4-0)": {
-      "ratio": 1.0274,
-      "n_games": 36489
+      "ratio": 1.0265,
+      "n_games": 36603
     },
     "5 (4-1)": {
-      "ratio": 1.09,
-      "n_games": 48980
+      "ratio": 1.0899,
+      "n_games": 49163
     },
     "6 (4-2)": {
-      "ratio": 1.0518,
-      "n_games": 48678
+      "ratio": 1.0516,
+      "n_games": 48857
     },
     "7-9 (short deuce)": {
-      "ratio": 0.9389,
-      "n_games": 22799
+      "ratio": 0.9391,
+      "n_games": 22884
     },
     "10+ (long deuce)": {
-      "ratio": 1.1139,
-      "n_games": 19812
+      "ratio": 1.1137,
+      "n_games": 19907
     }
   },
   "by_game_length_iid_null": {
     "4 (4-0)": {
       "ratio": null,
-      "n_games": 179446
+      "n_games": 178092
     },
     "5 (4-1)": {
-      "ratio": 1.0922,
-      "n_games": 278144
+      "ratio": 1.0927,
+      "n_games": 278856
     },
     "6 (4-2)": {
-      "ratio": 1.0505,
-      "n_games": 288199
+      "ratio": 1.0494,
+      "n_games": 288697
     },
     "7-9 (short deuce)": {
-      "ratio": 0.9331,
-      "n_games": 134334
+      "ratio": 0.9332,
+      "n_games": 134461
     },
     "10+ (long deuce)": {
-      "ratio": 1.1079,
-      "n_games": 119877
+      "ratio": 1.1086,
+      "n_games": 119894
     }
   },
-  "verdict": "ARTIFACT (essentially). Scoring structure alone produces a transition ratio of 1.0500; the observed 1.0527 leaves a residual real effect of just 0.26% (anti-persistence). The Stage 0 'anti-momentum' was ~95% an artifact of the permutation null. There is NO evidence of positive momentum, and the tiny residual is within the simplifications of this null (constant within-game p; real serve prob varies by score state, adding still more structural alternation), so it is an upper bound, not a finding.",
+  "verdict": "ARTIFACT (essentially). Scoring structure alone produces a transition ratio of 1.0499; the observed 1.0527 leaves a residual real effect of just 0.26% (anti-persistence). The Stage 0 'anti-momentum' was ~95% an artifact of the permutation null. There is NO evidence of positive momentum, and the tiny residual is within the simplifications of this null (constant within-game p; real serve prob varies by score state, adding still more structural alternation), so it is an upper bound, not a finding.",
   "why": "The permutation null (E[transitions]=2*n1*n0/n) assumes all arrangements of a game's points are equally likely. Tennis scoring forbids many and forces alternation in deuce games, so even momentum-FREE i.i.d. points produce transition ratios above 1. The correct null is i.i.d. points played under the scoring rules, estimated here by simulation.",
-  "n_observed_games": 176758,
+  "n_observed_games": 177414,
   "n_sim_games": 1000000
 }
