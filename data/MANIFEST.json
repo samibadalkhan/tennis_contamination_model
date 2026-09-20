@@ -1,0 +1,1343 @@
+{
+  "generated_utc": "2026-09-20T09:32:36+00:00",
+  "fetched_via": "github",
+  "pins": {
+    "mirror": {
+      "repo": "Aneeshers/tennis-sackmann-archive",
+      "sha": "83733587353df8a41f2fd4f516147d5aa83f5a8d",
+      "verified_against_live_head_utc": "2026-09-20"
+    },
+    "match_charting": {
+      "repo": "JeffSackmann/tennis_MatchChartingProject",
+      "sha": "1813a1309b7ed7ebf1c7e884b32bf675d00e4edf"
+    },
+    "hugging_face_fallback": {
+      "repo": "Aneeshers/tennis-sackmann-archive",
+      "revision": "main",
+      "trust": "bytes only, verified against sha256"
+    }
+  },
+  "sources": {
+    "slam": {
+      "via": "mirror",
+      "upstream_repo": "https://github.com/JeffSackmann/tennis_slam_pointbypoint",
+      "upstream_status": "404 as of 2026-09 (repo removed)",
+      "upstream_commit": "6febb77 (abbrev; full SHA unrecoverable \u2014 upstream gone)",
+      "snapshot_date": "2024-10",
+      "coverage": "2011-2024 (NOT uniformly complete; see README/audit)",
+      "provenance_quality": "good \u2014 mirror names the upstream commit"
+    },
+    "atp": {
+      "via": "mirror",
+      "upstream_repo": "https://github.com/JeffSackmann/tennis_atp",
+      "upstream_status": "404 as of 2026-09 (repo removed)",
+      "upstream_commit": null,
+      "snapshot_date": "2026-06",
+      "coverage": "through 2026 (windowed here to 2011-2024)",
+      "provenance_quality": "WEAK \u2014 upstream SHA not recorded by the mirror; trust risk"
+    },
+    "wta": {
+      "via": "mirror",
+      "upstream_repo": "https://github.com/JeffSackmann/tennis_wta",
+      "upstream_status": "404 as of 2026-09 (repo removed)",
+      "upstream_commit": null,
+      "snapshot_date": "2026-06",
+      "coverage": "through 2026 (windowed here to 2011-2024)",
+      "provenance_quality": "WEAK \u2014 upstream SHA not recorded by the mirror; trust risk"
+    },
+    "mcp": {
+      "via": "upstream",
+      "upstream_repo": "https://github.com/JeffSackmann/tennis_MatchChartingProject",
+      "upstream_status": "live",
+      "upstream_commit": "1813a1309b7ed7ebf1c7e884b32bf675d00e4edf",
+      "snapshot_date": "2026-09",
+      "coverage": "men's charting through 2020s",
+      "provenance_quality": "good \u2014 pinned directly to a live upstream commit"
+    }
+  },
+  "provenance_notes": [
+    "Mirror is an archive, not a fork: no shared git history with upstream, so contents cannot be diffed against the original repos. Integrity rests on the per-file sha256 below, not on lineage.",
+    "atp/wta provenance is weak: the mirror did not record an upstream commit SHA for the June 2026 snapshot. Treat as a known trust risk.",
+    "Keep an independent cold copy; do not assume the mirror persists.",
+    "Dataset is FROZEN: slam point-by-point ends Oct 2024; there will be no 2025-26 slam data. The Stage 0 train-early/test-late split is the only out-of-sample period this project will ever have."
+  ],
+  "groups_fetched": [
+    "slam",
+    "atp",
+    "wta",
+    "mcp"
+  ],
+  "file_count": 141,
+  "total_bytes": 446952832,
+  "files": [
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2011-ausopen-matches.csv",
+      "size_bytes": 25765,
+      "sha256": "4c8c17b996890b805cea3d27c87f4944e5c33366fb3b9b0e56b29ba44792858d",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2011-ausopen-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2011-ausopen-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2011-ausopen-points.csv",
+      "size_bytes": 4426119,
+      "sha256": "257a5bb5f2499177da9ec3f7818228a0feab3dc39f02559843a2a0d2f344fb0a",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2011-ausopen-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2011-ausopen-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2011-frenchopen-matches.csv",
+      "size_bytes": 28025,
+      "sha256": "72fe585a77c2cf2299c8b1e4c032bdac674458b4cc2cb5df477999312d7f8cc5",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2011-frenchopen-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2011-frenchopen-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2011-frenchopen-points.csv",
+      "size_bytes": 5128179,
+      "sha256": "fff0b4a45ae5d2babea5600bbb199f452dde45e28645fd7cf4c52d25d7626ed5",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2011-frenchopen-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2011-frenchopen-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2011-usopen-matches.csv",
+      "size_bytes": 22161,
+      "sha256": "92b2a1fcc15c2a9294ce55ccf361a27b622c901d7de846b6cf019307f1bf8980",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2011-usopen-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2011-usopen-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2011-usopen-points.csv",
+      "size_bytes": 4020799,
+      "sha256": "9e0f2087987e88b16117318919d661fa3d2c08f37e482b835f4c8c08c327818f",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2011-usopen-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2011-usopen-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2011-wimbledon-matches.csv",
+      "size_bytes": 16320,
+      "sha256": "fea6e5c34f3781ce80add4648d785f6d290f65d51b64aec87c297401c6e3f5d6",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2011-wimbledon-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2011-wimbledon-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2011-wimbledon-points.csv",
+      "size_bytes": 3183932,
+      "sha256": "b93466ba4ee66a2619949a6420fdd07f5ca611f829e4401ed1f695eb83ce8013",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2011-wimbledon-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2011-wimbledon-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2012-ausopen-matches.csv",
+      "size_bytes": 12970,
+      "sha256": "c7da8cdc942573a69cbf733e7c5ba5fafec7297ae931588c0fd93da0ffa18288",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2012-ausopen-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2012-ausopen-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2012-ausopen-points.csv",
+      "size_bytes": 3809227,
+      "sha256": "a88ff5c043a023c6d8e67141ae519578274f8b301caf13afafc14935957ecd8a",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2012-ausopen-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2012-ausopen-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2012-frenchopen-matches.csv",
+      "size_bytes": 14411,
+      "sha256": "5e037397364f3460cf7461efcf5676da3e2f5ba2c4df33ed7f1def573b013656",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2012-frenchopen-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2012-frenchopen-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2012-frenchopen-points.csv",
+      "size_bytes": 4183880,
+      "sha256": "6b9fb87abd3d314d1e60abbc8376398c1c487251931c36e6b436ba3a2c0cfb3d",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2012-frenchopen-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2012-frenchopen-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2012-usopen-matches.csv",
+      "size_bytes": 12916,
+      "sha256": "1b44eebbcdf540dfaa5d7e1ca7b2eaaeb2fc734bae95c9053e3b64a1588c633e",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2012-usopen-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2012-usopen-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2012-usopen-points.csv",
+      "size_bytes": 4045435,
+      "sha256": "661c661548ffbe18014e4ab92ba49de8d84bbdcac9f7901a269e9c74dc7e58c3",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2012-usopen-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2012-usopen-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2012-wimbledon-matches.csv",
+      "size_bytes": 11454,
+      "sha256": "197b73fbd9ecd23bb4168aa194e0724ff485b4cbf9a3bdece7df718909f6a900",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2012-wimbledon-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2012-wimbledon-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2012-wimbledon-points.csv",
+      "size_bytes": 3474152,
+      "sha256": "50b46bb813bfac311148c13d98338103ee3c9729a1c8bd087962b970aaa8f8a7",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2012-wimbledon-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2012-wimbledon-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2013-ausopen-matches.csv",
+      "size_bytes": 13828,
+      "sha256": "7060339f0aaf28a4f92b1851e550f2a441c612933be7358ed1f59a79f45f88ff",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2013-ausopen-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2013-ausopen-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2013-ausopen-points.csv",
+      "size_bytes": 4168201,
+      "sha256": "acad03c788ae598ada94d1265e2eeccd1ee7ba4fc59cd48f2b5af76d62d49815",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2013-ausopen-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2013-ausopen-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2013-frenchopen-matches.csv",
+      "size_bytes": 15579,
+      "sha256": "a8d8e1049cc289ba088c1d3e7bc9445c9fada39a75a8ee5e7415733b318f14b7",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2013-frenchopen-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2013-frenchopen-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2013-frenchopen-points.csv",
+      "size_bytes": 4461014,
+      "sha256": "3e2625ad23202b7e6f02f6a901732fd833a1a596f9e974b00319a7bf2f02949a",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2013-frenchopen-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2013-frenchopen-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2013-usopen-matches.csv",
+      "size_bytes": 12586,
+      "sha256": "289ed22d7af8f16321342a92a29d4fd97b060db6537199c17db0f19c112e683b",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2013-usopen-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2013-usopen-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2013-usopen-points.csv",
+      "size_bytes": 3831067,
+      "sha256": "f063b92169a2bcc2f718709a9c60ee7ff9b61d2fba180027baa6f5d2062ed2e0",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2013-usopen-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2013-usopen-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2013-wimbledon-matches.csv",
+      "size_bytes": 11864,
+      "sha256": "7ddfc267e1be2b86762059e98ead6db250de6a7b76d04ea148d29ccdfdd46cf2",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2013-wimbledon-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2013-wimbledon-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2013-wimbledon-points.csv",
+      "size_bytes": 3321365,
+      "sha256": "7609a73f2a7cee02f4607dac88fc4b8c508e5f0b685ffe0bb8baf7bfd20db536",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2013-wimbledon-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2013-wimbledon-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2014-ausopen-matches.csv",
+      "size_bytes": 12257,
+      "sha256": "26247548157aa2a376eeb63b920977040afe1686d434fe3cf9f5e71b2f334bf4",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2014-ausopen-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2014-ausopen-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2014-ausopen-points.csv",
+      "size_bytes": 3600025,
+      "sha256": "d84a2908007cd27d872ccd1beb772b6ddb09813ea95707e37a4fe7d48a3dbc3b",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2014-ausopen-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2014-ausopen-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2014-frenchopen-matches.csv",
+      "size_bytes": 21239,
+      "sha256": "a9bf24646849104cb1ab07717eeff524ba4f053f45ebf5fb39a2852b4285bbfa",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2014-frenchopen-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2014-frenchopen-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2014-frenchopen-points.csv",
+      "size_bytes": 6002309,
+      "sha256": "59574587d3914eef13639b7ff7c3ec0113c5f6cdbd34a8b8db9b71590f326f03",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2014-frenchopen-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2014-frenchopen-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2014-usopen-matches.csv",
+      "size_bytes": 14058,
+      "sha256": "80d626f669d21ac3841092e9e43576cd3a0891b375058218bfd8ebba99f98433",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2014-usopen-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2014-usopen-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2014-usopen-points.csv",
+      "size_bytes": 4377230,
+      "sha256": "f98975ddda68bffd64e58e7c838a0f9a9a385fd3de370a4a8cdedc3f2d52696f",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2014-usopen-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2014-usopen-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2014-wimbledon-matches.csv",
+      "size_bytes": 20498,
+      "sha256": "1112b757d838bfd4c8486e25c4727a202811cf88fa8972f4ea7e3f9c172d2acc",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2014-wimbledon-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2014-wimbledon-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2014-wimbledon-points.csv",
+      "size_bytes": 6371028,
+      "sha256": "b23870a60dc718e54e5c7eac7abce1df057026fd5bdb615cf10838257fe7f573",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2014-wimbledon-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2014-wimbledon-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2015-ausopen-matches.csv",
+      "size_bytes": 16128,
+      "sha256": "1b44664e39c64297dbe2aa31f7242a35e1db2301c7f945edfb945d6106c26066",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2015-ausopen-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2015-ausopen-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2015-ausopen-points.csv",
+      "size_bytes": 5080162,
+      "sha256": "cb5ba3a796dfcf067e098364da2a33a73208a817389c5bd95142a472223fa24f",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2015-ausopen-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2015-ausopen-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2015-frenchopen-matches.csv",
+      "size_bytes": 17297,
+      "sha256": "849eb5a90d2a06901e9c77913bc25bfd7b9f0cbc094b6b6a5528fd22f7163b6a",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2015-frenchopen-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2015-frenchopen-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2015-frenchopen-points.csv",
+      "size_bytes": 5515191,
+      "sha256": "1dac9e69a108bba7b1feee3bc73995369747225c36ad0a1057c7142cfbc5c298",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2015-frenchopen-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2015-frenchopen-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2015-usopen-matches.csv",
+      "size_bytes": 13274,
+      "sha256": "8790292deb676b72c3a33a55744c988b9d29c0d68fc3324ea1e4ff079e81684d",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2015-usopen-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2015-usopen-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2015-usopen-points.csv",
+      "size_bytes": 4568092,
+      "sha256": "7898cc16aa0f6c7d45826267d935f8d91d736381bbbcb6b08e16c3f1f64ef08b",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2015-usopen-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2015-usopen-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2015-wimbledon-matches.csv",
+      "size_bytes": 20589,
+      "sha256": "f40ff56329795800c669d1db07cbaf310dc55fbc8b17143898d8ef668bfcc2da",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2015-wimbledon-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2015-wimbledon-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2015-wimbledon-points.csv",
+      "size_bytes": 6849988,
+      "sha256": "43e503c1890be476a63ce88b07d2782ea14aed15c3f9905bad97ab5dd38b4b56",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2015-wimbledon-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2015-wimbledon-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2016-ausopen-matches.csv",
+      "size_bytes": 17885,
+      "sha256": "e9dcde46447099dcf4f71aa5b2ce82d7dc5e54d61c61b45370c34cb8cb178169",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2016-ausopen-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2016-ausopen-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2016-ausopen-points.csv",
+      "size_bytes": 5966391,
+      "sha256": "130edecf38d145250fc2b427d902450b0cf42ca52081d809d6e76e884e0d03b6",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2016-ausopen-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2016-ausopen-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2016-frenchopen-matches.csv",
+      "size_bytes": 14724,
+      "sha256": "682b26f28bc6c91e9f493518c79a304845824c3aafcb948051f4c15f8b2c305b",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2016-frenchopen-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2016-frenchopen-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2016-frenchopen-points.csv",
+      "size_bytes": 5003311,
+      "sha256": "8b9e63afcda6b19368f83b948cc599b1e5cc10f9927ea2d7e38766227b080255",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2016-frenchopen-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2016-frenchopen-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2016-usopen-matches.csv",
+      "size_bytes": 12936,
+      "sha256": "fc0ecbad7065b99369b6f6831005f27774bd4fe879430ff7ef9146b0d362950f",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2016-usopen-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2016-usopen-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2016-usopen-points.csv",
+      "size_bytes": 4756346,
+      "sha256": "3ae4b1a2794cb0875daee3a0e687f04fba0ee9cec58eafb85840ada62c4d348a",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2016-usopen-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2016-usopen-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2016-wimbledon-matches.csv",
+      "size_bytes": 10156,
+      "sha256": "9ec4911f93459468373eb0a4fd0c2510534275023477eb0c4da0c6b1f601c8dc",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2016-wimbledon-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2016-wimbledon-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2016-wimbledon-points.csv",
+      "size_bytes": 4491527,
+      "sha256": "aa88cb008d02d394cae05b29e63a6ffaf94ebf3f4c04125dbe7fee3a8a05eb26",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2016-wimbledon-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2016-wimbledon-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2017-ausopen-matches.csv",
+      "size_bytes": 18200,
+      "sha256": "b156721fa02012b65b80590335d2681d8fafbbf8a51e3d64db2475fb43d84e99",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2017-ausopen-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2017-ausopen-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2017-ausopen-points.csv",
+      "size_bytes": 6780140,
+      "sha256": "09399f6ad039de5a05dbb80eb7f48b65e559131bbba776799d4f39fff4e8d6f0",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2017-ausopen-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2017-ausopen-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2017-frenchopen-matches.csv",
+      "size_bytes": 20259,
+      "sha256": "d5f634a2f4014d190e696e9af289e5833b2f4f99a1a5ed76414945134e148bed",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2017-frenchopen-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2017-frenchopen-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2017-frenchopen-points.csv",
+      "size_bytes": 6651861,
+      "sha256": "4f5293626d80918a38e819cf86b62200dc8c555362ce82cab8557ac293ab98fd",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2017-frenchopen-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2017-frenchopen-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2017-usopen-matches.csv",
+      "size_bytes": 12320,
+      "sha256": "55531be1d947c9479c7eaf31bb44c7b6a9c75c72cfd6b9c5d5405ec18e5e9d77",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2017-usopen-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2017-usopen-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2017-usopen-points.csv",
+      "size_bytes": 4815136,
+      "sha256": "e231b6985a6e258ebaee021b60221a71d8356b9903e195c15e41e259bd1a54e4",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2017-usopen-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2017-usopen-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2017-wimbledon-matches.csv",
+      "size_bytes": 20669,
+      "sha256": "379443e1e6422f5acfcca3f9221a86f6d3123d1a6430c37e6f8be4342778760c",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2017-wimbledon-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2017-wimbledon-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2017-wimbledon-points.csv",
+      "size_bytes": 7288687,
+      "sha256": "3ea6f7e5e48ff351c639a330c732c5e5f2f4b419410138b4f6169ef5a2c26d38",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2017-wimbledon-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2017-wimbledon-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2018-ausopen-matches.csv",
+      "size_bytes": 19017,
+      "sha256": "de4a9235388497c2d95c05f0974b7224cff5ccd3d30c777dc63b667fc789d218",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2018-ausopen-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2018-ausopen-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2018-ausopen-points.csv",
+      "size_bytes": 4988785,
+      "sha256": "3dff1959b2afbc392b6e41184c65c853fbf702d3f9eb9d2f120910060b27caab",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2018-ausopen-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2018-ausopen-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2018-frenchopen-matches.csv",
+      "size_bytes": 20590,
+      "sha256": "dc534708eb6bd4d1055b7d39e45a656958876f7a6ad8dcb4a4282e5ad666ca60",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2018-frenchopen-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2018-frenchopen-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2018-frenchopen-points.csv",
+      "size_bytes": 4896385,
+      "sha256": "70ac63cac0a6cf817411c37701ad91fdc942839bb8004df2f3632ecb089ed675",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2018-frenchopen-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2018-frenchopen-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2018-usopen-matches.csv",
+      "size_bytes": 13445,
+      "sha256": "417ed7fca40b8642ea527f4da9c6b57a05ffae6c1e1fffdf7d3dc71baeb49bdb",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2018-usopen-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2018-usopen-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2018-usopen-points.csv",
+      "size_bytes": 5096059,
+      "sha256": "e6220ce7aa7df2a8c146b27bb979eab8fbbd200ad56390597cc225cfd40f84e6",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2018-usopen-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2018-usopen-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2018-wimbledon-matches.csv",
+      "size_bytes": 20712,
+      "sha256": "bff045e3428396ef03d7e785cc64c0db18e107de808d14ebed3a631b7090ce0d",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2018-wimbledon-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2018-wimbledon-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2018-wimbledon-points.csv",
+      "size_bytes": 7844923,
+      "sha256": "2072e6fcc5345e369ecdf27310e6cc74c9c947123f2950daf82c0da0046c66c1",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2018-wimbledon-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2018-wimbledon-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2019-ausopen-matches.csv",
+      "size_bytes": 19134,
+      "sha256": "2708e513b128047913ed449f9435f5be5b212c96477bb13b7fee5f9d59b8e4cd",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2019-ausopen-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2019-ausopen-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2019-ausopen-points.csv",
+      "size_bytes": 4892605,
+      "sha256": "bb96ebd456509ba053fd6cf179ce4533e99e57a5cb4e1ef628496d6811e3744f",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2019-ausopen-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2019-ausopen-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2019-frenchopen-matches.csv",
+      "size_bytes": 20385,
+      "sha256": "012c029c9d96865d44d22c1c9d9226d4d1c78bd0840191b8198b7ebdfe88c8ca",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2019-frenchopen-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2019-frenchopen-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2019-frenchopen-points.csv",
+      "size_bytes": 4971557,
+      "sha256": "5c85e1dc5f5d63f88ef5bc7925f29e3dc2dc3107fedf14169d2891ad700a5e30",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2019-frenchopen-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2019-frenchopen-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2019-usopen-matches.csv",
+      "size_bytes": 18842,
+      "sha256": "a187f450f4520eed72347c9f6d1b450fd9a8bcc5eb0218570eea6341801dfbcc",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2019-usopen-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2019-usopen-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2019-usopen-points.csv",
+      "size_bytes": 7480927,
+      "sha256": "324fe620e969463d4100200945175736c199329b0cc2176a26ccd0c3de03dc4a",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2019-usopen-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2019-usopen-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2019-wimbledon-matches.csv",
+      "size_bytes": 20624,
+      "sha256": "19c2fbd44a697cb948fad1de8443c494c1417a0a87ebcbdfa829dea915b770e3",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2019-wimbledon-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2019-wimbledon-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2019-wimbledon-points.csv",
+      "size_bytes": 7560905,
+      "sha256": "7e894b03d277547a175f3b24b560a6ed677b9c007ad489e1e9f8518044a81cfb",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2019-wimbledon-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2019-wimbledon-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2020-ausopen-matches.csv",
+      "size_bytes": 18923,
+      "sha256": "d98cd8f95b0337863f2454f46bf3f1efbea3af071b91a6958aa43849952356e9",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2020-ausopen-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2020-ausopen-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2020-ausopen-points.csv",
+      "size_bytes": 4909102,
+      "sha256": "11ab596c5f784975a8267b8646fcc1244f15c1a1bd981981e6df59c7b018b55c",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2020-ausopen-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2020-ausopen-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2020-frenchopen-matches.csv",
+      "size_bytes": 18600,
+      "sha256": "a8b88f05fbaf0f8d5244fa333d49618f542b7b9096d5c50fc6c77a7b41d3cda6",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2020-frenchopen-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2020-frenchopen-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2020-frenchopen-points.csv",
+      "size_bytes": 5027975,
+      "sha256": "e2071234eed6546d46963367ed8580b6a13e8fd25655d04726d05ea9bb02b567",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2020-frenchopen-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2020-frenchopen-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2020-usopen-matches.csv",
+      "size_bytes": 18774,
+      "sha256": "ed75ef21396e1ff475d3bac2c4f1a0f9474e9d2e4c6d8aaac0aa6af0a40dcc80",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2020-usopen-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2020-usopen-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2020-usopen-points.csv",
+      "size_bytes": 7074131,
+      "sha256": "c0914503b5ac0be8f2793430eae381dcb4f4fdace74c17deff3d16c3b6cb231b",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2020-usopen-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2020-usopen-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2021-ausopen-matches.csv",
+      "size_bytes": 17528,
+      "sha256": "94bbdb8f4c4315eedd98424a74f40a5cf9a09580e679980c3537d79f25fc9d26",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2021-ausopen-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2021-ausopen-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2021-ausopen-points.csv",
+      "size_bytes": 4754652,
+      "sha256": "c613739246ace83db762c6e6712ca4391fbb9b9ee0ff0fce7a27de9a9b5e9fcf",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2021-ausopen-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2021-ausopen-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2021-frenchopen-matches.csv",
+      "size_bytes": 18729,
+      "sha256": "5430a0b631dfa0ad8a48c80669c5a5f8b3784974e7248c7df643874b923c4eb1",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2021-frenchopen-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2021-frenchopen-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2021-frenchopen-points.csv",
+      "size_bytes": 5033010,
+      "sha256": "e0fe16cc278d0fd11a63ced1b37f5c801bf8c3b5c9c1cfb413c3bfcc9eb63d2c",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2021-frenchopen-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2021-frenchopen-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2021-usopen-matches.csv",
+      "size_bytes": 19288,
+      "sha256": "5b1ec3f89543876e205e9596f3b869a7aaa63125639aff30a5f04933082484e6",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2021-usopen-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2021-usopen-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2021-usopen-points.csv",
+      "size_bytes": 7727334,
+      "sha256": "55c79fac5f1e55fc0657a60be3737df2fe41e3b18277c0d2ee80cc85bbd376e3",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2021-usopen-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2021-usopen-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2021-wimbledon-matches.csv",
+      "size_bytes": 20705,
+      "sha256": "da0c1084f1e4610a50cdc4c849e2c0f4f21667df6bfcbd350ddb90537b751d12",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2021-wimbledon-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2021-wimbledon-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2021-wimbledon-points.csv",
+      "size_bytes": 7675588,
+      "sha256": "b53f12c2f95a58b00053e2fb77250d7f5a7766a76fbbea9d6a33cae0ee80476e",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2021-wimbledon-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2021-wimbledon-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2022-usopen-matches.csv",
+      "size_bytes": 18967,
+      "sha256": "7964a06016dbcce861371aa6e0cf90878252bfb4fbc9a1aac17dc03d0df5b8a7",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2022-usopen-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2022-usopen-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2022-usopen-points.csv",
+      "size_bytes": 7572634,
+      "sha256": "1a0794391adfaadbbf2f85b768c809fd39e4bd5dde5f1289f60cad1046729a2d",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2022-usopen-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2022-usopen-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2022-wimbledon-matches.csv",
+      "size_bytes": 20315,
+      "sha256": "4943ac51f362acb52aa513cdf845db3170f61aae1ec18d895d26e5b2ba2292e1",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2022-wimbledon-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2022-wimbledon-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2022-wimbledon-points.csv",
+      "size_bytes": 7517212,
+      "sha256": "e96e98565a720e15805158696041147c8cd142a4f04b706660e80f01b6757440",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2022-wimbledon-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2022-wimbledon-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2023-usopen-matches.csv",
+      "size_bytes": 19043,
+      "sha256": "5a940537cd2cc1d4902c074c4b92896ed93c6065556d3a87aa4d38e284d24045",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2023-usopen-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2023-usopen-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2023-usopen-points.csv",
+      "size_bytes": 7304490,
+      "sha256": "c2c2ad6d760017c6514cd2b065b933c4c3f630fdea9665c88b83e9465cdd0591",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2023-usopen-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2023-usopen-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2023-wimbledon-matches.csv",
+      "size_bytes": 20741,
+      "sha256": "e58018ed5ddf8f8ce48324795eaa7f29d3d52b2e982a5bcfdefca097a80a88bd",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2023-wimbledon-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2023-wimbledon-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2023-wimbledon-points.csv",
+      "size_bytes": 7908309,
+      "sha256": "cb9cbb7330d0890ddf332c5d3294991b79b73db6b268cb0648a39fdba59dc172",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2023-wimbledon-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2023-wimbledon-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2024-usopen-matches.csv",
+      "size_bytes": 19104,
+      "sha256": "82ada2ed864fd9eec10181320f036dae28b139c38b56622092cb6376975daf85",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2024-usopen-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2024-usopen-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2024-usopen-points.csv",
+      "size_bytes": 7260912,
+      "sha256": "ffb6edb889a8710659802a0353eae765ff19c6eff5fa2755e1f5155ea8e4e3b6",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2024-usopen-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2024-usopen-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2024-wimbledon-matches.csv",
+      "size_bytes": 20457,
+      "sha256": "51fd9571a8856b424dc8d934b4450ea91cca9bbf20881bfe2eff3b2b7876899b",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2024-wimbledon-matches.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2024-wimbledon-matches.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/2024-wimbledon-points.csv",
+      "size_bytes": 7827299,
+      "sha256": "442f9b8564744c966dfa9974dcb4d5af999d8cb88634cec1aff304e33c3a9238",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/2024-wimbledon-points.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/2024-wimbledon-points.csv"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/UPSTREAM_README.md",
+      "size_bytes": 4343,
+      "sha256": "ce863a9472638346b666c398f403486df15365264a48246296fcbaa189b2163c",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/UPSTREAM_README.md",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/UPSTREAM_README.md"
+    },
+    {
+      "group": "slam",
+      "file": "slam_pointbypoint/data_dictionary.txt",
+      "size_bytes": 216,
+      "sha256": "d7a03828c7a3516a60b974f10d62cc76a0cd0a5287bac41d245f5fcfe1bba1a3",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/slam_pointbypoint/data_dictionary.txt",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/slam_pointbypoint/data_dictionary.txt"
+    },
+    {
+      "group": "atp",
+      "file": "atp/UPSTREAM_README.md",
+      "size_bytes": 4673,
+      "sha256": "80fd5a50ba020fd306890d31142187bb737627ba468d3e36faabe92d48ab5083",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/atp/UPSTREAM_README.md",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/atp/UPSTREAM_README.md"
+    },
+    {
+      "group": "atp",
+      "file": "atp/atp_matches_2011.csv",
+      "size_bytes": 611939,
+      "sha256": "8e91e4b680f0b4e9605a3c71b4c676b55e2a102de8544a7d3b2fbaca5977575a",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/atp/atp_matches_2011.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/atp/atp_matches_2011.csv"
+    },
+    {
+      "group": "atp",
+      "file": "atp/atp_matches_2012.csv",
+      "size_bytes": 610116,
+      "sha256": "03f03612691af370c9c47939dde4202d9858e05ea044367388115e627d4d13f3",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/atp/atp_matches_2012.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/atp/atp_matches_2012.csv"
+    },
+    {
+      "group": "atp",
+      "file": "atp/atp_matches_2013.csv",
+      "size_bytes": 596714,
+      "sha256": "9e1e3b124ac22c1b840118f78475a910cb2ea68684289581f70b54a022f2832c",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/atp/atp_matches_2013.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/atp/atp_matches_2013.csv"
+    },
+    {
+      "group": "atp",
+      "file": "atp/atp_matches_2014.csv",
+      "size_bytes": 589216,
+      "sha256": "7c102ee3b0da1fee59edc6a5f280eb0784ac0bad69988583f65791dcb7084177",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/atp/atp_matches_2014.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/atp/atp_matches_2014.csv"
+    },
+    {
+      "group": "atp",
+      "file": "atp/atp_matches_2015.csv",
+      "size_bytes": 594438,
+      "sha256": "20c1f723df86b367f3ec205bbda3d8a7163fa6d4e46dcfda15095e24965bc5ed",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/atp/atp_matches_2015.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/atp/atp_matches_2015.csv"
+    },
+    {
+      "group": "atp",
+      "file": "atp/atp_matches_2016.csv",
+      "size_bytes": 617660,
+      "sha256": "86dda3871cb79d3226a047774c8fc97b86267cfe96709dea832a347dfbf81684",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/atp/atp_matches_2016.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/atp/atp_matches_2016.csv"
+    },
+    {
+      "group": "atp",
+      "file": "atp/atp_matches_2017.csv",
+      "size_bytes": 611380,
+      "sha256": "4bb295788c37487b120cd39171d413cef0ebc6f4c2d9fa40b7261f5143f3719f",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/atp/atp_matches_2017.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/atp/atp_matches_2017.csv"
+    },
+    {
+      "group": "atp",
+      "file": "atp/atp_matches_2018.csv",
+      "size_bytes": 608903,
+      "sha256": "0363dc6012190f337fcf34b4ca443634f192c4670cc6c14c94342a54b9adf7eb",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/atp/atp_matches_2018.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/atp/atp_matches_2018.csv"
+    },
+    {
+      "group": "atp",
+      "file": "atp/atp_matches_2019.csv",
+      "size_bytes": 586071,
+      "sha256": "7f1a21451ff622bb0c6a09690898db46d51e59dcdf08086d369753822e1d5478",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/atp/atp_matches_2019.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/atp/atp_matches_2019.csv"
+    },
+    {
+      "group": "atp",
+      "file": "atp/atp_matches_2020.csv",
+      "size_bytes": 307277,
+      "sha256": "985a917b72d5efb7dd5ef9df8ecc58c637ed6b88561ccad364653af71ac12da0",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/atp/atp_matches_2020.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/atp/atp_matches_2020.csv"
+    },
+    {
+      "group": "atp",
+      "file": "atp/atp_matches_2021.csv",
+      "size_bytes": 573056,
+      "sha256": "b9b1d31a4b0b9273b8f338cbb1347c5a847ad2361334ec760a286f5990fba347",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/atp/atp_matches_2021.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/atp/atp_matches_2021.csv"
+    },
+    {
+      "group": "atp",
+      "file": "atp/atp_matches_2022.csv",
+      "size_bytes": 608789,
+      "sha256": "7190042565ab8400e74f44fda60700acb36ddf3c82d393f331a07589e05b5f52",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/atp/atp_matches_2022.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/atp/atp_matches_2022.csv"
+    },
+    {
+      "group": "atp",
+      "file": "atp/atp_matches_2023.csv",
+      "size_bytes": 625341,
+      "sha256": "9b9671aa7c8156e74c2e4466675b7ed4e762bb8a58b7237a30daefd84ffceff5",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/atp/atp_matches_2023.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/atp/atp_matches_2023.csv"
+    },
+    {
+      "group": "atp",
+      "file": "atp/atp_matches_2024.csv",
+      "size_bytes": 650136,
+      "sha256": "73aec32247a0db68d8aa8fd8003eefea132905177f1cb145502d9215b53311be",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/atp/atp_matches_2024.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/atp/atp_matches_2024.csv"
+    },
+    {
+      "group": "atp",
+      "file": "atp/atp_players.csv",
+      "size_bytes": 2516538,
+      "sha256": "89e81bb3a02561dee29afe53dbcdabe4ae22f725fb5d0303617366a57e3b7a83",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/atp/atp_players.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/atp/atp_players.csv"
+    },
+    {
+      "group": "atp",
+      "file": "atp/atp_rankings_10s.csv",
+      "size_bytes": 21212713,
+      "sha256": "2921c7ccc1f2c3709bab2a2570ad18de4ca49b126e6b078a53e0dc2eaa6fa8de",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/atp/atp_rankings_10s.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/atp/atp_rankings_10s.csv"
+    },
+    {
+      "group": "atp",
+      "file": "atp/atp_rankings_20s.csv",
+      "size_bytes": 11988309,
+      "sha256": "d527934459a6322fbbce24f99434f93b3f5a986ee65c7a542f6096d478c7c42a",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/atp/atp_rankings_20s.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/atp/atp_rankings_20s.csv"
+    },
+    {
+      "group": "atp",
+      "file": "atp/matches_data_dictionary.txt",
+      "size_bytes": 3758,
+      "sha256": "b4b525ad8163f9ee2ffde3ab7108924ec1385ef7d2fddf828c1fc096fcaafee4",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/atp/matches_data_dictionary.txt",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/atp/matches_data_dictionary.txt"
+    },
+    {
+      "group": "wta",
+      "file": "wta/UPSTREAM_README.md",
+      "size_bytes": 3607,
+      "sha256": "f34402380f3c84f7c7d9f6156225603ef917bb2b2d6d18676a234fb5323b13c9",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/wta/UPSTREAM_README.md",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/wta/UPSTREAM_README.md"
+    },
+    {
+      "group": "wta",
+      "file": "wta/wta_matches_2011.csv",
+      "size_bytes": 575703,
+      "sha256": "ea0afb5d5e5a1fd230860f722de4f79578f7bd39949358a8b66480f2cae6e101",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/wta/wta_matches_2011.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/wta/wta_matches_2011.csv"
+    },
+    {
+      "group": "wta",
+      "file": "wta/wta_matches_2012.csv",
+      "size_bytes": 584181,
+      "sha256": "a8e7f92534df31293a5574db3406e6a0d1c2d956ba63610c44c7bb6f3f09f52d",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/wta/wta_matches_2012.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/wta/wta_matches_2012.csv"
+    },
+    {
+      "group": "wta",
+      "file": "wta/wta_matches_2013.csv",
+      "size_bytes": 559834,
+      "sha256": "0d31dde39e721a683b158c30ffbe612293b06bd2386dfeec47ae28e9bad8d93c",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/wta/wta_matches_2013.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/wta/wta_matches_2013.csv"
+    },
+    {
+      "group": "wta",
+      "file": "wta/wta_matches_2014.csv",
+      "size_bytes": 574337,
+      "sha256": "4cb59debfa4cbf079c550ee7dfc0ee098237af33376701cd340e112b917f8176",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/wta/wta_matches_2014.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/wta/wta_matches_2014.csv"
+    },
+    {
+      "group": "wta",
+      "file": "wta/wta_matches_2015.csv",
+      "size_bytes": 550360,
+      "sha256": "9332d0d470c378c8d439553ed7d81379eb3596d04babf39bee7021edae316130",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/wta/wta_matches_2015.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/wta/wta_matches_2015.csv"
+    },
+    {
+      "group": "wta",
+      "file": "wta/wta_matches_2016.csv",
+      "size_bytes": 602004,
+      "sha256": "17145270279d6bf5d1abec4038d51d6af3aa71a7b40421b9f175205fafa075f7",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/wta/wta_matches_2016.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/wta/wta_matches_2016.csv"
+    },
+    {
+      "group": "wta",
+      "file": "wta/wta_matches_2017.csv",
+      "size_bytes": 593130,
+      "sha256": "eae2de68b2e87fcac7e2ff1f6168c78d1baba91fb0ffecda455aa329a81437c8",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/wta/wta_matches_2017.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/wta/wta_matches_2017.csv"
+    },
+    {
+      "group": "wta",
+      "file": "wta/wta_matches_2018.csv",
+      "size_bytes": 572565,
+      "sha256": "6ccfc04baabe536e4260083c2e299c8c36668a8e8276dfc309219df23bf9ea38",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/wta/wta_matches_2018.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/wta/wta_matches_2018.csv"
+    },
+    {
+      "group": "wta",
+      "file": "wta/wta_matches_2019.csv",
+      "size_bytes": 567137,
+      "sha256": "da251744c6ece2cab4b94df659ee38a81bb4aa50cf532d48f1a6eb0cc66726d4",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/wta/wta_matches_2019.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/wta/wta_matches_2019.csv"
+    },
+    {
+      "group": "wta",
+      "file": "wta/wta_matches_2020.csv",
+      "size_bytes": 266525,
+      "sha256": "bcbb285ee8a743ce117952bbb99cfe816bfc685412aa3adc7a9913e7799cd70c",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/wta/wta_matches_2020.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/wta/wta_matches_2020.csv"
+    },
+    {
+      "group": "wta",
+      "file": "wta/wta_matches_2021.csv",
+      "size_bytes": 531828,
+      "sha256": "3f4b865fe9f68aedb3d51597740cf658cf805f676bae652f2bc93cbab4f6e99f",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/wta/wta_matches_2021.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/wta/wta_matches_2021.csv"
+    },
+    {
+      "group": "wta",
+      "file": "wta/wta_matches_2022.csv",
+      "size_bytes": 530984,
+      "sha256": "f638cf65efefb01a1a10368c1d5217d5f90981fb76193ca3a9c3773c2abc2ba7",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/wta/wta_matches_2022.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/wta/wta_matches_2022.csv"
+    },
+    {
+      "group": "wta",
+      "file": "wta/wta_matches_2023.csv",
+      "size_bytes": 569610,
+      "sha256": "b73bf74928155b858cdb7045f6334246336cef604286cb361e695df26911ad18",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/wta/wta_matches_2023.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/wta/wta_matches_2023.csv"
+    },
+    {
+      "group": "wta",
+      "file": "wta/wta_matches_2024.csv",
+      "size_bytes": 542425,
+      "sha256": "d9bba2a0b3793f63c737ef62a809b82b56b3ad0ee94e1f95e78cecfac7615ed2",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/wta/wta_matches_2024.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/wta/wta_matches_2024.csv"
+    },
+    {
+      "group": "wta",
+      "file": "wta/wta_players.csv",
+      "size_bytes": 2380786,
+      "sha256": "601a747a3e6e291d5ae8778b0e75f30db5536dbf9cd3d654a95d991311ad8870",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/wta/wta_players.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/wta/wta_players.csv"
+    },
+    {
+      "group": "wta",
+      "file": "wta/wta_rankings_10s.csv",
+      "size_bytes": 15766990,
+      "sha256": "e6ab8d53e98acec32ce604c8e6c1e57c0a03d1658fa9561daf4d1051661b4597",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/wta/wta_rankings_10s.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/wta/wta_rankings_10s.csv"
+    },
+    {
+      "group": "wta",
+      "file": "wta/wta_rankings_20s.csv",
+      "size_bytes": 10688710,
+      "sha256": "f76421980133fcd8c625ce4cb1b6008fdd1f99d4a42b36bbf3542554bab76610",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/Aneeshers/tennis-sackmann-archive/83733587353df8a41f2fd4f516147d5aa83f5a8d/wta/wta_rankings_20s.csv",
+      "hf_url": "https://huggingface.co/datasets/Aneeshers/tennis-sackmann-archive/resolve/main/wta/wta_rankings_20s.csv"
+    },
+    {
+      "group": "mcp",
+      "file": "match_charting/charting-m-matches.csv",
+      "size_bytes": 1141817,
+      "sha256": "d8dce1ad8d12c04efa01da587441b54ece8e8100530660528312244f632efe80",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/JeffSackmann/tennis_MatchChartingProject/1813a1309b7ed7ebf1c7e884b32bf675d00e4edf/charting-m-matches.csv",
+      "hf_url": null
+    },
+    {
+      "group": "mcp",
+      "file": "match_charting/charting-m-points-2010s.csv",
+      "size_bytes": 36475702,
+      "sha256": "2719cdc136b64698f24b360cf4f60302e11add24971c2fdd585e1b729178db8c",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/JeffSackmann/tennis_MatchChartingProject/1813a1309b7ed7ebf1c7e884b32bf675d00e4edf/charting-m-points-2010s.csv",
+      "hf_url": null
+    },
+    {
+      "group": "mcp",
+      "file": "match_charting/charting-m-points-2020s.csv",
+      "size_bytes": 56590483,
+      "sha256": "2cd43f73e0530a47ea4c02b99dae40177ca6d58a8ccf9189358eb05dffb4be9a",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/JeffSackmann/tennis_MatchChartingProject/1813a1309b7ed7ebf1c7e884b32bf675d00e4edf/charting-m-points-2020s.csv",
+      "hf_url": null
+    },
+    {
+      "group": "mcp",
+      "file": "match_charting/data_dictionary.txt",
+      "size_bytes": 2649,
+      "sha256": "e60154eb0289e4e0e11221e62c60dcfc94e9d6e4d4a889aa065a7c17bf42b238",
+      "source": "github",
+      "github_url": "https://raw.githubusercontent.com/JeffSackmann/tennis_MatchChartingProject/1813a1309b7ed7ebf1c7e884b32bf675d00e4edf/data_dictionary.txt",
+      "hf_url": null
+    }
+  ]
+}

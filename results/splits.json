@@ -1,0 +1,26 @@
+{
+  "declared_utc": "2026-09-20T10:05:23+00:00",
+  "unit": "by year (match-clean) and by time (train early, test late)",
+  "train_years": [
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018
+  ],
+  "val_years": [
+    2019,
+    2020
+  ],
+  "test_years": [
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "rationale": "Chronological split, train-early/test-late, to respect ability drift. Boundaries fall on year gaps so no match spans folds (match-clean by construction). Coverage is uneven: TRAIN 2011-2018 has all four slams per year; VAL 2019-2020 is missing 2020 Wimbledon; TEST 2021-2024 has all four in 2021 but only two slams each in 2022-2024, skewing the late test years toward grass/hard. Consequence: never compare raw rates across folds without conditioning on slam x year fixed effects, and report per-slam cross-checks. The split is frozen once written; the test fold is the only out-of-sample period available and Stage 0 does not touch it.",
+  "frozen_dataset": "slam point-by-point ends 2024-10; test fold is the only OOS period this project will ever have -- declared once, never re-split."
+}

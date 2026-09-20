@@ -1,0 +1,158 @@
+{
+  "utc": "2026-09-20T10:05:41+00:00",
+  "model": "i.i.d.-given-server: L2 logistic on serve(player) + return(player) + slam|year|tour",
+  "n_train_points": 1119761,
+  "n_val_points": 324240,
+  "n_features": 2217,
+  "C_grid_val_logloss": {
+    "0.1": 0.667913,
+    "0.3": 0.668847,
+    "1.0": 0.669095,
+    "3.0": 0.669487
+  },
+  "C_selected": 0.1,
+  "val_logloss": 0.667913,
+  "train_logloss": 0.658371,
+  "baseline_val_logloss_constant_rate": 0.668662,
+  "serve_effects": {
+    "strongest": [
+      [
+        "R. Federer",
+        0.65
+      ],
+      [
+        "J. Isner",
+        0.588
+      ],
+      [
+        "John Isner",
+        0.559
+      ],
+      [
+        "Serena Williams",
+        0.554
+      ],
+      [
+        "Ivo Karlovic",
+        0.55
+      ],
+      [
+        "Roger Federer",
+        0.542
+      ],
+      [
+        "Juan Martin del Potro",
+        0.51
+      ],
+      [
+        "Milos Raonic",
+        0.495
+      ]
+    ],
+    "weakest": [
+      [
+        "Sara Sorribes Tormo",
+        -0.422
+      ],
+      [
+        "Yvonne Meusburger",
+        -0.421
+      ],
+      [
+        "Rui Machado",
+        -0.375
+      ],
+      [
+        "Olga Puchkova",
+        -0.373
+      ],
+      [
+        "Y. Bhambri",
+        -0.349
+      ],
+      [
+        "Chanelle Scheepers",
+        -0.344
+      ],
+      [
+        "Joao Souza",
+        -0.343
+      ],
+      [
+        "Di Wu",
+        -0.342
+      ]
+    ]
+  },
+  "return_effects": {
+    "strongest": [
+      [
+        "I. Karlovic",
+        0.547
+      ],
+      [
+        "Jurgen Zopp",
+        0.483
+      ],
+      [
+        "Potito Starace",
+        0.466
+      ],
+      [
+        "Olivier Rochus",
+        0.378
+      ],
+      [
+        "J. Isner",
+        0.368
+      ],
+      [
+        "Ivo Karlovic",
+        0.355
+      ],
+      [
+        "Kenny De Schepper",
+        0.355
+      ],
+      [
+        "Albano Olivetti",
+        0.352
+      ]
+    ],
+    "weakest": [
+      [
+        "R. Nadal",
+        -0.545
+      ],
+      [
+        "D. Schwartzman",
+        -0.52
+      ],
+      [
+        "A. Kerber",
+        -0.479
+      ],
+      [
+        "S. Halep",
+        -0.476
+      ],
+      [
+        "Novak Djokovic",
+        -0.476
+      ],
+      [
+        "Klara Zakopalova",
+        -0.461
+      ],
+      [
+        "Rafael Nadal",
+        -0.432
+      ],
+      [
+        "Andy Murray",
+        -0.42
+      ]
+    ]
+  },
+  "note": "C selected on validation; full C-grid reported for sensitivity. Test fold untouched."
+}

@@ -1,0 +1,71 @@
+{
+  "utc": "2026-09-20T10:05:45+00:00",
+  "held_out_fold": "val",
+  "mean_val_logloss": 0.667913,
+  "ci95": [
+    0.666501,
+    0.669275
+  ],
+  "ci_half_width": 0.001387,
+  "bootstrap_se": 0.000707,
+  "reference_serve_win_prob": 0.6006,
+  "oracle_effect_grid": [
+    {
+      "eps": 0.02,
+      "delta": 0.1,
+      "oracle_logloss_gain": 0.0004,
+      "detectable": false
+    },
+    {
+      "eps": 0.02,
+      "delta": 0.2,
+      "oracle_logloss_gain": 0.00159,
+      "detectable": true
+    },
+    {
+      "eps": 0.02,
+      "delta": 0.3,
+      "oracle_logloss_gain": 0.0036,
+      "detectable": true
+    },
+    {
+      "eps": 0.05,
+      "delta": 0.1,
+      "oracle_logloss_gain": 0.00097,
+      "detectable": false
+    },
+    {
+      "eps": 0.05,
+      "delta": 0.2,
+      "oracle_logloss_gain": 0.00385,
+      "detectable": true
+    },
+    {
+      "eps": 0.05,
+      "delta": 0.3,
+      "oracle_logloss_gain": 0.00872,
+      "detectable": true
+    },
+    {
+      "eps": 0.1,
+      "delta": 0.1,
+      "oracle_logloss_gain": 0.00183,
+      "detectable": true
+    },
+    {
+      "eps": 0.1,
+      "delta": 0.2,
+      "oracle_logloss_gain": 0.00728,
+      "detectable": true
+    },
+    {
+      "eps": 0.1,
+      "delta": 0.3,
+      "oracle_logloss_gain": 0.01652,
+      "detectable": true
+    }
+  ],
+  "n_detectable_cells": 7,
+  "verdict": "adequate",
+  "interpretation": "If the oracle log-loss gain from resolving a plausible contamination is smaller than the held-out CI half-width, the mixture cannot be distinguished from the single component at that (eps,delta): report INCONCLUSIVE, not negative. This is an upper bound (oracle knows the labels)."
+}

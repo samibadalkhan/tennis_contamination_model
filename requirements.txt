@@ -1,0 +1,6 @@
+# Runtime deps for the modeling pipeline. src/fetch.py itself uses only the
+# standard library (no install needed to pull the data).
+numpy
+pandas
+scipy
+statsmodels

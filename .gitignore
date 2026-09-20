@@ -1,3 +1,15 @@
+# ---------------------------------------------------------------------------
+# Raw data — NEVER commit. CC BY-NC-SA 4.0 (Jeff Sackmann); redistribution
+# would need the same license, and the corpus is large. Fetch it locally with
+#   python -m src.fetch
+# Everything under data/ is ignored except the provenance/licensing files the
+# fetcher writes, which are small, safe to share, and document what was pulled.
+data/*
+!data/MANIFEST.json
+!data/ATTRIBUTION.txt
+!data/DATA_LICENSE.txt
+
+# ---------------------------------------------------------------------------
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]

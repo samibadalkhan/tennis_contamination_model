@@ -1,0 +1,21 @@
+Tennis data in this directory was compiled by Jeff Sackmann and is used here
+under CC BY-NC-SA 4.0 (non-commercial; attribution required; share-alike). The
+license grant is irrevocable: upstream withdrawal of the repositories does not
+affect the grant on copies already distributed, so this use is fine.
+
+Provenance origins (now-dead upstream repositories, linked per the attribution
+requirement):
+  Grand Slam point-by-point  https://github.com/JeffSackmann/tennis_slam_pointbypoint  (404)
+  ATP                        https://github.com/JeffSackmann/tennis_atp                (404)
+  WTA                        https://github.com/JeffSackmann/tennis_wta                (404)
+  Match Charting Project     https://github.com/JeffSackmann/tennis_MatchChartingProject (live)
+
+slam/atp/wta were retrieved from the archival mirror
+Aneeshers/tennis-sackmann-archive (an archive, not a fork: no shared git history
+with upstream); the Match Charting Project directly from JeffSackmann. Pinned
+commit SHAs and a per-file SHA-256 are in MANIFEST.json. atp/wta carry no
+recorded upstream commit SHA (June 2026 snapshot) — weaker provenance.
+
+This data is NOT committed to git and must not be redistributed except under the
+same CC BY-NC-SA 4.0 license. Use is non-commercial only; NonCommercial excludes
+carrying this data into commercial research.
