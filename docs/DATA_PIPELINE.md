@@ -446,6 +446,39 @@ risking silent corruption or redefinition.
 
 ---
 
+## 6. Processed layer — `src/build_processed.py`
+
+**What it does.** Materializes the whole normalized pipeline into a clean,
+regenerable analysis layer under `data/processed/` so nothing downstream ever
+has to re-derive it (or re-hit the name-fragmentation bug) from raw. Raw is
+never modified — it stays byte-for-byte as fetched and `--verify`-able; the
+processed layer is derived and fully rebuildable.
+
+**Outputs** (all gitignored, like the rest of `data/`):
+`points.parquet` (1.9M rows, canonical names, all folds), `slam_matches.parquet`,
+`tour_slam_matches.parquet` (ATP+WTA slam results with `is_ret`/`is_walkover`,
+ranks, surface — the label source for Stage 0.5 and the weak-player test),
+`name_crosswalk.parquet` (every raw name → canonical), `BUILD.json` (provenance:
+raw source SHAs + counts), and `README.md` (data dictionary). A small committed
+summary lands in `results/processed_build.json`.
+
+**Why (the trap it closes).** `load.canonical_name` fixes name fragmentation at
+read time, but any code that opens the raw CSVs directly hits it again. This
+layer bakes the fix in. **Prefer `load.load_processed_points()`** over
+re-deriving from raw.
+
+**True name collisions.** The crosswalk's collision audit found ~9 canonical
+keys that merge *distinct* players (twins/siblings/same-initial pairs — e.g.
+`k pliskova` = Karolina **and** Kristyna, `a rodionova`, `x wang`). For these,
+initial-only records are inherently ambiguous (the corpus dropped the first
+name), so rows carry `ambiguous_identity = True` (~2.3% of points) instead of
+being silently merged. Curated in `build_processed.KNOWN_COLLISIONS`; re-review
+the audit's flagged list on each build.
+
+**Command.** `python -m src.build_processed`
+
+---
+
 ## Known gaps / caveats
 
 - **Coverage is uneven across 2011-2024, and gets worse toward the end.**

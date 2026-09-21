@@ -87,6 +87,20 @@ def singles_point_files() -> list[Path]:
                   if _POINTS_RE.match(p.name))
 
 
+def tour_of(match_num, event_name=None) -> str:
+    """Derive tour (M/W) from a slam match number, cross-checked by event_name.
+
+    Formats vary by slam-year: most use numeric ``1xxx`` (men) / ``2xxx`` (women),
+    but e.g. 2021 Australian Open uses ``MS101`` / ``WS...`` with an empty
+    event_name. Key off the leading character so both are covered.
+    """
+    c = str(match_num).strip()[:1].upper()
+    t = "M" if c in ("1", "M") else ("W" if c in ("2", "W") else "?")
+    if isinstance(event_name, str) and event_name.strip():
+        t = "M" if "Men" in event_name else ("W" if "Women" in event_name else t)
+    return t
+
+
 def _match_meta(slam: str, year: int) -> dict[str, tuple[str, str, str]]:
     """match_id -> (player1, player2, tour).
 
@@ -101,11 +115,7 @@ def _match_meta(slam: str, year: int) -> dict[str, tuple[str, str, str]]:
     m = pd.read_csv(mf, dtype=str)
     out = {}
     for r in m.itertuples():
-        tour = "M" if str(r.match_num).startswith("1") else (
-            "W" if str(r.match_num).startswith("2") else "?")
-        ev = getattr(r, "event_name", None)
-        if isinstance(ev, str) and ev.strip():
-            tour = "M" if "Men" in ev else ("W" if "Women" in ev else tour)
+        tour = tour_of(r.match_num, getattr(r, "event_name", None))
         # Canonical identity unifies the full-name / initial-surname split across
         # years (see canonical_name); joins to ATP/WTA use the same key.
         out[r.match_id] = (canonical_name(r.player1), canonical_name(r.player2), tour)
@@ -170,6 +180,26 @@ def load_points_file(path: Path, decl: dict | None = None) -> pd.DataFrame:
     # Player-name resolution can fail if a match_id is absent from the matches
     # file; drop those points (they cannot be attributed) but they are rare.
     return out.dropna(subset=["server", "returner"]).reset_index(drop=True)
+
+
+def load_processed_points(folds: tuple[str, ...] | None = None) -> pd.DataFrame:
+    """Read the materialized, canonical-name analysis layer if it exists.
+
+    Prefer this over re-deriving from raw: ``python -m src.build_processed``
+    writes ``data/processed/points.parquet`` with names already canonicalized, so
+    downstream code cannot re-introduce the name-fragmentation bug. Falls back to
+    building from raw (``load_points``) if the processed layer is absent.
+
+    ``folds`` filters by fold; the guard that keeps analysis off the test set
+    (``folds=("train","val")``) works the same as in ``load_points``.
+    """
+    p = DATA / "processed" / "points.parquet"
+    if not p.exists():
+        return load_points(folds=folds)
+    df = pd.read_parquet(p)
+    if folds is not None:
+        df = df[df["fold"].isin(folds)].reset_index(drop=True)
+    return df
 
 
 def load_points(folds: tuple[str, ...] | None = None,

@@ -1,0 +1,439 @@
+{
+  "built_utc": "2026-09-21T04:28:09+00:00",
+  "reports": {
+    "points": {
+      "rows": 1910897,
+      "by_fold": {
+        "test": 462626,
+        "train": 1124031,
+        "val": 324240
+      },
+      "by_tour": {
+        "M": 1187528,
+        "W": 723369
+      },
+      "ambiguous_identity_rows": 43685,
+      "distinct_players_canonical": 1069
+    },
+    "slam_matches": {
+      "rows": 10513,
+      "by_tour": {
+        "M": 5338,
+        "W": 5175
+      },
+      "ambiguous_identity_rows": 270
+    },
+    "tour_matches": {
+      "rows": 12573,
+      "retirements": 327,
+      "walkovers": 43,
+      "by_tour": {
+        "M": 6350,
+        "W": 6223
+      }
+    },
+    "crosswalk": {
+      "distinct_raw_names": 1996,
+      "distinct_canonical": 1173,
+      "canonical_keys_with_multiple_raw_variants": 508,
+      "flagged_possible_collisions": 27,
+      "true_collisions_curated": [
+        "a beck",
+        "a kuznetsov",
+        "a rodionova",
+        "c harrison",
+        "e nava",
+        "k pliskova",
+        "m gonzalez",
+        "x wang",
+        "z zhang"
+      ],
+      "flagged_not_curated_review": [
+        "a cornet",
+        "a friedsam",
+        "a schmiedlova",
+        "a yakimova",
+        "b strycova",
+        "c garin",
+        "c gauff",
+        "c mcnally",
+        "g muguruza",
+        "j struff",
+        "j tsonga",
+        "l tsurenko",
+        "p herbert",
+        "r berankis",
+        "s groth",
+        "s hsieh",
+        "s wawrinka",
+        "y lu"
+      ]
+    }
+  },
+  "flagged_possible_collisions": [
+    {
+      "canonical": "a beck",
+      "raw_variants": [
+        "Andreas Beck",
+        "Annika Beck"
+      ],
+      "distinct_full_first_names": [
+        "andreas",
+        "annika"
+      ],
+      "known_collision": true
+    },
+    {
+      "canonical": "a kuznetsov",
+      "raw_variants": [
+        "Alex Kuznetsov",
+        "Andrey Kuznetsov"
+      ],
+      "distinct_full_first_names": [
+        "alex",
+        "andrey"
+      ],
+      "known_collision": true
+    },
+    {
+      "canonical": "a rodionova",
+      "raw_variants": [
+        "A Rodionova",
+        "A. Rodionova",
+        "Anastasia Rodionova",
+        "Arina Rodionova"
+      ],
+      "distinct_full_first_names": [
+        "anastasia",
+        "arina"
+      ],
+      "known_collision": true
+    },
+    {
+      "canonical": "c harrison",
+      "raw_variants": [
+        "Catherine Harrison",
+        "Christian Harrison"
+      ],
+      "distinct_full_first_names": [
+        "catherine",
+        "christian"
+      ],
+      "known_collision": true
+    },
+    {
+      "canonical": "e nava",
+      "raw_variants": [
+        "Eduardo Nava",
+        "Emilio Nava"
+      ],
+      "distinct_full_first_names": [
+        "eduardo",
+        "emilio"
+      ],
+      "known_collision": true
+    },
+    {
+      "canonical": "k pliskova",
+      "raw_variants": [
+        "K. Pliskova",
+        "Ka Pliskova",
+        "Ka. Pliskova",
+        "Karolina Pliskova",
+        "Kr Pliskova",
+        "Kr. Pliskova",
+        "Kristyna Pliskova"
+      ],
+      "distinct_full_first_names": [
+        "ka",
+        "karolina",
+        "kr",
+        "kristyna"
+      ],
+      "known_collision": true
+    },
+    {
+      "canonical": "m gonzalez",
+      "raw_variants": [
+        "Maximo Gonzalez",
+        "Montserrat Gonzalez"
+      ],
+      "distinct_full_first_names": [
+        "maximo",
+        "montserrat"
+      ],
+      "known_collision": true
+    },
+    {
+      "canonical": "x wang",
+      "raw_variants": [
+        "X Wang",
+        "X. Wang",
+        "Xinyu Wang",
+        "Xiyu Wang"
+      ],
+      "distinct_full_first_names": [
+        "xinyu",
+        "xiyu"
+      ],
+      "known_collision": true
+    },
+    {
+      "canonical": "z zhang",
+      "raw_variants": [
+        "Ze Zhang",
+        "Zhizhen Zhang"
+      ],
+      "distinct_full_first_names": [
+        "ze",
+        "zhizhen"
+      ],
+      "known_collision": true
+    },
+    {
+      "canonical": "a cornet",
+      "raw_variants": [
+        "A Cornet",
+        "A. Cornet",
+        "Alize Cornet",
+        "Aliz\u00e9 Cornet"
+      ],
+      "distinct_full_first_names": [
+        "alize",
+        "aliz\u00e9"
+      ],
+      "known_collision": false
+    },
+    {
+      "canonical": "a friedsam",
+      "raw_variants": [
+        "A. Friedsam",
+        "Al Friedsam",
+        "Anna-Lena Friedsam"
+      ],
+      "distinct_full_first_names": [
+        "al",
+        "anna-lena"
+      ],
+      "known_collision": false
+    },
+    {
+      "canonical": "a schmiedlova",
+      "raw_variants": [
+        "A Schmiedlova",
+        "A. Schmiedlova",
+        "Ak Schmiedlova",
+        "Anna Schmiedlova"
+      ],
+      "distinct_full_first_names": [
+        "ak",
+        "anna"
+      ],
+      "known_collision": false
+    },
+    {
+      "canonical": "a yakimova",
+      "raw_variants": [
+        "Anastasia Yakimova",
+        "Anastasiya Yakimova"
+      ],
+      "distinct_full_first_names": [
+        "anastasia",
+        "anastasiya"
+      ],
+      "known_collision": false
+    },
+    {
+      "canonical": "b strycova",
+      "raw_variants": [
+        "B Strycova",
+        "B. Strycova",
+        "B.Zahlavova Strycova",
+        "Barbora Strycova"
+      ],
+      "distinct_full_first_names": [
+        "barbora",
+        "bzahlavova"
+      ],
+      "known_collision": false
+    },
+    {
+      "canonical": "c garin",
+      "raw_variants": [
+        "C Garin",
+        "C. Garin",
+        "Christian Garin",
+        "Cristian Garin"
+      ],
+      "distinct_full_first_names": [
+        "christian",
+        "cristian"
+      ],
+      "known_collision": false
+    },
+    {
+      "canonical": "c gauff",
+      "raw_variants": [
+        "C Gauff",
+        "C. Gauff",
+        "Coco Gauff",
+        "Cori Gauff"
+      ],
+      "distinct_full_first_names": [
+        "coco",
+        "cori"
+      ],
+      "known_collision": false
+    },
+    {
+      "canonical": "c mcnally",
+      "raw_variants": [
+        "C. McNally",
+        "Catherine McNally",
+        "Caty McNally",
+        "Caty Mcnally"
+      ],
+      "distinct_full_first_names": [
+        "catherine",
+        "caty"
+      ],
+      "known_collision": false
+    },
+    {
+      "canonical": "g muguruza",
+      "raw_variants": [
+        "G Muguruza",
+        "G. Muguruza",
+        "Garbine Muguruza",
+        "Garbi\u00f1e Muguruza"
+      ],
+      "distinct_full_first_names": [
+        "garbine",
+        "garbi\u00f1e"
+      ],
+      "known_collision": false
+    },
+    {
+      "canonical": "j struff",
+      "raw_variants": [
+        "J Struff",
+        "J. Struff",
+        "Jan-Lennard Struff",
+        "Jl Struff"
+      ],
+      "distinct_full_first_names": [
+        "jan-lennard",
+        "jl"
+      ],
+      "known_collision": false
+    },
+    {
+      "canonical": "j tsonga",
+      "raw_variants": [
+        "J. Tsonga",
+        "Jo-Wilfried Tsonga",
+        "Jw Tsonga"
+      ],
+      "distinct_full_first_names": [
+        "jo-wilfried",
+        "jw"
+      ],
+      "known_collision": false
+    },
+    {
+      "canonical": "l tsurenko",
+      "raw_variants": [
+        "L. Tsurenko",
+        "Lesia Tsurenko",
+        "Lesya Tsurenko"
+      ],
+      "distinct_full_first_names": [
+        "lesia",
+        "lesya"
+      ],
+      "known_collision": false
+    },
+    {
+      "canonical": "p herbert",
+      "raw_variants": [
+        "P Herbert",
+        "P. Herbert",
+        "Ph Herbert",
+        "Pierre-Hugues Herbert"
+      ],
+      "distinct_full_first_names": [
+        "ph",
+        "pierre-hugues"
+      ],
+      "known_collision": false
+    },
+    {
+      "canonical": "r berankis",
+      "raw_variants": [
+        "R Berankis",
+        "R. Berankis",
+        "Ricardas Berankis",
+        "Richard Berankis"
+      ],
+      "distinct_full_first_names": [
+        "ricardas",
+        "richard"
+      ],
+      "known_collision": false
+    },
+    {
+      "canonical": "s groth",
+      "raw_variants": [
+        "Sam Groth",
+        "Samuel Groth"
+      ],
+      "distinct_full_first_names": [
+        "sam",
+        "samuel"
+      ],
+      "known_collision": false
+    },
+    {
+      "canonical": "s hsieh",
+      "raw_variants": [
+        "S Hsieh",
+        "S. Hsieh",
+        "Su-Wei Hsieh",
+        "Sw Hsieh"
+      ],
+      "distinct_full_first_names": [
+        "su-wei",
+        "sw"
+      ],
+      "known_collision": false
+    },
+    {
+      "canonical": "s wawrinka",
+      "raw_variants": [
+        "S Wawrinka",
+        "S. Wawrinka",
+        "Stan Wawrinka",
+        "Stanislas Wawrinka"
+      ],
+      "distinct_full_first_names": [
+        "stan",
+        "stanislas"
+      ],
+      "known_collision": false
+    },
+    {
+      "canonical": "y lu",
+      "raw_variants": [
+        "Y Lu",
+        "Y. Lu",
+        "Yen-Hsun Lu",
+        "Yh Lu"
+      ],
+      "distinct_full_first_names": [
+        "yen-hsun",
+        "yh"
+      ],
+      "known_collision": false
+    }
+  ]
+}
