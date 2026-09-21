@@ -24,3 +24,9 @@
 {"trial": 24, "utc": "2026-09-20T18:39:31+00:00", "stage": "0.5", "kind": "labels", "params": {}, "metrics": {"n_ret": 263, "n_completed": 9235}, "note": "RET from ATP/WTA score strings; loser=retiree; canonical-name join"}
 {"trial": 25, "utc": "2026-09-20T18:39:38+00:00", "stage": "0.5", "kind": "degradation", "params": {"window": "last_set"}, "metrics": {"ret_degradation": 0.1173, "control_degradation": 0.0383, "excess": 0.079}, "note": ""}
 {"trial": 26, "utc": "2026-09-20T18:39:42+00:00", "stage": "0.5", "kind": "degradation", "params": {"window": "last_k"}, "metrics": {"ret_degradation": 0.1195, "control_degradation": 0.0601, "excess": 0.059399999999999994}, "note": ""}
+{"trial": 27, "utc": "2026-09-21T21:28:29+00:00", "stage": "0-audit", "kind": "coverage", "params": {}, "metrics": {"test_atp_matches": 2944}, "note": ""}
+{"trial": 28, "utc": "2026-09-21T21:28:30+00:00", "stage": "0-audit", "kind": "artifacts", "params": {}, "metrics": {"slam_to_atp_match_rate": 0.794}, "note": ""}
+{"trial": 29, "utc": "2026-09-21T21:28:30+00:00", "stage": "0-audit", "kind": "custody", "params": {}, "metrics": {"recorded_equals_independent": true}, "note": ""}
+{"trial": 30, "utc": "2026-09-21T21:28:31+00:00", "stage": "0-audit", "kind": "power_check", "params": {}, "metrics": {"proxy_mean_ce": 0.6320308903862972, "ci_half_width": 0.022136726934823325, "n_detectable": 0}, "note": ""}
+{"trial": 31, "utc": "2026-09-21T21:30:25+00:00", "stage": "0-audit", "kind": "power_check", "params": {}, "metrics": {"paired_half_width": 0.01549634658303935, "absolute_half_width": 0.022136726934823325, "n_detectable_paired": 1}, "note": ""}
+{"trial": 32, "utc": "2026-09-21T21:31:08+00:00", "stage": "0-audit", "kind": "power_check", "params": {}, "metrics": {"paired_half_width": 0.01549634658303935, "absolute_half_width": 0.022136726934823325, "n_detectable_paired": 1}, "note": ""}

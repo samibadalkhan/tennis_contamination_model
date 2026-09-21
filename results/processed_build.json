@@ -1,12 +1,10 @@
 {
-  "built_utc": "2026-09-21T04:28:09+00:00",
+  "built_utc": "2026-09-21T21:22:22+00:00",
   "reports": {
     "points": {
       "rows": 1910897,
       "by_fold": {
-        "test": 462626,
-        "train": 1124031,
-        "val": 324240
+        "develop": 1910897
       },
       "by_tour": {
         "M": 1187528,
@@ -24,19 +22,19 @@
       "ambiguous_identity_rows": 270
     },
     "tour_matches": {
-      "rows": 12573,
-      "retirements": 327,
-      "walkovers": 43,
+      "rows": 25019,
+      "retirements": 656,
+      "walkovers": 72,
       "by_tour": {
-        "M": 6350,
-        "W": 6223
+        "M": 12573,
+        "W": 12446
       }
     },
     "crosswalk": {
-      "distinct_raw_names": 1996,
-      "distinct_canonical": 1173,
-      "canonical_keys_with_multiple_raw_variants": 508,
-      "flagged_possible_collisions": 27,
+      "distinct_raw_names": 2770,
+      "distinct_canonical": 1942,
+      "canonical_keys_with_multiple_raw_variants": 511,
+      "flagged_possible_collisions": 32,
       "true_collisions_curated": [
         "a beck",
         "a kuznetsov",
@@ -51,15 +49,20 @@
       "flagged_not_curated_review": [
         "a cornet",
         "a friedsam",
+        "a martin",
         "a schmiedlova",
+        "a serra zanetti",
         "a yakimova",
         "b strycova",
         "c garin",
         "c gauff",
+        "c gullickson",
         "c mcnally",
+        "c ruud",
         "g muguruza",
         "j struff",
         "j tsonga",
+        "j ward",
         "l tsurenko",
         "p herbert",
         "r berankis",
@@ -218,6 +221,19 @@
       "known_collision": false
     },
     {
+      "canonical": "a martin",
+      "raw_variants": [
+        "A Martin",
+        "Alberto Martin",
+        "Andrej Martin"
+      ],
+      "distinct_full_first_names": [
+        "alberto",
+        "andrej"
+      ],
+      "known_collision": false
+    },
+    {
       "canonical": "a schmiedlova",
       "raw_variants": [
         "A Schmiedlova",
@@ -228,6 +244,18 @@
       "distinct_full_first_names": [
         "ak",
         "anna"
+      ],
+      "known_collision": false
+    },
+    {
+      "canonical": "a serra zanetti",
+      "raw_variants": [
+        "Adriana Serra Zanetti",
+        "Antonella Serra Zanetti"
+      ],
+      "distinct_full_first_names": [
+        "adriana",
+        "antonella"
       ],
       "known_collision": false
     },
@@ -286,6 +314,18 @@
       "known_collision": false
     },
     {
+      "canonical": "c gullickson",
+      "raw_variants": [
+        "Carly Gullickson",
+        "Chelsey Gullickson"
+      ],
+      "distinct_full_first_names": [
+        "carly",
+        "chelsey"
+      ],
+      "known_collision": false
+    },
+    {
       "canonical": "c mcnally",
       "raw_variants": [
         "C. McNally",
@@ -296,6 +336,20 @@
       "distinct_full_first_names": [
         "catherine",
         "caty"
+      ],
+      "known_collision": false
+    },
+    {
+      "canonical": "c ruud",
+      "raw_variants": [
+        "C Ruud",
+        "C. Ruud",
+        "Casper Ruud",
+        "Christian Ruud"
+      ],
+      "distinct_full_first_names": [
+        "casper",
+        "christian"
       ],
       "known_collision": false
     },
@@ -337,6 +391,18 @@
       "distinct_full_first_names": [
         "jo-wilfried",
         "jw"
+      ],
+      "known_collision": false
+    },
+    {
+      "canonical": "j ward",
+      "raw_variants": [
+        "James Ward",
+        "Joanne Ward"
+      ],
+      "distinct_full_first_names": [
+        "james",
+        "joanne"
       ],
       "known_collision": false
     },

@@ -1,0 +1,23 @@
+{
+  "utc": "2026-09-21T21:28:30+00:00",
+  "sha_resolution": {
+    "recorded_in_manifest": "83733587353df8a41f2fd4f516147d5aa83f5a8d",
+    "independent_pin": "83733587353df8a41f2fd4f516147d5aa83f5a8d",
+    "spec_flagged_value": "83733358\u2026",
+    "recorded_equals_independent": true,
+    "verified_against_live_head_utc": "2026-09-20",
+    "resolution": "Recorded pin equals the independent (correct) pin and the live main HEAD; the spec's 83733358\u2026 (diverging at char 6) is the BAD value and was never recorded here."
+  },
+  "integrity": {
+    "per_file_sha256": true,
+    "verify_command": "python -m src.fetch --verify",
+    "hash_failure": "hard stop",
+    "hf_fallback": "bytes only, verified against sha256"
+  },
+  "provenance_quality": {
+    "atp_wta": "WEAK \u2014 June 2026 mirror snapshot, no upstream SHA recorded (this is the HEADLINE dataset, so hashes carry more weight)",
+    "slam": "good \u2014 mirror names upstream 6febb77 (Oct 2024)",
+    "archive_not_fork": "mirror shares no git history with upstream; cannot diff against it \u2014 integrity rests on the hashes",
+    "cold_copy": "keep an independent cold copy; do not assume the mirror persists"
+  }
+}

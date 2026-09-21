@@ -1,0 +1,115 @@
+{
+  "utc": "2026-09-21T21:28:30+00:00",
+  "singles_only": {
+    "doubles_or_mixed_rows_in_processed": 0,
+    "note": "load filters to singles by filename; processed inherits it"
+  },
+  "retirements": {
+    "kept_and_flagged": true,
+    "slam_point_matches_flagged_via_join": "see stage diagnostics",
+    "atp_retirements_in_grid": 1044,
+    "note": "retirements are the key diagnostic; never dropped"
+  },
+  "slam_to_atp_resolution": {
+    "matched": 8346,
+    "unmatched": 2167,
+    "match_rate": 0.794,
+    "by_year_matched_unmatched": {
+      "2011": [
+        600,
+        51
+      ],
+      "2012": [
+        603,
+        47
+      ],
+      "2013": [
+        618,
+        60
+      ],
+      "2014": [
+        749,
+        103
+      ],
+      "2015": [
+        771,
+        74
+      ],
+      "2016": [
+        635,
+        70
+      ],
+      "2017": [
+        806,
+        92
+      ],
+      "2018": [
+        854,
+        84
+      ],
+      "2019": [
+        819,
+        192
+      ],
+      "2020": [
+        452,
+        303
+      ],
+      "2021": [
+        702,
+        312
+      ],
+      "2022": [
+        250,
+        254
+      ],
+      "2023": [
+        245,
+        262
+      ],
+      "2024": [
+        242,
+        263
+      ]
+    },
+    "note": "unmatched dominated by Hawkeye-only slam coverage (missing first-rounders) + residual name variants; investigate, do not drop"
+  },
+  "reduced_covariate": {
+    "slam_serve_number_missing_frac_by_year": {
+      "2011": 1.0,
+      "2012": 1.0,
+      "2013": 1.0,
+      "2014": 0.213,
+      "2015": 0.042,
+      "2016": 0.04,
+      "2017": 0.042,
+      "2018": 0.022,
+      "2019": 0.022,
+      "2020": 0.014,
+      "2021": 0.022,
+      "2022": 0.047,
+      "2023": 0.043,
+      "2024": 0.047
+    },
+    "atp_serve_stats_present_frac_by_year": {
+      "2013": 0.888,
+      "2014": 0.887,
+      "2015": 0.89,
+      "2016": 0.991,
+      "2017": 0.986,
+      "2018": 0.988,
+      "2019": 0.96,
+      "2020": 0.968,
+      "2021": 0.965,
+      "2022": 0.941,
+      "2023": 0.943,
+      "2024": 0.98,
+      "2025": 0.912
+    },
+    "note": "absence is never a signal; use a reduced-covariate model"
+  },
+  "schema_growth": {
+    "slam_serve_number": "absent pre-2019 (all-missing early years)",
+    "note": "covariate availability correlates with year"
+  }
+}

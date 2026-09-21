@@ -125,7 +125,11 @@ SOURCES = {
     },
 }
 
-WINDOW = range(2011, 2025)  # 2011-2024 inclusive, the slam point-by-point span
+# ATP/WTA match window. Widened for the Ingram forecasting design: history for
+# the random-walk ability model, the 2014 reproduction, development <=2024, and
+# the 2025 test season. (The slam point-by-point corpus is filtered by filename,
+# not by this window.)
+WINDOW = range(2000, 2027)
 
 GH_RAW = "https://raw.githubusercontent.com/{repo}/{sha}/{path}"
 HF_RAW = "https://huggingface.co/datasets/{repo}/resolve/{rev}/{path}"
@@ -161,8 +165,8 @@ def _is_tour_window(name: str) -> bool:
     m = re.fullmatch(r"(?:atp|wta)_matches_(20\d\d)\.csv", name)
     if m:
         return int(m.group(1)) in WINDOW
-    # Rankings covering the 2010s / 2020s (2011-2024 fits within these two).
-    return bool(re.fullmatch(r"(?:atp|wta)_rankings_(10s|20s)\.csv", name))
+    # Rankings covering the 2000s / 2010s / 2020s (spans the widened window).
+    return bool(re.fullmatch(r"(?:atp|wta)_rankings_(00s|10s|20s)\.csv", name))
 
 
 def _is_mcp_core(name: str) -> bool:

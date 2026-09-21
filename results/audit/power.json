@@ -1,0 +1,32 @@
+{
+  "utc": "2026-09-21T21:31:08+00:00",
+  "reference_forecasters": "logistic on log-rank vs raw-rank difference (proxies for two arms)",
+  "proxy_season": 2024,
+  "proxy_matches_scored": 3030,
+  "proxy_tournaments": 153,
+  "absolute_mean_cross_entropy": 0.632,
+  "absolute_ci_half_width": 0.0221,
+  "paired_difference_ci_half_width": 0.0155,
+  "paired_note": "The relevant noise floor: CI on the per-match CE difference between two forecasters scored on the same matches, clustered by tournament. Two real arms are far more correlated than these two proxies, so the true paired floor is likely SMALLER still \u2014 this is an upper bound on the floor.",
+  "test_2025_matches": 2944,
+  "test_2025_tournaments": 141,
+  "plausible_gain_grid": [
+    {
+      "gain": 0.005,
+      "detectable_paired": false,
+      "detectable_absolute": false
+    },
+    {
+      "gain": 0.01,
+      "detectable_paired": false,
+      "detectable_absolute": false
+    },
+    {
+      "gain": 0.02,
+      "detectable_paired": true,
+      "detectable_absolute": false
+    }
+  ],
+  "verdict": "conditionally adequate \u2014 gains \u2265 0.020 clear the CONSERVATIVE paired floor (0.0155, an upper bound); smaller gains need confirmation once the real, more-correlated arms exist",
+  "caveat": "Absolute-CE CI (\u00b10.022) is NOT the right floor for a paired comparison and would wrongly read as underpowered. Re-check the real paired floor once both arms exist."
+}

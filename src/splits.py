@@ -1,18 +1,27 @@
-"""The train / validation / test split -- declared ONCE, up front, by TIME.
+"""The develop / test split -- declared ONCE, up front, chronologically.
 
-Non-negotiable (CLAUDE.md): split by match and by time, never by point; ability
-drifts, so train early and test late; declare the split once and never re-split
-after seeing results. Because year boundaries never cut through a match (a match
-lives in one slam-year), a by-year split is automatically match-clean.
+New design (Ingram forecasting protocol; see tennis-contamination.md
+"Frozen-data protocol"): develop on everything <= 2024, test on the 2025 ATP
+season, once. This retires the earlier slam-year split (train 2011-2018 /
+val 2019-2020 / test 2021-2024), which belonged to the superseded
+contamination-detection design; that split never touched a 2025 fold, so
+nothing about the new test is compromised by the change.
 
-The dataset is FROZEN (slam point-by-point ends Oct 2024), so the TEST fold here
-is the only out-of-sample period this project will ever have. Stage 0 does NOT
-touch it -- Stage 0 fits on TRAIN and measures the noise floor on VALIDATION.
-Test is reserved for the final full-mixture-vs-single-component comparison.
+Why this split:
+  * Mirrors Ingram (2019): hold out a full ATP season, forecast its matches.
+  * Chronological and match-clean -- season boundaries never cut a match.
+  * Slam point-by-point ends Oct 2024, so ALL point data sits in development.
+    The hybrid arm (point terms replacing the ATP match term for slam matches)
+    is therefore a development-time signal; the 2025 test is match-level.
+  * The corpus is frozen and the test is SINGLE-USE. Validation is done inside
+    development by rolling-origin evaluation, never on 2025.
 
-``declare()`` persists this to ``results/splits.json`` exactly once and refuses
-to overwrite it, so the declaration is a durable fact, not something re-derived
-(and silently changed) each run.
+Uncertainty is clustered by PLAYER-TOURNAMENT (tournament-level as a
+conservative check) -- not by match.
+
+``declare()`` persists this to ``results/splits.json``. Re-running is a no-op;
+changing the declared design requires ``force=True`` (a logged, deliberate act,
+as when this replaced the slam-year split), never a silent re-run.
 """
 
 from __future__ import annotations
@@ -22,44 +31,44 @@ from src.util import RESULTS, read_json, utcnow, write_json
 SPLITS_FILE = RESULTS / "splits.json"
 
 # --- the declaration -----------------------------------------------------------
-TRAIN_YEARS = list(range(2011, 2019))   # 2011-2018, all four slams each year
-VAL_YEARS = [2019, 2020]                # 2020 missing Wimbledon (cancelled)
-TEST_YEARS = [2021, 2022, 2023, 2024]   # 2022-2024 carry only two slams each
+DEV_MAX_YEAR = 2024          # develop on everything up to and including 2024
+TEST_SEASON = 2025           # hold out the 2025 ATP season, forecast it once
+# 2026 exists in the ATP mirror but is partial; excluded from both.
+CLUSTER_UNIT = "player_tournament"
 
 RATIONALE = (
-    "Chronological split, train-early/test-late, to respect ability drift. "
-    "Boundaries fall on year gaps so no match spans folds (match-clean by "
-    "construction). Coverage is uneven: TRAIN 2011-2018 has all four slams per "
-    "year; VAL 2019-2020 is missing 2020 Wimbledon; TEST 2021-2024 has all four "
-    "in 2021 but only two slams each in 2022-2024, skewing the late test years "
-    "toward grass/hard. Consequence: never compare raw rates across folds "
-    "without conditioning on slam x year fixed effects, and report per-slam "
-    "cross-checks. The split is frozen once written; the test fold is the only "
-    "out-of-sample period available and Stage 0 does not touch it."
+    "Ingram protocol: develop on <=2024, test on the 2025 ATP season once. "
+    "Chronological and match-clean (season boundaries never split a match). "
+    "Slam point-by-point ends Oct 2024, so all point data is in development and "
+    "feeds the hybrid arm; the 2025 test is match-level. Validation is by "
+    "rolling-origin within development -- the 2025 test is single-use and never "
+    "tuned on. Uncertainty clustered by player-tournament. This replaces the "
+    "superseded slam-year split (train 2011-2018 / val 2019-2020 / test "
+    "2021-2024) from the contamination-detection design."
 )
 
 
 def _decl() -> dict:
     return {
         "declared_utc": utcnow(),
-        "unit": "by year (match-clean) and by time (train early, test late)",
-        "train_years": TRAIN_YEARS,
-        "val_years": VAL_YEARS,
-        "test_years": TEST_YEARS,
+        "design": "ingram_forecasting_robust_vs_ordinary",
+        "unit": "chronological by season (match-clean); test = one held-out ATP season",
+        "dev_max_year": DEV_MAX_YEAR,
+        "test_season": TEST_SEASON,
+        "validation": "rolling-origin within development (<=2024); never on test",
+        "cluster_unit": CLUSTER_UNIT,
         "rationale": RATIONALE,
         "frozen_dataset": (
-            "slam point-by-point ends 2024-10; test fold is the only OOS period "
-            "this project will ever have -- declared once, never re-split."
+            "corpus frozen (ATP to Jun 2026, slam points to Oct 2024); the 2025 "
+            "test season is the single-use out-of-sample period. An underpowered "
+            "result is permanent."
         ),
+        "supersedes": "slam-year split (train 2011-2018 / val 2019-2020 / test 2021-2024)",
     }
 
 
 def declare(force: bool = False) -> dict:
-    """Write the split declaration once. Refuses to overwrite unless ``force``.
-
-    Re-splitting after seeing results is forbidden, so overwriting requires an
-    explicit, logged decision (``force=True``) -- never a silent re-run.
-    """
+    """Write the split declaration once. Refuses to overwrite unless ``force``."""
     existing = read_json(SPLITS_FILE)
     if existing is not None and not force:
         return existing
@@ -78,11 +87,11 @@ def load() -> dict:
 
 
 def fold_of(year: int, decl: dict | None = None) -> str:
+    """Map a calendar year to its fold under the frozen split."""
     d = decl or load()
-    if year in d["train_years"]:
-        return "train"
-    if year in d["val_years"]:
-        return "val"
-    if year in d["test_years"]:
+    y = int(year)
+    if y <= d["dev_max_year"]:
+        return "develop"
+    if y == d["test_season"]:
         return "test"
-    return "unassigned"
+    return "excluded"        # e.g. partial 2026
