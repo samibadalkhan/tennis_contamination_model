@@ -48,68 +48,73 @@ def run_filter(matches, alpha, sigma, prior_var, eval_year):
             "mean_pred": float(preds.mean())}
 
 
-def run():
-    ensure(INGRAM)
-    matches = load.load_matches("M")               # tour-level singles, serve stats
-    # per-surface intercept from pre-2013 data only (no leakage into tuning)
-    alpha = alpha_by_surface(matches[matches.year < 2013])
-
-    # tune sigma / prior_var on 2013 (development), pick best log loss
-    tuning = []
-    best = None
+def score_season(matches, eval_year, tune_year=None):
+    """Tune sigma/prior_var on ``tune_year`` (default eval_year-1), score eval_year.
+    Never tunes on the evaluation season; per-surface intercept from pre-season data."""
+    tune_year = tune_year or (eval_year - 1)
+    alpha_tune = alpha_by_surface(matches[matches.year < tune_year])
+    tuning, best = [], None
     for sigma in SIGMA_GRID:
         for pv in PRIOR_GRID:
-            m = run_filter(matches, alpha, sigma, pv, eval_year=2013)
+            m = run_filter(matches, alpha_tune, sigma, pv, eval_year=tune_year)
             tuning.append({"sigma": sigma, "prior_var": pv, **m})
-            trials.log(stage="1-ingram", kind="tune_2013",
+            trials.log(stage="1-ingram", kind=f"tune_{tune_year}",
                        params={"sigma": sigma, "prior_var": pv},
                        metrics={"val_log_loss": m["log_loss"], "val_acc": m["accuracy"]})
             if best is None or m["log_loss"] < best["log_loss"]:
                 best = {"sigma": sigma, "prior_var": pv, "log_loss": m["log_loss"]}
-
-    # reproduce on 2014 with the chosen setting
-    alpha14 = alpha_by_surface(matches[matches.year < 2014])
-    test = run_filter(matches, alpha14, best["sigma"], best["prior_var"], eval_year=2014)
-    trials.log(stage="1-ingram", kind="reproduce_2014",
-               params={"sigma": best["sigma"], "prior_var": best["prior_var"]},
+    alpha_eval = alpha_by_surface(matches[matches.year < eval_year])
+    test = run_filter(matches, alpha_eval, best["sigma"], best["prior_var"], eval_year)
+    trials.log(stage="1-ingram", kind=f"score_{eval_year}",
+               params={"sigma": best["sigma"], "prior_var": best["prior_var"], "tuned_on": tune_year},
                metrics={"log_loss": test["log_loss"], "accuracy": test["accuracy"]})
+    return {"utc": utcnow(), "eval_year": eval_year, "tuned_on": tune_year,
+            "ingram_target": {"log_loss": INGRAM_LOGLOSS, "accuracy": INGRAM_ACC},
+            "chosen_hyperparams": {"sigma": best["sigma"], "prior_var": best["prior_var"]},
+            "result": test, "log_loss_gap_vs_ingram": round(test["log_loss"] - INGRAM_LOGLOSS, 4),
+            "tuning": tuning,
+            "note": "Ordinary random-walk ability filter + iid analytic forecast, "
+                    "match-only tour-level singles (G/M/A/F). Hyperparameters tuned "
+                    "on the prior season, never the eval season."}
 
-    ll_gap = test["log_loss"] - INGRAM_LOGLOSS
-    passed = abs(ll_gap) <= 0.02                   # "near 0.592", small drift allowed
-    out = {"utc": utcnow(),
-           "ingram_target": {"log_loss": INGRAM_LOGLOSS, "accuracy": INGRAM_ACC, "season": 2014},
-           "chosen_hyperparams": {"sigma": best["sigma"], "prior_var": best["prior_var"],
-                                  "tuned_on": 2013},
-           "reproduction_2014": test,
-           "log_loss_gap_vs_ingram": round(ll_gap, 4),
-           "gate_passed": bool(passed),
-           "tuning_2013": tuning,
-           "note": "Ordinary random-walk ability filter + iid analytic forecast. "
-                   "Match-only, tour-level singles (G/M/A/F). If off, check surface "
-                   "handling, Davis Cup inclusion, per-surface skills, first/second "
-                   "serve split, and data revisions."}
-    write_json(INGRAM / "reproduce.json", out)
 
+def run(eval_year=2014, tune_year=None):
+    ensure(INGRAM)
+    matches = load.load_matches("M")
+    out = score_season(matches, eval_year, tune_year)
+    t = out["result"]
+    is_gate = (eval_year == 2014)
+    passed = abs(out["log_loss_gap_vs_ingram"]) <= 0.02
+    out["gate_passed"] = bool(passed) if is_gate else None
+    fname = "reproduce" if is_gate else f"score_{eval_year}"
+    write_json(INGRAM / f"{fname}.json", out)
     lines = [
-        "# Gate 1 — reproduce Ingram (2019)", "",
-        f"_generated {utcnow()} · trials logged: {trials.count()}_", "",
-        f"Target (2014): log loss **{INGRAM_LOGLOSS}**, accuracy **{INGRAM_ACC}**.",
-        f"Chosen on 2013: sigma={best['sigma']}, prior_var={best['prior_var']}.", "",
-        f"## 2014 reproduction",
-        f"- log loss **{test['log_loss']:.4f}** (gap {ll_gap:+.4f}), "
-        f"accuracy **{test['accuracy']:.4f}**, on {test['n']} matches.",
-        f"- **Gate {'PASSED' if passed else 'NOT passed'}** "
-        f"({'within' if passed else 'outside'} 0.02 of Ingram).", "",
-        "## 2013 tuning (log loss)",
-        *[f"- sigma={t['sigma']}, prior_var={t['prior_var']}: {t['log_loss']:.4f} "
-          f"(acc {t['accuracy']:.3f})" for t in tuning],
+        f"# {'Gate 1 — reproduce Ingram (2019)' if is_gate else f'Season score — {eval_year}'}",
+        "", f"_generated {utcnow()} · trials logged: {trials.count()}_", "",
+        f"Ingram 2014 reference: log loss **{INGRAM_LOGLOSS}**, accuracy **{INGRAM_ACC}**.",
+        f"Hyperparameters tuned on {out['tuned_on']}: sigma={out['chosen_hyperparams']['sigma']}, "
+        f"prior_var={out['chosen_hyperparams']['prior_var']}.", "",
+        f"## {eval_year} result",
+        f"- log loss **{t['log_loss']:.4f}** (gap {out['log_loss_gap_vs_ingram']:+.4f} vs Ingram), "
+        f"accuracy **{t['accuracy']:.4f}**, mean forecast {t['mean_pred']:.3f}, on {t['n']} matches.",
     ]
-    (INGRAM / "reproduce_report.md").write_text("\n".join(lines) + "\n")
-    print(f"2014: log loss {test['log_loss']:.4f} (gap {ll_gap:+.4f}), "
-          f"acc {test['accuracy']:.4f} | gate {'PASSED' if passed else 'NOT passed'}")
+    if is_gate:
+        lines.append(f"- **Gate {'PASSED' if passed else 'NOT passed'}** "
+                     f"({'within' if passed else 'outside'} 0.02 of Ingram).")
+    lines += ["", f"## {out['tuned_on']} tuning (log loss)",
+              *[f"- sigma={x['sigma']}, prior_var={x['prior_var']}: {x['log_loss']:.4f} "
+                f"(acc {x['accuracy']:.3f})" for x in sorted(out['tuning'], key=lambda z: z['log_loss'])]]
+    (INGRAM / f"{fname}_report.md").write_text("\n".join(lines) + "\n")
+    print(f"{eval_year}: log loss {t['log_loss']:.4f} (gap {out['log_loss_gap_vs_ingram']:+.4f}), "
+          f"acc {t['accuracy']:.4f}" + (f" | gate {'PASSED' if passed else 'NOT passed'}" if is_gate else ""))
     return out
 
 
 if __name__ == "__main__":
-    run()
+    import argparse
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--year", type=int, default=2014, help="season to score (default 2014, the Ingram gate)")
+    ap.add_argument("--tune-year", type=int, default=None, help="season to tune on (default: year-1)")
+    a = ap.parse_args()
+    run(a.year, a.tune_year)
     sys.exit(0)
