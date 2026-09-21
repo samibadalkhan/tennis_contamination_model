@@ -182,6 +182,62 @@ def load_points_file(path: Path, decl: dict | None = None) -> pd.DataFrame:
     return out.dropna(subset=["server", "returner"]).reset_index(drop=True)
 
 
+_MATCH_STATS = ["w_svpt", "w_1stWon", "w_2ndWon", "l_svpt", "l_1stWon", "l_2ndWon"]
+_ROUND_ORDER = {"R128": 0, "R64": 1, "R32": 2, "R16": 3, "QF": 4, "SF": 5, "F": 6,
+                "RR": 3, "BR": 5}  # round-robin / bronze placed roughly
+
+
+def load_matches(tour: str = "M", levels=("G", "M", "A", "F"),
+                 require_serve_stats: bool = True) -> pd.DataFrame:
+    """Match-level serve observations for the ability model (Ingram data).
+
+    One row per singles match, chronological. For each player: serve points
+    played and serve points won (1st+2nd serve points won). ``p1`` is the winner
+    and ``p2`` the loser (``p1_won`` == 1); the forecaster orients by name, and
+    the filter uses only the serve counts (observed data, not the label), so
+    winner-as-p1 introduces no leakage.
+
+    ``levels`` selects tourney levels (default excludes Davis Cup 'D', a team
+    event with different incentives). ``require_serve_stats`` drops matches
+    without serve counts -- those are a reduced-covariate case handled later, not
+    part of the point-win-rate observations.
+    """
+    d = DATA / ("atp" if tour == "M" else "wta")
+    pref = "atp" if tour == "M" else "wta"
+    decl = splits.declare()
+    frames = []
+    for f in sorted(d.glob(f"{pref}_matches_[0-9][0-9][0-9][0-9].csv")):
+        year = int(re.search(r"(\d{4})", f.name).group(1))
+        m = pd.read_csv(f, dtype=str)
+        if "tourney_level" in m and levels is not None:
+            m = m[m.tourney_level.isin(levels)]
+        for c in _MATCH_STATS:
+            m[c] = pd.to_numeric(m.get(c), errors="coerce")
+        if require_serve_stats:
+            m = m.dropna(subset=_MATCH_STATS)
+            m = m[(m.w_svpt > 0) & (m.l_svpt > 0)]
+        if m.empty:
+            continue
+        rnd = m.get("round")
+        frames.append(pd.DataFrame({
+            "match_id": tour + "-" + m["tourney_id"].astype(str) + "-" + m["match_num"].astype(str),
+            "year": year, "tour": tour, "fold": splits.fold_of(year, decl),
+            "date": pd.to_datetime(m["tourney_date"], format="%Y%m%d", errors="coerce"),
+            "tourney_id": m["tourney_id"], "tourney_name": m["tourney_name"],
+            "surface": m["surface"], "best_of": pd.to_numeric(m["best_of"], errors="coerce"),
+            "round": rnd, "round_order": rnd.map(_ROUND_ORDER) if rnd is not None else 0,
+            "p1": m["winner_name"].map(canonical_name), "p2": m["loser_name"].map(canonical_name),
+            "p1_svpt": m.w_svpt, "p1_spw": m.w_1stWon + m.w_2ndWon,
+            "p2_svpt": m.l_svpt, "p2_spw": m.l_1stWon + m.l_2ndWon,
+            "p1_rank": pd.to_numeric(m.get("winner_rank"), errors="coerce"),
+            "p2_rank": pd.to_numeric(m.get("loser_rank"), errors="coerce"),
+            "p1_won": 1,
+        }))
+    out = pd.concat(frames, ignore_index=True)
+    out = out.dropna(subset=["date", "best_of", "surface", "p1", "p2"])
+    return out.sort_values(["date", "tourney_id", "round_order"]).reset_index(drop=True)
+
+
 def load_processed_points(folds: tuple[str, ...] | None = None) -> pd.DataFrame:
     """Read the materialized, canonical-name analysis layer if it exists.
 

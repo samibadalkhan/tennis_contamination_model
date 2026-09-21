@@ -1,0 +1,192 @@
+{
+  "utc": "2026-09-21T21:53:07+00:00",
+  "ingram_target": {
+    "log_loss": 0.592,
+    "accuracy": 0.688,
+    "season": 2014
+  },
+  "chosen_hyperparams": {
+    "sigma": 0.03,
+    "prior_var": 1.0,
+    "tuned_on": 2013
+  },
+  "reproduction_2014": {
+    "n": 2573,
+    "log_loss": 0.6044320120369899,
+    "accuracy": 0.6789739603575593,
+    "mean_pred": 0.6075999669927722
+  },
+  "log_loss_gap_vs_ingram": 0.0124,
+  "gate_passed": true,
+  "tuning_2013": [
+    {
+      "sigma": 0.01,
+      "prior_var": 0.25,
+      "n": 2613,
+      "log_loss": 0.6020043002187748,
+      "accuracy": 0.6758515116724072,
+      "mean_pred": 0.6000499107914877
+    },
+    {
+      "sigma": 0.01,
+      "prior_var": 0.5,
+      "n": 2613,
+      "log_loss": 0.6015537081063492,
+      "accuracy": 0.6781477229238423,
+      "mean_pred": 0.6012017407700981
+    },
+    {
+      "sigma": 0.01,
+      "prior_var": 1.0,
+      "n": 2613,
+      "log_loss": 0.6011531105317232,
+      "accuracy": 0.6789131266743207,
+      "mean_pred": 0.6023437022388258
+    },
+    {
+      "sigma": 0.02,
+      "prior_var": 0.25,
+      "n": 2613,
+      "log_loss": 0.5979682329590179,
+      "accuracy": 0.677382319173364,
+      "mean_pred": 0.6051877240253838
+    },
+    {
+      "sigma": 0.02,
+      "prior_var": 0.5,
+      "n": 2613,
+      "log_loss": 0.597664416536764,
+      "accuracy": 0.6789131266743207,
+      "mean_pred": 0.6062145002564687
+    },
+    {
+      "sigma": 0.02,
+      "prior_var": 1.0,
+      "n": 2613,
+      "log_loss": 0.5974301527684917,
+      "accuracy": 0.6792958285495599,
+      "mean_pred": 0.6072452583220315
+    },
+    {
+      "sigma": 0.03,
+      "prior_var": 0.25,
+      "n": 2613,
+      "log_loss": 0.5971175926744925,
+      "accuracy": 0.6739380022962113,
+      "mean_pred": 0.6079484536466617
+    },
+    {
+      "sigma": 0.03,
+      "prior_var": 0.5,
+      "n": 2613,
+      "log_loss": 0.5969940241503356,
+      "accuracy": 0.6762342135476463,
+      "mean_pred": 0.6088640997882694
+    },
+    {
+      "sigma": 0.03,
+      "prior_var": 1.0,
+      "n": 2613,
+      "log_loss": 0.5969575286933787,
+      "accuracy": 0.6758515116724072,
+      "mean_pred": 0.6097918593557531
+    },
+    {
+      "sigma": 0.05,
+      "prior_var": 0.25,
+      "n": 2613,
+      "log_loss": 0.5984384612442691,
+      "accuracy": 0.6735553004209721,
+      "mean_pred": 0.6109022277419242
+    },
+    {
+      "sigma": 0.05,
+      "prior_var": 0.5,
+      "n": 2613,
+      "log_loss": 0.5986727063114751,
+      "accuracy": 0.6743207041714504,
+      "mean_pred": 0.6116205607433856
+    },
+    {
+      "sigma": 0.05,
+      "prior_var": 1.0,
+      "n": 2613,
+      "log_loss": 0.5990360350766316,
+      "accuracy": 0.6739380022962113,
+      "mean_pred": 0.61236698429168
+    },
+    {
+      "sigma": 0.08,
+      "prior_var": 0.25,
+      "n": 2613,
+      "log_loss": 0.6032579206501645,
+      "accuracy": 0.6735553004209721,
+      "mean_pred": 0.613229794075197
+    },
+    {
+      "sigma": 0.08,
+      "prior_var": 0.5,
+      "n": 2613,
+      "log_loss": 0.6039711776589262,
+      "accuracy": 0.6735553004209721,
+      "mean_pred": 0.6136977939310824
+    },
+    {
+      "sigma": 0.08,
+      "prior_var": 1.0,
+      "n": 2613,
+      "log_loss": 0.6048908738875893,
+      "accuracy": 0.6735553004209721,
+      "mean_pred": 0.614219269398081
+    },
+    {
+      "sigma": 0.12,
+      "prior_var": 0.25,
+      "n": 2613,
+      "log_loss": 0.6119476026240885,
+      "accuracy": 0.6739380022962113,
+      "mean_pred": 0.6149455685134588
+    },
+    {
+      "sigma": 0.12,
+      "prior_var": 0.5,
+      "n": 2613,
+      "log_loss": 0.6132228219116547,
+      "accuracy": 0.6731725985457329,
+      "mean_pred": 0.6151503277261176
+    },
+    {
+      "sigma": 0.12,
+      "prior_var": 1.0,
+      "n": 2613,
+      "log_loss": 0.6148240661914444,
+      "accuracy": 0.6720244929200153,
+      "mean_pred": 0.6154364446945917
+    },
+    {
+      "sigma": 0.18,
+      "prior_var": 0.25,
+      "n": 2613,
+      "log_loss": 0.6276170419221512,
+      "accuracy": 0.6689628779181018,
+      "mean_pred": 0.6163362463048527
+    },
+    {
+      "sigma": 0.18,
+      "prior_var": 0.5,
+      "n": 2613,
+      "log_loss": 0.6297067482803597,
+      "accuracy": 0.6666666666666666,
+      "mean_pred": 0.6162559347662693
+    },
+    {
+      "sigma": 0.18,
+      "prior_var": 1.0,
+      "n": 2613,
+      "log_loss": 0.6323223242199463,
+      "accuracy": 0.6670493685419059,
+      "mean_pred": 0.6162742141146835
+    }
+  ],
+  "note": "Ordinary random-walk ability filter + iid analytic forecast. Match-only, tour-level singles (G/M/A/F). If off, check surface handling, Davis Cup inclusion, per-surface skills, first/second serve split, and data revisions."
+}
