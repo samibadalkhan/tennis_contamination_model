@@ -1,0 +1,77 @@
+{
+  "utc": "2026-09-22T04:13:06+00:00",
+  "eval_year": 2019,
+  "n_matches": 2603,
+  "sigma": 0.03,
+  "prior_var": 1.0,
+  "caps": [
+    1.345,
+    2.5
+  ],
+  "note": "Development season, not test. Same sigma/forecast both arms; only the Huber cap differs. Positive paired_ll_gain = robust better. Tournament-clustered bootstrap.",
+  "arms": {
+    "ordinary": {
+      "log_loss": 0.6562925581625825,
+      "accuracy": 0.6334998079139454,
+      "mean_pred": 0.5823811415758268
+    },
+    "robust_1.345": {
+      "log_loss": 0.6683386941940754,
+      "accuracy": 0.6227429888590088,
+      "mean_pred": 0.5782111040050127
+    },
+    "robust_2.5": {
+      "log_loss": 0.6588742842171231,
+      "accuracy": 0.6319631194775259,
+      "mean_pred": 0.5824438104353655
+    }
+  },
+  "comparisons": {
+    "robust_1.345": {
+      "cap": 1.345,
+      "paired_ll_gain": {
+        "mean": -0.012046136031493087,
+        "lo": -0.018685140212015314,
+        "hi": -0.0053410886660365964,
+        "se": 0.003419527015132163,
+        "sig": true
+      },
+      "first_match": {
+        "n": 1195,
+        "mean": -0.010991934082974691,
+        "lo": -0.02190145321956506,
+        "hi": 0.0004252376980338886
+      },
+      "later_round": {
+        "n": 1408,
+        "mean": -0.012940859986379083,
+        "lo": -0.018739768465724185,
+        "hi": -0.006819290258466138
+      },
+      "n_capped_updates": null
+    },
+    "robust_2.5": {
+      "cap": 2.5,
+      "paired_ll_gain": {
+        "mean": -0.002581726054540613,
+        "lo": -0.004760089127801792,
+        "hi": -0.0002580647527722983,
+        "se": 0.001158486966918089,
+        "sig": true
+      },
+      "first_match": {
+        "n": 1195,
+        "mean": -0.004787184423244383,
+        "lo": -0.009023750851226413,
+        "hi": -0.0008338508253448432
+      },
+      "later_round": {
+        "n": 1408,
+        "mean": -0.0007099059191705814,
+        "lo": -0.003083134482060831,
+        "hi": 0.00174484576381642
+      },
+      "n_capped_updates": null
+    }
+  }
+}

@@ -75,8 +75,8 @@ disappears. So:
 
 ## Code
 
-Project source code is licensed separately from the data (see repository
-`LICENSE` / `README.md`). The CC BY-NC-SA 4.0 license above governs the **data
+Project source code is licensed separately from the data (MIT; see repository
+`LICENSE`). The CC BY-NC-SA 4.0 license above governs the **data
 only**.
 
 ## References

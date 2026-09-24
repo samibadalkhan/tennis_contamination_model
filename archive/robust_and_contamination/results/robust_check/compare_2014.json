@@ -1,0 +1,77 @@
+{
+  "utc": "2026-09-22T04:12:56+00:00",
+  "eval_year": 2014,
+  "n_matches": 2573,
+  "sigma": 0.03,
+  "prior_var": 1.0,
+  "caps": [
+    1.345,
+    2.5
+  ],
+  "note": "Development season, not test. Same sigma/forecast both arms; only the Huber cap differs. Positive paired_ll_gain = robust better. Tournament-clustered bootstrap.",
+  "arms": {
+    "ordinary": {
+      "log_loss": 0.6128015168856885,
+      "accuracy": 0.6789739603575593,
+      "mean_pred": 0.6162052376836898
+    },
+    "robust_1.345": {
+      "log_loss": 0.6210842004625333,
+      "accuracy": 0.6793626117372716,
+      "mean_pred": 0.6121202866302432
+    },
+    "robust_2.5": {
+      "log_loss": 0.6161718160164013,
+      "accuracy": 0.6816945200155461,
+      "mean_pred": 0.6158640645729219
+    }
+  },
+  "comparisons": {
+    "robust_1.345": {
+      "cap": 1.345,
+      "paired_ll_gain": {
+        "mean": -0.008282683576844842,
+        "lo": -0.016661713388251582,
+        "hi": 0.00040642908582760385,
+        "se": 0.004309820997620073,
+        "sig": false
+      },
+      "first_match": {
+        "n": 1170,
+        "mean": -0.0034707110675902065,
+        "lo": -0.018977646713543142,
+        "hi": 0.013739831200064332
+      },
+      "later_round": {
+        "n": 1403,
+        "mean": -0.012295518812645219,
+        "lo": -0.021946784407276324,
+        "hi": -0.005535943574836969
+      },
+      "n_capped_updates": null
+    },
+    "robust_2.5": {
+      "cap": 2.5,
+      "paired_ll_gain": {
+        "mean": -0.003370299130712756,
+        "lo": -0.008590725838599947,
+        "hi": -2.1206670161126262e-05,
+        "se": 0.0022054099317243914,
+        "sig": true
+      },
+      "first_match": {
+        "n": 1170,
+        "mean": -0.0035854533920650117,
+        "lo": -0.008304566168211942,
+        "hi": 0.0008890605668472223
+      },
+      "later_round": {
+        "n": 1403,
+        "mean": -0.0031908761187511452,
+        "lo": -0.009745142689905865,
+        "hi": 0.0008843883105002417
+      },
+      "n_capped_updates": null
+    }
+  }
+}

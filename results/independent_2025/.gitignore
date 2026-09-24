@@ -1,0 +1,2 @@
+# Large posterior arrays are reproducible from the sealed protocol and hashes.
+fits/*.npz

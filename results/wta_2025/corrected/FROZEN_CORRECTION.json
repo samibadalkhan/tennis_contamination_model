@@ -1,0 +1,29 @@
+{
+  "utc": "2026-09-23T18:02:31+00:00",
+  "status": "frozen_protocol_correction_after_test_open",
+  "periods": [
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89
+  ],
+  "levels": [
+    "F",
+    "G",
+    "I",
+    "P",
+    "PM"
+  ],
+  "mcmc_seed": 1729,
+  "burst_seed": 4001,
+  "burst_rate": 0.5,
+  "temperature": 1.5,
+  "team_event_pattern": "(?:United Cup|Fed Cup|Billie Jean King Cup|Hopman Cup)",
+  "protocol_sha256": "d0a06ac8f10575f0fada6c0805495e5fc34d243895c79ffaaecb443c6e27e1bf",
+  "deviation_sha256": "36d9ac317b21c81a55ab908ab66ae76db829d6725c4ccc4da48c0129b73256af",
+  "code_sha256": "256c8830d67f1a8422ac4116c06c70cb7346dbce13aa926bd65163f4a9ea5098",
+  "test_source_sha256": "e4eb002bc6d828b0bd21e04ed286e68722ddc8ccbbb27ea980bf62e938377f96"
+}

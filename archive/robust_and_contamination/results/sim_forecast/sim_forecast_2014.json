@@ -1,0 +1,105 @@
+{
+  "utc": "2026-09-22T04:18:44+00:00",
+  "eval_year": 2014,
+  "tune_year": 2013,
+  "sigma": 0.03,
+  "prior_var": 0.25,
+  "sev": 1.5,
+  "len_frac": 0.35,
+  "rate_grid": [
+    0.0,
+    0.1,
+    0.2,
+    0.35
+  ],
+  "S": 200,
+  "arms": {
+    "ordinary": {
+      "tuned_rate": 0.35,
+      "tune_curve": [
+        {
+          "rate": 0.0,
+          "log_loss": 0.6040109125746858
+        },
+        {
+          "rate": 0.1,
+          "log_loss": 0.5977294077640457
+        },
+        {
+          "rate": 0.2,
+          "log_loss": 0.5945761374140753
+        },
+        {
+          "rate": 0.35,
+          "log_loss": 0.5919123120572365
+        }
+      ],
+      "log_loss": 0.5984432796458191,
+      "accuracy": 0.6677030703458997,
+      "mean_pred": 0.5904672667033514
+    },
+    "robust_1.345": {
+      "tuned_rate": 0.2,
+      "tune_curve": [
+        {
+          "rate": 0.0,
+          "log_loss": 0.6135067573900413
+        },
+        {
+          "rate": 0.1,
+          "log_loss": 0.6051455697142909
+        },
+        {
+          "rate": 0.2,
+          "log_loss": 0.5989933673382146
+        },
+        {
+          "rate": 0.35,
+          "log_loss": 0.599371715835907
+        }
+      ],
+      "log_loss": 0.6041170945151569,
+      "accuracy": 0.6719782355227361,
+      "mean_pred": 0.5977515940478619,
+      "paired_gain_vs_ordinary_sim": {
+        "mean": -0.0057,
+        "lo": -0.0113,
+        "hi": -0.0002
+      }
+    },
+    "robust_2.5": {
+      "tuned_rate": 0.35,
+      "tune_curve": [
+        {
+          "rate": 0.0,
+          "log_loss": 0.607514365112075
+        },
+        {
+          "rate": 0.1,
+          "log_loss": 0.5996967891453437
+        },
+        {
+          "rate": 0.2,
+          "log_loss": 0.5950404738822875
+        },
+        {
+          "rate": 0.35,
+          "log_loss": 0.5923896999388933
+        }
+      ],
+      "log_loss": 0.5993048038032313,
+      "accuracy": 0.6766420520792849,
+      "mean_pred": 0.5908347538990198,
+      "paired_gain_vs_ordinary_sim": {
+        "mean": -0.0009,
+        "lo": -0.0045,
+        "hi": 0.0028
+      }
+    }
+  },
+  "ordinary_iid_reference": {
+    "log_loss": 0.6100498761938984,
+    "accuracy": 0.6762534006995725
+  },
+  "paired_ci_note": "Tournament-clustered bootstrap (64 clusters, B=2000), after the tourney-id recording fix."
+}

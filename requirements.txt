@@ -2,5 +2,7 @@
 # standard library (no install needed to pull the data).
 numpy
 pandas
+pyarrow        # src/build_processed.py: read/write the derived parquet layer
 scipy
-statsmodels
+scikit-learn   # src/audit.py: LogisticRegression power-check proxy
+matplotlib     # experiment reports and results/plots/ figure generators

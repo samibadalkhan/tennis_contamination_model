@@ -1,0 +1,8 @@
+{
+  "utc": "2026-09-23T04:30:36Z",
+  "status": "interrupted_before_any_fit_was_saved",
+  "period": 83,
+  "draw_progress_by_chain": [42, 28, 27, 23],
+  "reason": "The first WTA fit was launched concurrently with the ATP seed replication. Aggregate sampler throughput fell, so the WTA process was interrupted and will be restarted after the ATP run completes.",
+  "protocol_effect": "None. No posterior, prediction, or score was saved; the frozen cohort, code, sampler settings, and random seeds are unchanged."
+}

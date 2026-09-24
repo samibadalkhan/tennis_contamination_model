@@ -1,0 +1,107 @@
+{
+  "utc": "2026-09-22T10:33:56+00:00",
+  "n": 2208,
+  "published_reference": {
+    "log_loss": 0.592,
+    "accuracy": 0.688
+  },
+  "ordinary_published_rules": {
+    "log_loss": {
+      "tournament": {
+        "mean": 0.5929311843327131,
+        "lo": 0.5662222959163035,
+        "hi": 0.625075972720313,
+        "n": 2208
+      },
+      "player_tournament": {
+        "mean": 0.5929311843327131,
+        "lo": 0.5537071313748783,
+        "hi": 0.638788747599645,
+        "n": 2208
+      }
+    },
+    "accuracy": {
+      "tournament": {
+        "mean": 0.6884057971014492,
+        "lo": 0.668545009905245,
+        "hi": 0.7064151810710959,
+        "n": 2208
+      },
+      "player_tournament": {
+        "mean": 0.6884057971014492,
+        "lo": 0.6531618629509449,
+        "hi": 0.7198716877967217,
+        "n": 2208
+      }
+    },
+    "brier": {
+      "tournament": {
+        "mean": 0.20231918054236658,
+        "lo": 0.19280991969458194,
+        "hi": 0.21368483475243163,
+        "n": 2208
+      },
+      "player_tournament": {
+        "mean": 0.20231918054236658,
+        "lo": 0.18701178284358502,
+        "hi": 0.21950441305524618,
+        "n": 2208
+      }
+    },
+    "calibration": {
+      "slope": 0.6958996558981887,
+      "ece_10": 0.04984672088832006,
+      "construction": "winner-first forecasts mirrored to both orientations"
+    }
+  },
+  "ordinary_historical_rules": {
+    "log_loss": {
+      "tournament": {
+        "mean": 0.5932231522879491,
+        "lo": 0.5666118984167248,
+        "hi": 0.6252388859715663,
+        "n": 2208
+      },
+      "player_tournament": {
+        "mean": 0.5932231522879491,
+        "lo": 0.5539083081635667,
+        "hi": 0.6392867884212505,
+        "n": 2208
+      }
+    },
+    "accuracy": {
+      "tournament": {
+        "mean": 0.6884057971014492,
+        "lo": 0.668545009905245,
+        "hi": 0.7064151810710959,
+        "n": 2208
+      },
+      "player_tournament": {
+        "mean": 0.6884057971014492,
+        "lo": 0.6531618629509449,
+        "hi": 0.7198716877967217,
+        "n": 2208
+      }
+    },
+    "brier": {
+      "tournament": {
+        "mean": 0.20236895386554626,
+        "lo": 0.19292000115169805,
+        "hi": 0.21371015120905226,
+        "n": 2208
+      },
+      "player_tournament": {
+        "mean": 0.20236895386554626,
+        "lo": 0.1870452649841608,
+        "hi": 0.2195286758328461,
+        "n": 2208
+      }
+    },
+    "calibration": {
+      "slope": 0.6933790927814245,
+      "ece_10": 0.0502192872283575,
+      "construction": "winner-first forecasts mirrored to both orientations"
+    }
+  },
+  "within_existing_002_tolerance": true
+}

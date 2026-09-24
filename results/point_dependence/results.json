@@ -1,0 +1,79 @@
+{
+  "utc": "2026-09-23T03:32:57+00:00",
+  "source": "/Users/sami/tennis_contamination_model/data/processed/points.parquet",
+  "n_points": 1867212,
+  "methods": {
+    "sequence": "Within each match-server, preserve n and k and compare adjacent outcomes with their random-permutation expectation; require at least 20 service points.",
+    "sets": "Within each match-server, compare per-set counts with the exact multivariate-hypergeometric Pearson expectation; require at least 12 service points per set and two sets.",
+    "intervals": "3000 match-cluster bootstrap replicates, seed 2907.",
+    "chronology": "point_no is numeric and strictly increasing within every source match."
+  },
+  "groups": {
+    "men": {
+      "n_matches": 5271,
+      "n_match_server_sequences": 10534,
+      "n_match_server_set_profiles": 10465,
+      "estimates": {
+        "excess_adjacent_agreement": {
+          "value": 0.0026702626894567687,
+          "lo": 0.0018422419935429897,
+          "hi": 0.003495467329952397
+        },
+        "permutation_adjusted_lag1_rho": {
+          "value": 0.006547683849961836,
+          "lo": 0.0047262777234064095,
+          "hi": 0.008411025794086851
+        },
+        "set_rate_dispersion_ratio": {
+          "value": 1.1922708580088806,
+          "lo": 1.1717358960329345,
+          "hi": 1.2106120882939841
+        }
+      }
+    },
+    "women": {
+      "n_matches": 4941,
+      "n_match_server_sequences": 9876,
+      "n_match_server_set_profiles": 9809,
+      "estimates": {
+        "excess_adjacent_agreement": {
+          "value": 0.000371120993478041,
+          "lo": -0.0007325017925014949,
+          "hi": 0.0015150400071199022
+        },
+        "permutation_adjusted_lag1_rho": {
+          "value": 0.0018892535335353552,
+          "lo": -0.0003982713654659479,
+          "hi": 0.0042837069842115525
+        },
+        "set_rate_dispersion_ratio": {
+          "value": 1.1912756447969324,
+          "lo": 1.163158590364982,
+          "hi": 1.2182870827944707
+        }
+      }
+    },
+    "all": {
+      "n_matches": 10212,
+      "n_match_server_sequences": 20410,
+      "n_match_server_set_profiles": 20274,
+      "estimates": {
+        "excess_adjacent_agreement": {
+          "value": 0.0018213542549363007,
+          "lo": 0.0011603922920282032,
+          "hi": 0.0024857411232163695
+        },
+        "permutation_adjusted_lag1_rho": {
+          "value": 0.004766652686833819,
+          "lo": 0.003317231043552187,
+          "hi": 0.006217083204284601
+        },
+        "set_rate_dispersion_ratio": {
+          "value": 1.1919549537240286,
+          "lo": 1.1756378338666595,
+          "hi": 1.2077700541382215
+        }
+      }
+    }
+  }
+}

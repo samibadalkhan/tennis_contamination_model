@@ -163,6 +163,7 @@ activemq-data/
 .env
 .envrc
 .venv
+.venv*/
 env/
 venv/
 ENV/
@@ -228,3 +229,37 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Local macOS metadata
+.DS_Store
+
+# ---------------------------------------------------------------------------
+# Local editor / agent / tool state
+.claude/
+.vscode/
+.idea/
+*.swp
+.mplconfig/
+
+# Per-parameter MCMC summaries (~1 MB each) are regenerable from the fits;
+# the headline R-hat/ESS diagnostics stay in each fit's .json metadata.
+**/fits/*_diagnostics.csv
+
+# Per-match point-derived table (13 MB) rebuilt by analyze.py from the
+# licensed Sackmann point data; results.json and report.md carry the findings.
+analysis/point_structure_followup/match_components.csv
+
+# AI-agent instruction files stay local.
+CLAUDE.md
+**/CLAUDE.md
+AGENTS.md
+**/AGENTS.md
+.cursorrules
+.cursor/
+.github/copilot-instructions.md
+
+# Match-level rows derived from Martin Ingram's author fixture
+# (martiningram/tennis_bayes_point_based carries no license, so its rows are
+# not redistributed). Summary metrics remain in the adjacent JSON/markdown.
+results/independent/*_predictions*.csv
+archive/robust_and_contamination/results/independent/*_predictions*.csv

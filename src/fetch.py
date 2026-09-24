@@ -33,7 +33,7 @@ Provenance is UNEVEN and the code encodes it (see ``SOURCES``):
   archive is a second fallback, usable ONLY when its bytes reproduce our
   recorded hashes.
 
-Design notes worth respecting (see CLAUDE.md):
+Design notes worth respecting:
   * Singles only. The slam directory also carries ``-doubles`` / ``-mixed``
     files; those are filtered out here so a later glob can't pull them in.
   * ``atp``/``wta`` match files are windowed to 2011-2024 and tour-level main

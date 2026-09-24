@@ -1,0 +1,90 @@
+{
+  "description": "Curated copies and summaries of the final experiment figures",
+  "copied": [
+    {
+      "output": "atp_frozen_holdout.png",
+      "source": "results/independent_2025/ordinary_2025_holdout.png",
+      "source_sha256": "84b592e50e99d9ede351e12d62052ecee241f3679f9f42f63525e374320cf8a0",
+      "output_sha256": "84b592e50e99d9ede351e12d62052ecee241f3679f9f42f63525e374320cf8a0"
+    },
+    {
+      "output": "atp_online_updates.png",
+      "source": "results/independent_2025/online_2025_updates.png",
+      "source_sha256": "71acab2689d456b511a89bc2d573d0f23b7c1cd641f2f69eb0eaa8ee084ab808",
+      "output_sha256": "71acab2689d456b511a89bc2d573d0f23b7c1cd641f2f69eb0eaa8ee084ab808"
+    },
+    {
+      "output": "mcmc_seed_replication.png",
+      "source": "results/independent_2025/mcmc_seed_1729/mcmc_seed_summary.png",
+      "source_sha256": "8b0fe4b46a55ad65870ca36eaa34dafcd37ea7a36df274ffdb9af20639357b5b",
+      "output_sha256": "8b0fe4b46a55ad65870ca36eaa34dafcd37ea7a36df274ffdb9af20639357b5b"
+    },
+    {
+      "output": "burst_vs_temperature_by_format.png",
+      "source": "results/independent_2025/mechanism_splits/burst_vs_temperature_by_format.png",
+      "source_sha256": "2eeacbc2924092e32fee05d38eb76c10e504135879607bc01ec701298bcdfbc5",
+      "output_sha256": "2eeacbc2924092e32fee05d38eb76c10e504135879607bc01ec701298bcdfbc5"
+    },
+    {
+      "output": "burst_vs_temperature_by_edge.png",
+      "source": "results/independent_2025/mechanism_splits/burst_vs_temperature_by_edge.png",
+      "source_sha256": "8a0577523912ef9028d250bf5dbfcdd3d5770465302c3476cddb3ee0400cf568",
+      "output_sha256": "8a0577523912ef9028d250bf5dbfcdd3d5770465302c3476cddb3ee0400cf568"
+    },
+    {
+      "output": "wta_corrected_holdout.png",
+      "source": "results/wta_2025/corrected/wta_2025_summary.png",
+      "source_sha256": "f33706057239bebf1786b4171b66268f21166202af3eada378b62b93cfa13e82",
+      "output_sha256": "f33706057239bebf1786b4171b66268f21166202af3eada378b62b93cfa13e82"
+    },
+    {
+      "output": "point_dependence.png",
+      "source": "results/point_dependence/point_dependence.png",
+      "source_sha256": "946ac5d50c5a6797756d4844fc9968bab1e49117d4fa6aa6467540e78d7b577c",
+      "output_sha256": "946ac5d50c5a6797756d4844fc9968bab1e49117d4fa6aa6467540e78d7b577c"
+    },
+    {
+      "output": "point_structure_followup.png",
+      "source": "analysis/point_structure_followup/lag_structure.png",
+      "source_sha256": "74a50b1732f087ab96b4fb22f7eb1f65288b52baebc914abb3224e4209389f0d",
+      "output_sha256": "74a50b1732f087ab96b4fb22f7eb1f65288b52baebc914abb3224e4209389f0d"
+    }
+  ],
+  "generated": [
+    {
+      "output": "forecast_log_loss.png",
+      "output_sha256": "92a47314e6c1225f2cff4f5d4566ae2b0a2e560a3f383d9cb88ee70934e26951",
+      "inputs": {
+        "results/independent_2025/results.json": "ce8641b743f147c7d5eda3a021d0f1c1711dbdc6efa92b2da2e4e5709ce48b4f",
+        "results/independent_2025/online_results.json": "99a0e5a73667834f06459ae9cf86383aa515008f68e9af9f49e6f729d252711c",
+        "results/wta_2025/corrected/results.json": "91ae220e64c959eb139cd26990a0cdcaf2e3e2a6d76d0d77583975c3ce0aa275"
+      }
+    },
+    {
+      "output": "fit_diagnostics.png",
+      "output_sha256": "f54085f1ed99387c8d3259cd942e18fa794217ff56d0133f9516ca60bde832a0",
+      "inputs": {
+        "results/independent_2025/fits/ordinary_period_84.json": "6a5ae7b68cf8e3255482b7a2335e360408250f3113a40dfc274022f788c415aa",
+        "results/independent_2025/fits/ordinary_period_85.json": "94a2b667fe31906f417e507d4f4f0c6a4f2f90e72df8cb8b5491961935ed204a",
+        "results/independent_2025/fits/ordinary_period_86.json": "e808f6801988cc12c6765c9668f9a39540cddc41017d31add05c858ba236e9ae",
+        "results/independent_2025/fits/ordinary_period_87.json": "429b8f1e09017c33c5249c78da588f1e1980ef93510fc3d892b97cc5d16a4e0c",
+        "results/independent_2025/fits/ordinary_period_88.json": "4a747459f2c8a543b3319cad12e8fa9e7653199d43ca2b5a270014b12b4065c9",
+        "results/independent_2025/fits/ordinary_period_89.json": "34599ad09625fd87c55c9c50a817319a9d17962f3001924797590a5aecc89e1a",
+        "results/independent_2025/mcmc_seed_1729/fits/ordinary_period_84.json": "0ffa0fc7025f87cb28f5827c99f5b449ecb8cdf2478ba25462fbdcc04f03dfb5",
+        "results/independent_2025/mcmc_seed_1729/fits/ordinary_period_85.json": "d4261739df6515a8fd79d2c7d5e3c955fc24677d7a3c1795d7cd36debe30aa0e",
+        "results/independent_2025/mcmc_seed_1729/fits/ordinary_period_86.json": "b83eb65a52914f3796d45d7fbdce06b4323705b5b087794f974e14a98e7e465c",
+        "results/independent_2025/mcmc_seed_1729/fits/ordinary_period_87.json": "2b456afed30f75001565ef528a147f8043b8becc2be26ce47bc593990d4021a4",
+        "results/independent_2025/mcmc_seed_1729/fits/ordinary_period_88.json": "4e1f70658ce6f3f4d0e83eec063eb898b2ca8954e567ed5aec7eb1b8b65d2c9f",
+        "results/independent_2025/mcmc_seed_1729/fits/ordinary_period_89.json": "0a78660cfae47ec51ad0117bed337f748f4ccf7b78c0eb3c987da9802a77ce8b",
+        "results/wta_2025/corrected/fits/ordinary_period_83.json": "e8e6dabdd376c41e907304af23bfd828969509976f76ba35b979874f8b38f82f",
+        "results/wta_2025/corrected/fits/ordinary_period_84.json": "432bfc10486d9c51e7c1ada0d4ec26225249aa8620c9a44f73985a9ae876817b",
+        "results/wta_2025/corrected/fits/ordinary_period_85.json": "b92804b70fbf1669bd52cbd7d6cedaa9bc63e89765a5329db28751963a210b75",
+        "results/wta_2025/corrected/fits/ordinary_period_86.json": "d4e40ef8893a5d610ad562c411183a2490dd78fcc92137393d58e09dcec6ddf9",
+        "results/wta_2025/corrected/fits/ordinary_period_87.json": "bf8658cc4d8681dcfd2be50b34a3fa3a3d1f007dda97b1fc852680384da8250e",
+        "results/wta_2025/corrected/fits/ordinary_period_88.json": "505d2d3852d1e92eff050d301def88710e07cc9709a56f5ebd142d8f8a34ffc1",
+        "results/wta_2025/corrected/fits/ordinary_period_89.json": "fad1ddcd8a0d8da4f30e3137e5166743e9975a60bcb781d09473997915faf468"
+      }
+    }
+  ],
+  "script_sha256": "64cad4a746c7a05a7e8c20e811af9aac3446df35913c1363a7beaffbcf6f55f1"
+}

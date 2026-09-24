@@ -1,0 +1,86 @@
+{
+  "utc": "2026-09-22T10:50:28+00:00",
+  "status": "post-hoc exploratory control",
+  "validation_year": 2012,
+  "evaluation_year": 2013,
+  "temperature_grid": [
+    0.75,
+    0.9,
+    1.0,
+    1.1,
+    1.25,
+    1.5,
+    2.0
+  ],
+  "validation_curve": [
+    {
+      "temperature": 0.75,
+      "match_logloss": 0.8219769578293314
+    },
+    {
+      "temperature": 0.9,
+      "match_logloss": 0.741440338013225
+    },
+    {
+      "temperature": 1.0,
+      "match_logloss": 0.6979421113624017
+    },
+    {
+      "temperature": 1.1,
+      "match_logloss": 0.6641317622239674
+    },
+    {
+      "temperature": 1.25,
+      "match_logloss": 0.6263410952103713
+    },
+    {
+      "temperature": 1.5,
+      "match_logloss": 0.5855732312759024
+    },
+    {
+      "temperature": 2.0,
+      "match_logloss": 0.546932432924569
+    }
+  ],
+  "chosen_temperature": 2.0,
+  "modes": {
+    "frozen": {
+      "ordinary_match_logloss": 0.5844297858817086,
+      "temperature_match_logloss": 0.492569217125864,
+      "huber_match_logloss": 0.5608932134302168,
+      "temperature_vs_ordinary_gain": {
+        "mean": 0.09186056875584465,
+        "lo": 0.017019572711391616,
+        "hi": 0.1749158204637133,
+        "clusters": 4
+      },
+      "temperature_vs_huber_gain": {
+        "mean": 0.0683239963043529,
+        "lo": -0.007114171503718149,
+        "hi": 0.15204196301818784,
+        "clusters": 4
+      },
+      "matches": 346
+    },
+    "online": {
+      "ordinary_match_logloss": 0.5959399858776965,
+      "temperature_match_logloss": 0.5062695402426678,
+      "huber_match_logloss": 0.5574445211902022,
+      "temperature_vs_ordinary_gain": {
+        "mean": 0.08967044563502868,
+        "lo": 0.018464742910432982,
+        "hi": 0.16869140841476293,
+        "clusters": 4
+      },
+      "temperature_vs_huber_gain": {
+        "mean": 0.051174980947534476,
+        "lo": -0.019666075037667582,
+        "hi": 0.13296745393043768,
+        "clusters": 4
+      },
+      "matches": 346
+    }
+  },
+  "source_sha256": "862ef6a9f95439a17b93497c67a24dd89c82488cd459ff1632d325aefd0ecd42",
+  "note": "Grid was specified in the independent full-model protocol before this control. It was not registered in the early-real protocol; interpret only as a calibration diagnostic. The selected value is the maximum of the grid, so the optimum is not bracketed."
+}

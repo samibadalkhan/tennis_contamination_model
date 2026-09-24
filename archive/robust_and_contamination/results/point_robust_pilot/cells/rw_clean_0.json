@@ -1,0 +1,2368 @@
+{
+  "generator": "rw",
+  "condition": "clean",
+  "seed": 0,
+  "arms": {
+    "ordinary": {
+      "focal_rmse": 0.08782900572060327,
+      "other_rmse": 0.07794112468370984,
+      "all_rmse": 0.08052700012535326,
+      "per_player_rmse": [
+        0.0845672718646513,
+        0.09097386999083683,
+        0.08731626608804095,
+        0.05804288937247128,
+        0.07220407115639631,
+        0.07975236301253928,
+        0.0857946180077381,
+        0.080754085932364
+      ],
+      "removed_clean_fraction": 0.0,
+      "removed_corrupted_fraction": null,
+      "recovery_lags": null
+    },
+    "huber_2.5": {
+      "focal_rmse": 0.0879542492612699,
+      "other_rmse": 0.0778167426932849,
+      "all_rmse": 0.080470936202601,
+      "per_player_rmse": [
+        0.0841952296673351,
+        0.09155906960805081,
+        0.08688442568997834,
+        0.05589686117150663,
+        0.0724959411736918,
+        0.0791226624763865,
+        0.08693483123943088,
+        0.08115163619677364
+      ],
+      "removed_clean_fraction": 0.0,
+      "removed_corrupted_fraction": null,
+      "recovery_lags": null
+    },
+    "block_8": {
+      "focal_rmse": 0.08586344312974188,
+      "other_rmse": 0.07829685085456645,
+      "all_rmse": 0.08025540702550993,
+      "per_player_rmse": [
+        0.08276789592809045,
+        0.0888512078467458,
+        0.08953136272379471,
+        0.057475485177941606,
+        0.07192359819259127,
+        0.08002845663494255,
+        0.08656653885238723,
+        0.07994849165313739
+      ],
+      "removed_clean_fraction": 0.0010416666666666667,
+      "removed_corrupted_fraction": null,
+      "recovery_lags": null
+    },
+    "block_16": {
+      "focal_rmse": 0.08510453087691214,
+      "other_rmse": 0.07798307191993722,
+      "all_rmse": 0.07982302251542095,
+      "per_player_rmse": [
+        0.07923441750462236,
+        0.09059508504472955,
+        0.09089509002969673,
+        0.05812397323824052,
+        0.07165652188568773,
+        0.07967580334707158,
+        0.08348466423179927,
+        0.07997039108484279
+      ],
+      "removed_clean_fraction": 0.0015625,
+      "removed_corrupted_fraction": null,
+      "recovery_lags": null
+    },
+    "block_32": {
+      "focal_rmse": 0.08742696797811363,
+      "other_rmse": 0.07722780301881088,
+      "all_rmse": 0.07989974250143562,
+      "per_player_rmse": [
+        0.0858800219175453,
+        0.0889470139753671,
+        0.08478289769656734,
+        0.057747199728575144,
+        0.07483747032346469,
+        0.08023594221061126,
+        0.08288007231160528,
+        0.07971425696284228
+      ],
+      "removed_clean_fraction": 0.003125,
+      "removed_corrupted_fraction": null,
+      "recovery_lags": null
+    },
+    "oracle": {
+      "focal_rmse": 0.08782900572060327,
+      "other_rmse": 0.07794112468370984,
+      "all_rmse": 0.08052700012535326,
+      "per_player_rmse": [
+        0.0845672718646513,
+        0.09097386999083683,
+        0.08731626608804095,
+        0.05804288937247128,
+        0.07220407115639631,
+        0.07975236301253928,
+        0.0857946180077381,
+        0.080754085932364
+      ],
+      "removed_clean_fraction": 0.0,
+      "removed_corrupted_fraction": null,
+      "recovery_lags": null
+    }
+  },
+  "block_example": [
+    {
+      "session": 0,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.2248792479563164,
+      "eigenvalues": [
+        1.423217410424809
+      ]
+    },
+    {
+      "session": 1,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.2809857309878434,
+      "eigenvalues": [
+        1.3493061274781928
+      ]
+    },
+    {
+      "session": 2,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.3238546424871744,
+      "eigenvalues": [
+        1.064459232724967
+      ]
+    },
+    {
+      "session": 3,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.2524314061091895,
+      "eigenvalues": [
+        1.1084541199194287
+      ]
+    },
+    {
+      "session": 4,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.2115740402232404,
+      "eigenvalues": [
+        2.0034367952241277
+      ]
+    },
+    {
+      "session": 5,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.4489827138043583,
+      "eigenvalues": [
+        2.771258706689308,
+        2.372640526358973
+      ]
+    },
+    {
+      "session": 6,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.3159045955184436,
+      "eigenvalues": [
+        1.134347514200046
+      ]
+    },
+    {
+      "session": 7,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.5033656029868308,
+      "eigenvalues": [
+        0.9166179570292434
+      ]
+    },
+    {
+      "session": 8,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.3455007240028554,
+      "eigenvalues": [
+        1.0254464104528405
+      ]
+    },
+    {
+      "session": 9,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.3242224941630205,
+      "eigenvalues": [
+        1.1032470489871964
+      ]
+    },
+    {
+      "session": 10,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.210874317658865,
+      "eigenvalues": [
+        0.9753162763526362
+      ]
+    },
+    {
+      "session": 11,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.3317959954388927,
+      "eigenvalues": [
+        1.017175283637441
+      ]
+    },
+    {
+      "session": 12,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.374961080177437,
+      "eigenvalues": [
+        2.0992775147238736
+      ]
+    },
+    {
+      "session": 13,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.3218888922733316,
+      "eigenvalues": [
+        1.4499807941972123
+      ]
+    },
+    {
+      "session": 14,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.419217695852238,
+      "eigenvalues": [
+        0.7878797465937772
+      ]
+    },
+    {
+      "session": 15,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.4037918234511686,
+      "eigenvalues": [
+        1.603693754389265
+      ]
+    },
+    {
+      "session": 16,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.198652821749198,
+      "eigenvalues": [
+        0.9849270285467185
+      ]
+    },
+    {
+      "session": 17,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.734799732860607,
+      "eigenvalues": [
+        0.8625065107405263
+      ]
+    },
+    {
+      "session": 18,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.260018063388113,
+      "eigenvalues": [
+        0.908974863215891
+      ]
+    },
+    {
+      "session": 19,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.2889439386255166,
+      "eigenvalues": [
+        0.9027499637286884
+      ]
+    },
+    {
+      "session": 20,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.5183190837868175,
+      "eigenvalues": [
+        0.8900431813529958
+      ]
+    },
+    {
+      "session": 21,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.2889439386255166,
+      "eigenvalues": [
+        1.1555648809960726
+      ]
+    },
+    {
+      "session": 22,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.2516919573815746,
+      "eigenvalues": [
+        1.7577372668514895
+      ]
+    },
+    {
+      "session": 23,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.236733089027066,
+      "eigenvalues": [
+        0.8974360675161478
+      ]
+    },
+    {
+      "session": 24,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.1320212005382726,
+      "eigenvalues": [
+        1.1417360523620204
+      ]
+    },
+    {
+      "session": 25,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.213460081561103,
+      "eigenvalues": [
+        1.2327012626046177
+      ]
+    },
+    {
+      "session": 26,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.264537118669634,
+      "eigenvalues": [
+        1.8939833320141566
+      ]
+    },
+    {
+      "session": 27,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.45815314249625,
+      "eigenvalues": [
+        1.5309242406343329
+      ]
+    },
+    {
+      "session": 28,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.206581010574185,
+      "eigenvalues": [
+        1.220302714237373
+      ]
+    },
+    {
+      "session": 29,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.2371562888327077,
+      "eigenvalues": [
+        2.246091899580137,
+        1.5384053752284648
+      ]
+    },
+    {
+      "session": 30,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.32867479476422,
+      "eigenvalues": [
+        2.6507246559362447,
+        1.3936481377915708
+      ]
+    },
+    {
+      "session": 31,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.0936941787648506,
+      "eigenvalues": [
+        0.9879109512872979
+      ]
+    },
+    {
+      "session": 32,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.5935763077833958,
+      "eigenvalues": [
+        1.52834033254426
+      ]
+    },
+    {
+      "session": 33,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.4160625398221462,
+      "eigenvalues": [
+        1.1498564650705974
+      ]
+    },
+    {
+      "session": 34,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.2658462045975947,
+      "eigenvalues": [
+        0.6475977762426335
+      ]
+    },
+    {
+      "session": 35,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.391315516713412,
+      "eigenvalues": [
+        1.006405594797646
+      ]
+    },
+    {
+      "session": 36,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.203743743545904,
+      "eigenvalues": [
+        1.3270066127046252
+      ]
+    },
+    {
+      "session": 37,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.734799732860607,
+      "eigenvalues": [
+        1.8725508802422206
+      ]
+    },
+    {
+      "session": 38,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.271027131058863,
+      "eigenvalues": [
+        0.8115272356450153
+      ]
+    },
+    {
+      "session": 39,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.213460081561103,
+      "eigenvalues": [
+        1.314645560361303
+      ]
+    },
+    {
+      "session": 40,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.186217685509207,
+      "eigenvalues": [
+        1.024757939320278
+      ]
+    },
+    {
+      "session": 41,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.1953705151536536,
+      "eigenvalues": [
+        0.9846300105430235
+      ]
+    },
+    {
+      "session": 42,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.3432536265592185,
+      "eigenvalues": [
+        0.7143009474056414
+      ]
+    },
+    {
+      "session": 43,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.131679456275194,
+      "eigenvalues": [
+        0.8365560481897311
+      ]
+    },
+    {
+      "session": 44,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.2298542532539685,
+      "eigenvalues": [
+        1.1329235856712416
+      ]
+    },
+    {
+      "session": 45,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.2984127086666932,
+      "eigenvalues": [
+        1.4621652379360217
+      ]
+    },
+    {
+      "session": 46,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.2814422651788284,
+      "eigenvalues": [
+        0.8248403210380826
+      ]
+    },
+    {
+      "session": 47,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.213460081561103,
+      "eigenvalues": [
+        2.1303186432285823
+      ]
+    },
+    {
+      "session": 48,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.0947857411421813,
+      "eigenvalues": [
+        1.2065375049039737
+      ]
+    },
+    {
+      "session": 49,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.573282691653513,
+      "eigenvalues": [
+        0.7733780208278048
+      ]
+    },
+    {
+      "session": 50,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.5728942979533893,
+      "eigenvalues": [
+        1.9305083203137328
+      ]
+    },
+    {
+      "session": 51,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.3551277514366697,
+      "eigenvalues": [
+        1.1119718946874038
+      ]
+    },
+    {
+      "session": 52,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.4295228583897366,
+      "eigenvalues": [
+        1.213223719201459
+      ]
+    },
+    {
+      "session": 53,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.475619295764215,
+      "eigenvalues": [
+        1.7030198660262696
+      ]
+    },
+    {
+      "session": 54,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.213845386580261,
+      "eigenvalues": [
+        1.0795492617574465
+      ]
+    },
+    {
+      "session": 55,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.5033656029868308,
+      "eigenvalues": [
+        1.5337304196085173
+      ]
+    },
+    {
+      "session": 56,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.281474578011742,
+      "eigenvalues": [
+        1.7468120287025277
+      ]
+    },
+    {
+      "session": 57,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.248844977595822,
+      "eigenvalues": [
+        0.9591702583155494
+      ]
+    },
+    {
+      "session": 58,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.5136966187379675,
+      "eigenvalues": [
+        0.739349180994297
+      ]
+    },
+    {
+      "session": 59,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.471784711415296,
+      "eigenvalues": [
+        1.294737671119323
+      ]
+    },
+    {
+      "session": 60,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.3603830793339635,
+      "eigenvalues": [
+        1.39090167472416
+      ]
+    },
+    {
+      "session": 61,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.689460863095775,
+      "eigenvalues": [
+        0.9824440980020877
+      ]
+    },
+    {
+      "session": 62,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.203743743545904,
+      "eigenvalues": [
+        1.0914887275779441
+      ]
+    },
+    {
+      "session": 63,
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "corrupted_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 2.4105960009468412,
+      "eigenvalues": [
+        1.1479113602588071
+      ]
+    }
+  ],
+  "trial_ids": {
+    "ordinary": 674,
+    "huber_2.5": 675,
+    "block_8": 676,
+    "block_16": 677,
+    "block_32": 678,
+    "oracle": 679
+  }
+}

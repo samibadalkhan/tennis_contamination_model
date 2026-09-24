@@ -1,0 +1,3 @@
+# Large posterior samples are reproducible from the pinned source and protocol.
+fits/*.npz
+smoke/*.npz

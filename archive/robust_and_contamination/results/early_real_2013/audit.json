@@ -1,0 +1,844 @@
+{
+  "input_sha256": {
+    "atp/atp_matches_2011.csv": "8e91e4b680f0b4e9605a3c71b4c676b55e2a102de8544a7d3b2fbaca5977575a",
+    "atp/atp_matches_2012.csv": "03f03612691af370c9c47939dde4202d9858e05ea044367388115e627d4d13f3",
+    "atp/atp_matches_2013.csv": "9e1e3b124ac22c1b840118f78475a910cb2ea68684289581f70b54a022f2832c",
+    "slam_pointbypoint/2011-ausopen-matches.csv": "4c8c17b996890b805cea3d27c87f4944e5c33366fb3b9b0e56b29ba44792858d",
+    "slam_pointbypoint/2011-ausopen-points.csv": "257a5bb5f2499177da9ec3f7818228a0feab3dc39f02559843a2a0d2f344fb0a",
+    "slam_pointbypoint/2011-frenchopen-matches.csv": "72fe585a77c2cf2299c8b1e4c032bdac674458b4cc2cb5df477999312d7f8cc5",
+    "slam_pointbypoint/2011-frenchopen-points.csv": "fff0b4a45ae5d2babea5600bbb199f452dde45e28645fd7cf4c52d25d7626ed5",
+    "slam_pointbypoint/2011-wimbledon-matches.csv": "fea6e5c34f3781ce80add4648d785f6d290f65d51b64aec87c297401c6e3f5d6",
+    "slam_pointbypoint/2011-wimbledon-points.csv": "b93466ba4ee66a2619949a6420fdd07f5ca611f829e4401ed1f695eb83ce8013",
+    "slam_pointbypoint/2011-usopen-matches.csv": "92b2a1fcc15c2a9294ce55ccf361a27b622c901d7de846b6cf019307f1bf8980",
+    "slam_pointbypoint/2011-usopen-points.csv": "9e0f2087987e88b16117318919d661fa3d2c08f37e482b835f4c8c08c327818f",
+    "slam_pointbypoint/2012-ausopen-matches.csv": "c7da8cdc942573a69cbf733e7c5ba5fafec7297ae931588c0fd93da0ffa18288",
+    "slam_pointbypoint/2012-ausopen-points.csv": "a88ff5c043a023c6d8e67141ae519578274f8b301caf13afafc14935957ecd8a",
+    "slam_pointbypoint/2012-frenchopen-matches.csv": "5e037397364f3460cf7461efcf5676da3e2f5ba2c4df33ed7f1def573b013656",
+    "slam_pointbypoint/2012-frenchopen-points.csv": "6b9fb87abd3d314d1e60abbc8376398c1c487251931c36e6b436ba3a2c0cfb3d",
+    "slam_pointbypoint/2012-wimbledon-matches.csv": "197b73fbd9ecd23bb4168aa194e0724ff485b4cbf9a3bdece7df718909f6a900",
+    "slam_pointbypoint/2012-wimbledon-points.csv": "50b46bb813bfac311148c13d98338103ee3c9729a1c8bd087962b970aaa8f8a7",
+    "slam_pointbypoint/2012-usopen-matches.csv": "1b44eebbcdf540dfaa5d7e1ca7b2eaaeb2fc734bae95c9053e3b64a1588c633e",
+    "slam_pointbypoint/2012-usopen-points.csv": "661c661548ffbe18014e4ab92ba49de8d84bbdcac9f7901a269e9c74dc7e58c3",
+    "slam_pointbypoint/2013-ausopen-matches.csv": "7060339f0aaf28a4f92b1851e550f2a441c612933be7358ed1f59a79f45f88ff",
+    "slam_pointbypoint/2013-ausopen-points.csv": "acad03c788ae598ada94d1265e2eeccd1ee7ba4fc59cd48f2b5af76d62d49815",
+    "slam_pointbypoint/2013-frenchopen-matches.csv": "a8d8e1049cc289ba088c1d3e7bc9445c9fada39a75a8ee5e7415733b318f14b7",
+    "slam_pointbypoint/2013-frenchopen-points.csv": "3e2625ad23202b7e6f02f6a901732fd833a1a596f9e974b00319a7bf2f02949a",
+    "slam_pointbypoint/2013-wimbledon-matches.csv": "7ddfc267e1be2b86762059e98ead6db250de6a7b76d04ea148d29ccdfdd46cf2",
+    "slam_pointbypoint/2013-wimbledon-points.csv": "7609a73f2a7cee02f4607dac88fc4b8c508e5f0b685ffe0bb8baf7bfd20db536",
+    "slam_pointbypoint/2013-usopen-matches.csv": "289ed22d7af8f16321342a92a29d4fd97b060db6537199c17db0f19c112e683b",
+    "slam_pointbypoint/2013-usopen-points.csv": "f063b92169a2bcc2f718709a9c60ee7ff9b61d2fba180027baa6f5d2062ed2e0"
+  },
+  "coverage": [
+    {
+      "year": 2011,
+      "slam": "ausopen",
+      "atp_matches": 127,
+      "point_metadata_matches": 88,
+      "played_matches": 88,
+      "played_points": 18244,
+      "invalid_or_sentinel_rows": 89,
+      "no_played_points": [],
+      "point_number_gaps": 1,
+      "serve_count_disagreements": [
+        {
+          "match_id": "2011-ausopen-1116",
+          "recorded": [
+            104,
+            89
+          ],
+          "atp": [
+            105,
+            89
+          ]
+        },
+        {
+          "match_id": "2011-ausopen-1126",
+          "recorded": [
+            133,
+            131
+          ],
+          "atp": [
+            134,
+            132
+          ]
+        },
+        {
+          "match_id": "2011-ausopen-1138",
+          "recorded": [
+            134,
+            130
+          ],
+          "atp": [
+            134,
+            129
+          ]
+        },
+        {
+          "match_id": "2011-ausopen-1140",
+          "recorded": [
+            88,
+            68
+          ],
+          "atp": [
+            89,
+            68
+          ]
+        },
+        {
+          "match_id": "2011-ausopen-1163",
+          "recorded": [
+            126,
+            125
+          ],
+          "atp": [
+            126,
+            123
+          ]
+        },
+        {
+          "match_id": "2011-ausopen-1218",
+          "recorded": [
+            107,
+            96
+          ],
+          "atp": [
+            107,
+            95
+          ]
+        }
+      ],
+      "winner_label_disagreements": []
+    },
+    {
+      "year": 2011,
+      "slam": "frenchopen",
+      "atp_matches": 127,
+      "point_metadata_matches": 99,
+      "played_matches": 99,
+      "played_points": 21273,
+      "invalid_or_sentinel_rows": 99,
+      "no_played_points": [],
+      "point_number_gaps": 0,
+      "serve_count_disagreements": [
+        {
+          "match_id": "2011-frenchopen-1104",
+          "recorded": [
+            83,
+            101
+          ],
+          "atp": [
+            84,
+            101
+          ]
+        },
+        {
+          "match_id": "2011-frenchopen-1105",
+          "recorded": [
+            101,
+            104
+          ],
+          "atp": [
+            102,
+            104
+          ]
+        },
+        {
+          "match_id": "2011-frenchopen-1152",
+          "recorded": [
+            118,
+            109
+          ],
+          "atp": [
+            119,
+            109
+          ]
+        },
+        {
+          "match_id": "2011-frenchopen-1203",
+          "recorded": [
+            89,
+            94
+          ],
+          "atp": [
+            90,
+            94
+          ]
+        },
+        {
+          "match_id": "2011-frenchopen-1212",
+          "recorded": [
+            103,
+            91
+          ],
+          "atp": [
+            104,
+            91
+          ]
+        },
+        {
+          "match_id": "2011-frenchopen-1218",
+          "recorded": [
+            130,
+            113
+          ],
+          "atp": [
+            130,
+            114
+          ]
+        },
+        {
+          "match_id": "2011-frenchopen-1225",
+          "recorded": [
+            66,
+            53
+          ],
+          "atp": [
+            66,
+            54
+          ]
+        },
+        {
+          "match_id": "2011-frenchopen-1228",
+          "recorded": [
+            107,
+            92
+          ],
+          "atp": [
+            107,
+            93
+          ]
+        },
+        {
+          "match_id": "2011-frenchopen-1301",
+          "recorded": [
+            65,
+            56
+          ],
+          "atp": [
+            66,
+            56
+          ]
+        },
+        {
+          "match_id": "2011-frenchopen-1313",
+          "recorded": [
+            102,
+            109
+          ],
+          "atp": [
+            103,
+            109
+          ]
+        }
+      ],
+      "winner_label_disagreements": []
+    },
+    {
+      "year": 2011,
+      "slam": "wimbledon",
+      "atp_matches": 127,
+      "point_metadata_matches": 64,
+      "played_matches": 64,
+      "played_points": 13771,
+      "invalid_or_sentinel_rows": 64,
+      "no_played_points": [],
+      "point_number_gaps": 0,
+      "serve_count_disagreements": [
+        {
+          "match_id": "2011-wimbledon-1206",
+          "recorded": [
+            115,
+            150
+          ],
+          "atp": [
+            115,
+            149
+          ]
+        }
+      ],
+      "winner_label_disagreements": []
+    },
+    {
+      "year": 2011,
+      "slam": "usopen",
+      "atp_matches": 127,
+      "point_metadata_matches": 84,
+      "played_matches": 84,
+      "played_points": 16814,
+      "invalid_or_sentinel_rows": 84,
+      "no_played_points": [],
+      "point_number_gaps": 0,
+      "serve_count_disagreements": [
+        {
+          "match_id": "2011-usopen-1117",
+          "recorded": [
+            85,
+            98
+          ],
+          "atp": [
+            83,
+            98
+          ]
+        },
+        {
+          "match_id": "2011-usopen-1220",
+          "recorded": [
+            144,
+            134
+          ],
+          "atp": [
+            142,
+            134
+          ]
+        },
+        {
+          "match_id": "2011-usopen-1226",
+          "recorded": [
+            87,
+            83
+          ],
+          "atp": [
+            87,
+            81
+          ]
+        },
+        {
+          "match_id": "2011-usopen-1407",
+          "recorded": [
+            105,
+            112
+          ],
+          "atp": [
+            104,
+            112
+          ]
+        }
+      ],
+      "winner_label_disagreements": []
+    },
+    {
+      "year": 2012,
+      "slam": "ausopen",
+      "atp_matches": 127,
+      "point_metadata_matches": 85,
+      "played_matches": 85,
+      "played_points": 18466,
+      "invalid_or_sentinel_rows": 0,
+      "no_played_points": [],
+      "point_number_gaps": 0,
+      "serve_count_disagreements": [
+        {
+          "match_id": "2012-ausopen-1124",
+          "recorded": [
+            113,
+            111
+          ],
+          "atp": [
+            112,
+            111
+          ]
+        },
+        {
+          "match_id": "2012-ausopen-1314",
+          "recorded": [
+            116,
+            90
+          ],
+          "atp": [
+            118,
+            90
+          ]
+        },
+        {
+          "match_id": "2012-ausopen-1404",
+          "recorded": [
+            125,
+            144
+          ],
+          "atp": [
+            125,
+            142
+          ]
+        }
+      ],
+      "winner_label_disagreements": []
+    },
+    {
+      "year": 2012,
+      "slam": "frenchopen",
+      "atp_matches": 127,
+      "point_metadata_matches": 87,
+      "played_matches": 87,
+      "played_points": 19499,
+      "invalid_or_sentinel_rows": 327,
+      "no_played_points": [],
+      "point_number_gaps": 5,
+      "serve_count_disagreements": [
+        {
+          "match_id": "2012-frenchopen-1104",
+          "recorded": [
+            139,
+            123
+          ],
+          "atp": [
+            168,
+            154
+          ]
+        },
+        {
+          "match_id": "2012-frenchopen-1129",
+          "recorded": [
+            69,
+            68
+          ],
+          "atp": [
+            198,
+            210
+          ]
+        }
+      ],
+      "winner_label_disagreements": []
+    },
+    {
+      "year": 2012,
+      "slam": "wimbledon",
+      "atp_matches": 127,
+      "point_metadata_matches": 73,
+      "played_matches": 73,
+      "played_points": 16622,
+      "invalid_or_sentinel_rows": 0,
+      "no_played_points": [],
+      "point_number_gaps": 0,
+      "serve_count_disagreements": [
+        {
+          "match_id": "2012-wimbledon-1301",
+          "recorded": [
+            96,
+            141
+          ],
+          "atp": [
+            96,
+            143
+          ]
+        },
+        {
+          "match_id": "2012-wimbledon-1312",
+          "recorded": [
+            154,
+            118
+          ],
+          "atp": [
+            154,
+            117
+          ]
+        }
+      ],
+      "winner_label_disagreements": []
+    },
+    {
+      "year": 2012,
+      "slam": "usopen",
+      "atp_matches": 127,
+      "point_metadata_matches": 91,
+      "played_matches": 91,
+      "played_points": 20632,
+      "invalid_or_sentinel_rows": 3,
+      "no_played_points": [],
+      "point_number_gaps": 1,
+      "serve_count_disagreements": [
+        {
+          "match_id": "2012-usopen-1108",
+          "recorded": [
+            181,
+            154
+          ],
+          "atp": [
+            167,
+            165
+          ]
+        },
+        {
+          "match_id": "2012-usopen-1205",
+          "recorded": [
+            144,
+            163
+          ],
+          "atp": [
+            145,
+            163
+          ]
+        },
+        {
+          "match_id": "2012-usopen-1219",
+          "recorded": [
+            169,
+            186
+          ],
+          "atp": [
+            168,
+            186
+          ]
+        },
+        {
+          "match_id": "2012-usopen-1220",
+          "recorded": [
+            120,
+            116
+          ],
+          "atp": [
+            121,
+            116
+          ]
+        },
+        {
+          "match_id": "2012-usopen-1222",
+          "recorded": [
+            149,
+            126
+          ],
+          "atp": [
+            148,
+            126
+          ]
+        },
+        {
+          "match_id": "2012-usopen-1304",
+          "recorded": [
+            149,
+            133
+          ],
+          "atp": [
+            149,
+            135
+          ]
+        },
+        {
+          "match_id": "2012-usopen-1305",
+          "recorded": [
+            170,
+            146
+          ],
+          "atp": [
+            168,
+            146
+          ]
+        },
+        {
+          "match_id": "2012-usopen-1310",
+          "recorded": [
+            148,
+            137
+          ],
+          "atp": [
+            147,
+            137
+          ]
+        },
+        {
+          "match_id": "2012-usopen-1403",
+          "recorded": [
+            75,
+            84
+          ],
+          "atp": [
+            75,
+            87
+          ]
+        }
+      ],
+      "winner_label_disagreements": []
+    },
+    {
+      "year": 2013,
+      "slam": "ausopen",
+      "atp_matches": 127,
+      "point_metadata_matches": 88,
+      "played_matches": 88,
+      "played_points": 19598,
+      "invalid_or_sentinel_rows": 0,
+      "no_played_points": [],
+      "point_number_gaps": 0,
+      "serve_count_disagreements": [
+        {
+          "match_id": "2013-ausopen-1109",
+          "recorded": [
+            75,
+            98
+          ],
+          "atp": [
+            75,
+            99
+          ]
+        },
+        {
+          "match_id": "2013-ausopen-1120",
+          "recorded": [
+            191,
+            180
+          ],
+          "atp": [
+            192,
+            179
+          ]
+        },
+        {
+          "match_id": "2013-ausopen-1141",
+          "recorded": [
+            93,
+            102
+          ],
+          "atp": [
+            94,
+            102
+          ]
+        },
+        {
+          "match_id": "2013-ausopen-1214",
+          "recorded": [
+            158,
+            171
+          ],
+          "atp": [
+            157,
+            171
+          ]
+        },
+        {
+          "match_id": "2013-ausopen-1226",
+          "recorded": [
+            185,
+            195
+          ],
+          "atp": [
+            187,
+            195
+          ]
+        },
+        {
+          "match_id": "2013-ausopen-1303",
+          "recorded": [
+            147,
+            163
+          ],
+          "atp": [
+            147,
+            162
+          ]
+        }
+      ],
+      "winner_label_disagreements": []
+    },
+    {
+      "year": 2013,
+      "slam": "frenchopen",
+      "atp_matches": 127,
+      "point_metadata_matches": 94,
+      "played_matches": 94,
+      "played_points": 20294,
+      "invalid_or_sentinel_rows": 32,
+      "no_played_points": [],
+      "point_number_gaps": 15,
+      "serve_count_disagreements": [
+        {
+          "match_id": "2013-frenchopen-1109",
+          "recorded": [
+            85,
+            93
+          ],
+          "atp": [
+            86,
+            93
+          ]
+        },
+        {
+          "match_id": "2013-frenchopen-1116",
+          "recorded": [
+            79,
+            85
+          ],
+          "atp": [
+            81,
+            92
+          ]
+        },
+        {
+          "match_id": "2013-frenchopen-1202",
+          "recorded": [
+            77,
+            87
+          ],
+          "atp": [
+            82,
+            92
+          ]
+        },
+        {
+          "match_id": "2013-frenchopen-1217",
+          "recorded": [
+            152,
+            116
+          ],
+          "atp": [
+            152,
+            119
+          ]
+        },
+        {
+          "match_id": "2013-frenchopen-1219",
+          "recorded": [
+            163,
+            167
+          ],
+          "atp": [
+            164,
+            169
+          ]
+        },
+        {
+          "match_id": "2013-frenchopen-1221",
+          "recorded": [
+            121,
+            145
+          ],
+          "atp": [
+            123,
+            148
+          ]
+        },
+        {
+          "match_id": "2013-frenchopen-1226",
+          "recorded": [
+            80,
+            97
+          ],
+          "atp": [
+            84,
+            97
+          ]
+        },
+        {
+          "match_id": "2013-frenchopen-1231",
+          "recorded": [
+            176,
+            176
+          ],
+          "atp": [
+            177,
+            180
+          ]
+        },
+        {
+          "match_id": "2013-frenchopen-1402",
+          "recorded": [
+            70,
+            58
+          ],
+          "atp": [
+            71,
+            65
+          ]
+        },
+        {
+          "match_id": "2013-frenchopen-1501",
+          "recorded": [
+            0,
+            4
+          ],
+          "atp": [
+            78,
+            122
+          ]
+        }
+      ],
+      "winner_label_disagreements": []
+    },
+    {
+      "year": 2013,
+      "slam": "wimbledon",
+      "atp_matches": 127,
+      "point_metadata_matches": 75,
+      "played_matches": 75,
+      "played_points": 16041,
+      "invalid_or_sentinel_rows": 0,
+      "no_played_points": [],
+      "point_number_gaps": 0,
+      "serve_count_disagreements": [
+        {
+          "match_id": "2013-wimbledon-1147",
+          "recorded": [
+            42,
+            27
+          ],
+          "atp": [
+            76,
+            76
+          ]
+        }
+      ],
+      "winner_label_disagreements": []
+    },
+    {
+      "year": 2013,
+      "slam": "usopen",
+      "atp_matches": 127,
+      "point_metadata_matches": 89,
+      "played_matches": 89,
+      "played_points": 19790,
+      "invalid_or_sentinel_rows": 0,
+      "no_played_points": [],
+      "point_number_gaps": 0,
+      "serve_count_disagreements": [
+        {
+          "match_id": "2013-usopen-1155",
+          "recorded": [
+            192,
+            146
+          ],
+          "atp": [
+            192,
+            147
+          ]
+        },
+        {
+          "match_id": "2013-usopen-1305",
+          "recorded": [
+            81,
+            92
+          ],
+          "atp": [
+            81,
+            90
+          ]
+        },
+        {
+          "match_id": "2013-usopen-1309",
+          "recorded": [
+            92,
+            119
+          ],
+          "atp": [
+            93,
+            119
+          ]
+        },
+        {
+          "match_id": "2013-usopen-1601",
+          "recorded": [
+            139,
+            192
+          ],
+          "atp": [
+            138,
+            192
+          ]
+        }
+      ],
+      "winner_label_disagreements": []
+    }
+  ],
+  "aliases": {
+    "stanislaswawrinka": "stanwawrinka",
+    "richardberankis": "ricardasberankis",
+    "rogeriodutradasilva": "rogeriodutrasilva"
+  }
+}

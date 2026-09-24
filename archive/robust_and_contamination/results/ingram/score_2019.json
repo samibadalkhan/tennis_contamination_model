@@ -1,0 +1,192 @@
+{
+  "utc": "2026-09-22T04:11:59+00:00",
+  "eval_year": 2019,
+  "tuned_on": 2018,
+  "ingram_target": {
+    "log_loss": 0.592,
+    "accuracy": 0.688
+  },
+  "chosen_hyperparams": {
+    "sigma": 0.05,
+    "prior_var": 0.25
+  },
+  "result": {
+    "n": 2603,
+    "log_loss": 0.6529620337349716,
+    "accuracy": 0.6434882827506723,
+    "mean_pred": 0.5851701702940256
+  },
+  "log_loss_gap_vs_ingram": 0.061,
+  "tuning": [
+    {
+      "sigma": 0.01,
+      "prior_var": 0.25,
+      "n": 2636,
+      "log_loss": 0.6727010692369358,
+      "accuracy": 0.633535660091047,
+      "mean_pred": 0.5806342235211989
+    },
+    {
+      "sigma": 0.01,
+      "prior_var": 0.5,
+      "n": 2636,
+      "log_loss": 0.6748328491903611,
+      "accuracy": 0.6339150227617603,
+      "mean_pred": 0.5814106787922448
+    },
+    {
+      "sigma": 0.01,
+      "prior_var": 1.0,
+      "n": 2636,
+      "log_loss": 0.6761419839433856,
+      "accuracy": 0.6350531107738998,
+      "mean_pred": 0.5821244255259223
+    },
+    {
+      "sigma": 0.02,
+      "prior_var": 0.25,
+      "n": 2636,
+      "log_loss": 0.6629974262828826,
+      "accuracy": 0.6384673748103187,
+      "mean_pred": 0.5851615860096828
+    },
+    {
+      "sigma": 0.02,
+      "prior_var": 0.5,
+      "n": 2636,
+      "log_loss": 0.6650249166289696,
+      "accuracy": 0.6396054628224582,
+      "mean_pred": 0.585840184684622
+    },
+    {
+      "sigma": 0.02,
+      "prior_var": 1.0,
+      "n": 2636,
+      "log_loss": 0.6663986794892486,
+      "accuracy": 0.6392261001517451,
+      "mean_pred": 0.5864855680747206
+    },
+    {
+      "sigma": 0.03,
+      "prior_var": 0.25,
+      "n": 2636,
+      "log_loss": 0.6570386777506555,
+      "accuracy": 0.6441578148710166,
+      "mean_pred": 0.5881245405529362
+    },
+    {
+      "sigma": 0.03,
+      "prior_var": 0.5,
+      "n": 2636,
+      "log_loss": 0.6590698522981182,
+      "accuracy": 0.6441578148710166,
+      "mean_pred": 0.5887103792160387
+    },
+    {
+      "sigma": 0.03,
+      "prior_var": 1.0,
+      "n": 2636,
+      "log_loss": 0.6605759979008304,
+      "accuracy": 0.6437784522003035,
+      "mean_pred": 0.5892818550386189
+    },
+    {
+      "sigma": 0.05,
+      "prior_var": 0.25,
+      "n": 2636,
+      "log_loss": 0.6521135655370569,
+      "accuracy": 0.6528831562974203,
+      "mean_pred": 0.5918363398504344
+    },
+    {
+      "sigma": 0.05,
+      "prior_var": 0.5,
+      "n": 2636,
+      "log_loss": 0.6542524278221399,
+      "accuracy": 0.6532625189681336,
+      "mean_pred": 0.592247885769757
+    },
+    {
+      "sigma": 0.05,
+      "prior_var": 1.0,
+      "n": 2636,
+      "log_loss": 0.6560738731399609,
+      "accuracy": 0.6521244309559939,
+      "mean_pred": 0.592666357576683
+    },
+    {
+      "sigma": 0.08,
+      "prior_var": 0.25,
+      "n": 2636,
+      "log_loss": 0.6533640680496132,
+      "accuracy": 0.6494688922610015,
+      "mean_pred": 0.5948793609612844
+    },
+    {
+      "sigma": 0.08,
+      "prior_var": 0.5,
+      "n": 2636,
+      "log_loss": 0.6557257810281165,
+      "accuracy": 0.6494688922610015,
+      "mean_pred": 0.5950479498435608
+    },
+    {
+      "sigma": 0.08,
+      "prior_var": 1.0,
+      "n": 2636,
+      "log_loss": 0.6580248995429216,
+      "accuracy": 0.6483308042488619,
+      "mean_pred": 0.5952400797123337
+    },
+    {
+      "sigma": 0.12,
+      "prior_var": 0.25,
+      "n": 2636,
+      "log_loss": 0.6622788480331162,
+      "accuracy": 0.6407435508345979,
+      "mean_pred": 0.5968746541612371
+    },
+    {
+      "sigma": 0.12,
+      "prior_var": 0.5,
+      "n": 2636,
+      "log_loss": 0.6649588782108743,
+      "accuracy": 0.6407435508345979,
+      "mean_pred": 0.5967621661976689
+    },
+    {
+      "sigma": 0.12,
+      "prior_var": 1.0,
+      "n": 2636,
+      "log_loss": 0.6678616147097247,
+      "accuracy": 0.641122913505311,
+      "mean_pred": 0.5966924391500507
+    },
+    {
+      "sigma": 0.18,
+      "prior_var": 0.25,
+      "n": 2636,
+      "log_loss": 0.682757918157078,
+      "accuracy": 0.6346737481031867,
+      "mean_pred": 0.5979165550123584
+    },
+    {
+      "sigma": 0.18,
+      "prior_var": 0.5,
+      "n": 2636,
+      "log_loss": 0.6860261768279797,
+      "accuracy": 0.6358118361153262,
+      "mean_pred": 0.5974837818790572
+    },
+    {
+      "sigma": 0.18,
+      "prior_var": 1.0,
+      "n": 2636,
+      "log_loss": 0.6898884692423279,
+      "accuracy": 0.6354324734446131,
+      "mean_pred": 0.5971269220671296
+    }
+  ],
+  "note": "Ordinary random-walk ability filter + iid analytic forecast, match-only tour-level singles (G/M/A/F). Hyperparameters tuned on the prior season, never the eval season.",
+  "gate_passed": null
+}

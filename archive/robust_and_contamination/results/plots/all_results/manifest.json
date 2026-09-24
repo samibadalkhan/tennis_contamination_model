@@ -1,0 +1,28 @@
+{
+  "source_sha256": "aa70e77a0bb355ea1d53372e0c1ee18864a4696585417ba3ae64cff2006e832d",
+  "inputs": {
+    "results/independent/comparison.json": "a256bc6821e5e5bd04be634537ddc92d6e526c67fd4f0dad58beb5eb4419d9de",
+    "results/independent/comparison_2014_predictions.csv": "bc2e0142a71dc6918ed39535e06f77ce8183d0b161ab2ec97d5a99f8a1ae53fa",
+    "results/independent/early_real_calibration_control.json": "330e5634fd4e63bbd07c304ba09167dfdf2c764e4849db03d3280f23177d2c80",
+    "results/independent/synthetic_recovery.json": "4b4658540a3ce196a95b7d3ef081648d198183f711f983ae6daffcab89f209c8",
+    "results/early_real_2013/results.json": "fb93c80d612680491d699ae973f4be08c2aee8ba0123cdd57e0b38e19814e417",
+    "results/point_robust_pilot/results.json": "b8de50e430a69c6202300e8fc528761e6b962d9a65613e1a9d5cee08e0a8b7e6",
+    "results/robust_check/compare_2014.json": "ea8380234d528c430b3cacd3d5cfcd29dd42dc7f8e88482edf47ace315121efe",
+    "results/sim_forecast/sim_forecast_2014.json": "f5d920f5dd9abd4d06a01f8d10a03d05604bc5ca89539188e2fe07533b121912"
+  },
+  "figures": {
+    "01_executive_summary.png": "aab19913b6de9b85522dab1a496da124b74d89ab5ea19c7b96be5b1adb641ad3",
+    "02_full_model_scores_and_calibration.png": "182bf7e336d525384f05647aa021e553cc6c3207a0f39e985b9dc1ec9fc99bba",
+    "03_full_model_paired_gains.png": "7b43a96f03c4da9793929ff3f09c951ebde35227cc489999b64a393297bce746",
+    "04_tuning_and_simulation.png": "117e9a4ce48ffb510363ac58c802ba1b93a53622bdd432ecae3364d98b3008f8",
+    "05_sampling_diagnostics.png": "872813eda4f5dc68509d9e03e4c77c379a31257881f1400db922d6645a8b9360",
+    "06_early_real_point_and_match.png": "e67532fb717856c6fa20a8a689aacd3ca9a0514aeed971aee951f94a516d090a",
+    "07_point_pilot_recovery.png": "3a995e7cb59553c02e2fee6976f93a171bd9178e759f66f230ee08fa12f8b83c",
+    "08_point_pilot_filtering.png": "370f87e58dca8554e8ac240815dfb164ca3b52bdebc0d07c19495b9f05acd10a",
+    "09_legacy_simplified_pipeline.png": "85e764268a31e5baad30673e4415274a4b67a98aa17ecf2386dc98dd69ac8d2f",
+    "10_invalid_synthetic_diagnostics.png": "52d22c7a3ebdd76645f83c8b836c2dacab2e1a638c8ea628f39175ebbc6ea441",
+    "11_early_real_tuning_and_events.png": "97206f9d4846d880046947366530fb1aea2f7bc05b54b8ffbad327f67ec18cd8",
+    "12_point_pilot_adaptation.png": "264fa203532689c4437fcbbd1d2f36f9c029ac1f729a238d441e7d5e29822a3f"
+  },
+  "note": "Generated from saved development artifacts; no refits and no 2025 outcomes."
+}

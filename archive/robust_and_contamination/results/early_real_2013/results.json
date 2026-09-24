@@ -1,0 +1,1114 @@
+{
+  "utc": "2026-09-22T10:42:36+00:00",
+  "protocol": {
+    "train_years": [
+      2011,
+      2012
+    ],
+    "tune_year": 2012,
+    "eval_year": 2013,
+    "arms": [
+      "ordinary",
+      "huber_2.5",
+      "block_16"
+    ],
+    "sigma_grid": [
+      0.03,
+      0.1,
+      0.3,
+      1.0
+    ],
+    "prior_var": 1.0,
+    "block_size": 16,
+    "null_quantile": 0.99,
+    "null_draws": 255,
+    "max_removed_point_fraction": 0.25
+  },
+  "source_sha256": {
+    "src/experiments/early_real.py": "82865a47f585e6ba2bac1d005e09a47d6a5db2bf312b1088c21b83895a62bb05",
+    "src/models/block_filter.py": "544c54c50f690fec0621e285c7e8d8cf261dbccc982e4af43ecc37e8277efa18",
+    "src/models/ability.py": "db20bf2bf0a2591fc1fecfbaf52e3d121b474b0f952372da2213a37b2e352911",
+    "src/independent/scoring.py": "044d51cc0bb30ac9a35b6f63aa4ceb1bb886b5306238d5ef8fbb3411aa9cb3d1",
+    "docs/POINT_ROBUST_EARLY_REAL.md": "2bc52dc788dc036daeb0f7b0302b3c86d36f74abe49600120ed3ac0fee30405d"
+  },
+  "input_sha256": {
+    "atp/atp_matches_2011.csv": "8e91e4b680f0b4e9605a3c71b4c676b55e2a102de8544a7d3b2fbaca5977575a",
+    "atp/atp_matches_2012.csv": "03f03612691af370c9c47939dde4202d9858e05ea044367388115e627d4d13f3",
+    "atp/atp_matches_2013.csv": "9e1e3b124ac22c1b840118f78475a910cb2ea68684289581f70b54a022f2832c",
+    "slam_pointbypoint/2011-ausopen-matches.csv": "4c8c17b996890b805cea3d27c87f4944e5c33366fb3b9b0e56b29ba44792858d",
+    "slam_pointbypoint/2011-ausopen-points.csv": "257a5bb5f2499177da9ec3f7818228a0feab3dc39f02559843a2a0d2f344fb0a",
+    "slam_pointbypoint/2011-frenchopen-matches.csv": "72fe585a77c2cf2299c8b1e4c032bdac674458b4cc2cb5df477999312d7f8cc5",
+    "slam_pointbypoint/2011-frenchopen-points.csv": "fff0b4a45ae5d2babea5600bbb199f452dde45e28645fd7cf4c52d25d7626ed5",
+    "slam_pointbypoint/2011-wimbledon-matches.csv": "fea6e5c34f3781ce80add4648d785f6d290f65d51b64aec87c297401c6e3f5d6",
+    "slam_pointbypoint/2011-wimbledon-points.csv": "b93466ba4ee66a2619949a6420fdd07f5ca611f829e4401ed1f695eb83ce8013",
+    "slam_pointbypoint/2011-usopen-matches.csv": "92b2a1fcc15c2a9294ce55ccf361a27b622c901d7de846b6cf019307f1bf8980",
+    "slam_pointbypoint/2011-usopen-points.csv": "9e0f2087987e88b16117318919d661fa3d2c08f37e482b835f4c8c08c327818f",
+    "slam_pointbypoint/2012-ausopen-matches.csv": "c7da8cdc942573a69cbf733e7c5ba5fafec7297ae931588c0fd93da0ffa18288",
+    "slam_pointbypoint/2012-ausopen-points.csv": "a88ff5c043a023c6d8e67141ae519578274f8b301caf13afafc14935957ecd8a",
+    "slam_pointbypoint/2012-frenchopen-matches.csv": "5e037397364f3460cf7461efcf5676da3e2f5ba2c4df33ed7f1def573b013656",
+    "slam_pointbypoint/2012-frenchopen-points.csv": "6b9fb87abd3d314d1e60abbc8376398c1c487251931c36e6b436ba3a2c0cfb3d",
+    "slam_pointbypoint/2012-wimbledon-matches.csv": "197b73fbd9ecd23bb4168aa194e0724ff485b4cbf9a3bdece7df718909f6a900",
+    "slam_pointbypoint/2012-wimbledon-points.csv": "50b46bb813bfac311148c13d98338103ee3c9729a1c8bd087962b970aaa8f8a7",
+    "slam_pointbypoint/2012-usopen-matches.csv": "1b44eebbcdf540dfaa5d7e1ca7b2eaaeb2fc734bae95c9053e3b64a1588c633e",
+    "slam_pointbypoint/2012-usopen-points.csv": "661c661548ffbe18014e4ab92ba49de8d84bbdcac9f7901a269e9c74dc7e58c3",
+    "slam_pointbypoint/2013-ausopen-matches.csv": "7060339f0aaf28a4f92b1851e550f2a441c612933be7358ed1f59a79f45f88ff",
+    "slam_pointbypoint/2013-ausopen-points.csv": "acad03c788ae598ada94d1265e2eeccd1ee7ba4fc59cd48f2b5af76d62d49815",
+    "slam_pointbypoint/2013-frenchopen-matches.csv": "a8d8e1049cc289ba088c1d3e7bc9445c9fada39a75a8ee5e7415733b318f14b7",
+    "slam_pointbypoint/2013-frenchopen-points.csv": "3e2625ad23202b7e6f02f6a901732fd833a1a596f9e974b00319a7bf2f02949a",
+    "slam_pointbypoint/2013-wimbledon-matches.csv": "7ddfc267e1be2b86762059e98ead6db250de6a7b76d04ea148d29ccdfdd46cf2",
+    "slam_pointbypoint/2013-wimbledon-points.csv": "7609a73f2a7cee02f4607dac88fc4b8c508e5f0b685ffe0bb8baf7bfd20db536",
+    "slam_pointbypoint/2013-usopen-matches.csv": "289ed22d7af8f16321342a92a29d4fd97b060db6537199c17db0f19c112e683b",
+    "slam_pointbypoint/2013-usopen-points.csv": "f063b92169a2bcc2f718709a9c60ee7ff9b61d2fba180027baa6f5d2062ed2e0"
+  },
+  "tuning": [
+    {
+      "arm": "ordinary",
+      "sigma": 0.03,
+      "point_logloss": 0.655120298192659,
+      "trial_id": 1748
+    },
+    {
+      "arm": "ordinary",
+      "sigma": 0.1,
+      "point_logloss": 0.6552280968716104,
+      "trial_id": 1749
+    },
+    {
+      "arm": "ordinary",
+      "sigma": 0.3,
+      "point_logloss": 0.6560532461958098,
+      "trial_id": 1750
+    },
+    {
+      "arm": "ordinary",
+      "sigma": 1.0,
+      "point_logloss": 0.6586473867653642,
+      "trial_id": 1751
+    },
+    {
+      "arm": "huber_2.5",
+      "sigma": 0.03,
+      "point_logloss": 0.654264255814508,
+      "trial_id": 1752
+    },
+    {
+      "arm": "huber_2.5",
+      "sigma": 0.1,
+      "point_logloss": 0.6543363352939611,
+      "trial_id": 1753
+    },
+    {
+      "arm": "huber_2.5",
+      "sigma": 0.3,
+      "point_logloss": 0.6548994477476601,
+      "trial_id": 1754
+    },
+    {
+      "arm": "huber_2.5",
+      "sigma": 1.0,
+      "point_logloss": 0.6564842655937349,
+      "trial_id": 1755
+    },
+    {
+      "arm": "block_16",
+      "sigma": 0.03,
+      "point_logloss": 0.6551513647439258,
+      "trial_id": 1756
+    },
+    {
+      "arm": "block_16",
+      "sigma": 0.1,
+      "point_logloss": 0.6552614203342004,
+      "trial_id": 1757
+    },
+    {
+      "arm": "block_16",
+      "sigma": 0.3,
+      "point_logloss": 0.6561041982538834,
+      "trial_id": 1758
+    },
+    {
+      "arm": "block_16",
+      "sigma": 1.0,
+      "point_logloss": 0.6587520715471982,
+      "trial_id": 1759
+    }
+  ],
+  "chosen_sigma": {
+    "ordinary": 0.03,
+    "huber_2.5": 0.03,
+    "block_16": 0.03
+  },
+  "alpha_tune": {
+    "Hard": 0.5025130113141171,
+    "Clay": 0.4813004188924833,
+    "Grass": 0.6788585067421465
+  },
+  "alpha_final": {
+    "Hard": 0.5103869389503947,
+    "Clay": 0.48281211279040476,
+    "Grass": 0.6886841533394952
+  },
+  "final_trials": [
+    {
+      "arm": "ordinary",
+      "mode": "frozen",
+      "trial_id": 1760
+    },
+    {
+      "arm": "ordinary",
+      "mode": "online",
+      "trial_id": 1761
+    },
+    {
+      "arm": "huber_2.5",
+      "mode": "frozen",
+      "trial_id": 1762
+    },
+    {
+      "arm": "huber_2.5",
+      "mode": "online",
+      "trial_id": 1763
+    },
+    {
+      "arm": "block_16",
+      "mode": "frozen",
+      "trial_id": 1764
+    },
+    {
+      "arm": "block_16",
+      "mode": "online",
+      "trial_id": 1765
+    }
+  ],
+  "training": {
+    "matches": 671,
+    "points": 145321,
+    "players": 195
+  },
+  "evaluation": {
+    "matches": 346,
+    "points": 75723,
+    "unseen_players": 27
+  },
+  "filtering": {
+    "training_2011_2012": {
+      "matches": 671,
+      "points": 145321,
+      "removed_points": 248,
+      "affected_matches": 14
+    },
+    "online_updates_2013": {
+      "matches": 346,
+      "points": 75723,
+      "removed_points": 224,
+      "affected_matches": 11
+    }
+  },
+  "summary": {
+    "frozen": {
+      "ordinary": {
+        "point_logloss": {
+          "mean": 0.6519936360870262,
+          "lo": 0.6477064099827159,
+          "hi": 0.6566541340517889,
+          "clusters": 361
+        },
+        "point_brier": {
+          "mean": 0.22978425084529056,
+          "lo": 0.22775849290525826,
+          "hi": 0.2320054140305682,
+          "clusters": 361
+        },
+        "point_accuracy": {
+          "mean": 0.6345628144685235,
+          "lo": 0.6270011191565801,
+          "hi": 0.6409218715510064,
+          "clusters": 361
+        },
+        "point_gain": {
+          "mean": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "clusters": 361
+        },
+        "point_gain_tournament": {
+          "mean": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "clusters": 4
+        },
+        "match_logloss": {
+          "mean": 0.5844297858817086,
+          "lo": 0.4343581863112232,
+          "hi": 0.7509726585757839,
+          "clusters": 4
+        },
+        "match_accuracy": {
+          "mean": 0.7514450867052023,
+          "lo": 0.7073170731707317,
+          "hi": 0.7912087912087912,
+          "clusters": 4
+        },
+        "match_gain": {
+          "mean": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "clusters": 4
+        },
+        "completed_match_logloss": {
+          "mean": 0.5614772382570452,
+          "lo": 0.41607462877896095,
+          "hi": 0.7264532759341022,
+          "clusters": 4
+        },
+        "completed_match_gain": {
+          "mean": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "clusters": 4
+        },
+        "subsets": {
+          "both_seen": {
+            "points": 66167,
+            "matches": 300,
+            "logloss": {
+              "mean": 0.6513801096637678,
+              "lo": 0.6467439216014849,
+              "hi": 0.6561711359339683,
+              "clusters": 315
+            },
+            "gain": {
+              "mean": 0.0,
+              "lo": 0.0,
+              "hi": 0.0,
+              "clusters": 315
+            }
+          },
+          "opening_round": {
+            "points": 28167,
+            "matches": 130,
+            "logloss": {
+              "mean": 0.6547161971526612,
+              "lo": 0.6487217815330785,
+              "hi": 0.6605842692935789,
+              "clusters": 260
+            },
+            "gain": {
+              "mean": 0.0,
+              "lo": 0.0,
+              "hi": 0.0,
+              "clusters": 260
+            }
+          },
+          "later_round": {
+            "points": 47556,
+            "matches": 216,
+            "logloss": {
+              "mean": 0.650381087143975,
+              "lo": 0.6452479235591937,
+              "hi": 0.6552655514991753,
+              "clusters": 225
+            },
+            "gain": {
+              "mean": 0.0,
+              "lo": 0.0,
+              "hi": 0.0,
+              "clusters": 225
+            }
+          }
+        },
+        "events": {
+          "2013-520": {
+            "points": 20294,
+            "gain": {
+              "mean": 0.0,
+              "lo": 0.0,
+              "hi": 0.0,
+              "clusters": 98
+            }
+          },
+          "2013-540": {
+            "points": 16041,
+            "gain": {
+              "mean": 0.0,
+              "lo": 0.0,
+              "hi": 0.0,
+              "clusters": 81
+            }
+          },
+          "2013-560": {
+            "points": 19790,
+            "gain": {
+              "mean": 0.0,
+              "lo": 0.0,
+              "hi": 0.0,
+              "clusters": 91
+            }
+          },
+          "2013-580": {
+            "points": 19598,
+            "gain": {
+              "mean": 0.0,
+              "lo": 0.0,
+              "hi": 0.0,
+              "clusters": 91
+            }
+          }
+        }
+      },
+      "huber_2.5": {
+        "point_logloss": {
+          "mean": 0.6515490488623514,
+          "lo": 0.6473018780933435,
+          "hi": 0.6561532590983506,
+          "clusters": 361
+        },
+        "point_brier": {
+          "mean": 0.22958355549977633,
+          "lo": 0.22756344446214746,
+          "hi": 0.23180654227152733,
+          "clusters": 361
+        },
+        "point_accuracy": {
+          "mean": 0.6344835783051385,
+          "lo": 0.6269523047950094,
+          "hi": 0.6407618662035637,
+          "clusters": 361
+        },
+        "point_gain": {
+          "mean": 0.0004445872246747251,
+          "lo": 0.0001917581085166614,
+          "hi": 0.0007379951347908292,
+          "clusters": 361
+        },
+        "point_gain_tournament": {
+          "mean": 0.0004445872246747251,
+          "lo": 0.00023607646832185866,
+          "hi": 0.0007554098225592314,
+          "clusters": 4
+        },
+        "match_logloss": {
+          "mean": 0.5608932134302169,
+          "lo": 0.41022444209611353,
+          "hi": 0.7280988011302585,
+          "clusters": 4
+        },
+        "match_accuracy": {
+          "mean": 0.7572254335260116,
+          "lo": 0.725609756097561,
+          "hi": 0.7857142857142857,
+          "clusters": 4
+        },
+        "match_gain": {
+          "mean": 0.023536572451491756,
+          "lo": 0.009991218795775818,
+          "hi": 0.03560155958745732,
+          "clusters": 4
+        },
+        "completed_match_logloss": {
+          "mean": 0.5307986100713872,
+          "lo": 0.39047020303384383,
+          "hi": 0.6900173795947535,
+          "clusters": 4
+        },
+        "completed_match_gain": {
+          "mean": 0.030678628185658093,
+          "lo": 0.0161515093663161,
+          "hi": 0.0394315117769093,
+          "clusters": 4
+        },
+        "subsets": {
+          "both_seen": {
+            "points": 66167,
+            "matches": 300,
+            "logloss": {
+              "mean": 0.6509612080646243,
+              "lo": 0.64634316620277,
+              "hi": 0.6557384203055664,
+              "clusters": 315
+            },
+            "gain": {
+              "mean": 0.00041890159914356685,
+              "lo": 0.00016065882339725892,
+              "hi": 0.0007174331218900812,
+              "clusters": 315
+            }
+          },
+          "opening_round": {
+            "points": 28167,
+            "matches": 130,
+            "logloss": {
+              "mean": 0.6541079218190694,
+              "lo": 0.6481688052842988,
+              "hi": 0.6599194545273784,
+              "clusters": 260
+            },
+            "gain": {
+              "mean": 0.0006082753335918604,
+              "lo": 8.704887019619144e-05,
+              "hi": 0.0012170470473523022,
+              "clusters": 260
+            }
+          },
+          "later_round": {
+            "points": 47556,
+            "matches": 216,
+            "logloss": {
+              "mean": 0.6500334509446991,
+              "lo": 0.6449053249049991,
+              "hi": 0.6549221758106331,
+              "clusters": 225
+            },
+            "gain": {
+              "mean": 0.000347636199275849,
+              "lo": 8.750570395293964e-05,
+              "hi": 0.0006356100315457306,
+              "clusters": 225
+            }
+          }
+        },
+        "events": {
+          "2013-520": {
+            "points": 20294,
+            "gain": {
+              "mean": 0.0003446339969560683,
+              "lo": -0.00010538466935500657,
+              "hi": 0.0008973860826006212,
+              "clusters": 98
+            }
+          },
+          "2013-540": {
+            "points": 16041,
+            "gain": {
+              "mean": 0.00035444812412026565,
+              "lo": 1.0930576746264994e-05,
+              "hi": 0.0006895499022626921,
+              "clusters": 81
+            }
+          },
+          "2013-560": {
+            "points": 19790,
+            "gain": {
+              "mean": 0.0008637444461849592,
+              "lo": 0.00034371274928997244,
+              "hi": 0.0015175076776674345,
+              "clusters": 91
+            }
+          },
+          "2013-580": {
+            "points": 19598,
+            "gain": {
+              "mean": 0.00019860552764589426,
+              "lo": -0.00038388185755085783,
+              "hi": 0.0009123176909220213,
+              "clusters": 91
+            }
+          }
+        }
+      },
+      "block_16": {
+        "point_logloss": {
+          "mean": 0.652123880608411,
+          "lo": 0.6478255415278151,
+          "hi": 0.6567633655619666,
+          "clusters": 361
+        },
+        "point_brier": {
+          "mean": 0.22984119349152568,
+          "lo": 0.22779656453733382,
+          "hi": 0.23206394470732997,
+          "clusters": 361
+        },
+        "point_accuracy": {
+          "mean": 0.6346288446046776,
+          "lo": 0.6270691743825234,
+          "hi": 0.6409770766914494,
+          "clusters": 361
+        },
+        "point_gain": {
+          "mean": -0.0001302445213847656,
+          "lo": -0.00023286027774739384,
+          "hi": -4.68724080268476e-05,
+          "clusters": 361
+        },
+        "point_gain_tournament": {
+          "mean": -0.0001302445213847656,
+          "lo": -0.00017789527718465155,
+          "hi": -8.100303488119054e-05,
+          "clusters": 4
+        },
+        "match_logloss": {
+          "mean": 0.5940849906098664,
+          "lo": 0.4448952831799247,
+          "hi": 0.7596491781235822,
+          "clusters": 4
+        },
+        "match_accuracy": {
+          "mean": 0.7485549132947977,
+          "lo": 0.7012195121951219,
+          "hi": 0.7912087912087912,
+          "clusters": 4
+        },
+        "match_gain": {
+          "mean": -0.00965520472815782,
+          "lo": -0.013819007302041192,
+          "hi": -0.005946462544862793,
+          "clusters": 4
+        },
+        "completed_match_logloss": {
+          "mean": 0.5695220086993961,
+          "lo": 0.42796448998389275,
+          "hi": 0.7301353472419863,
+          "clusters": 4
+        },
+        "completed_match_gain": {
+          "mean": -0.008044770442350834,
+          "lo": -0.011889861204931722,
+          "hi": -0.0036820713078840575,
+          "clusters": 4
+        },
+        "subsets": {
+          "both_seen": {
+            "points": 66167,
+            "matches": 300,
+            "logloss": {
+              "mean": 0.6515099412888633,
+              "lo": 0.6468184045883316,
+              "hi": 0.6563436092685713,
+              "clusters": 315
+            },
+            "gain": {
+              "mean": -0.00012983162509543883,
+              "lo": -0.0002401890424677508,
+              "hi": -3.549428386028014e-05,
+              "clusters": 315
+            }
+          },
+          "opening_round": {
+            "points": 28167,
+            "matches": 130,
+            "logloss": {
+              "mean": 0.6548221061544105,
+              "lo": 0.6487643540663772,
+              "hi": 0.6606449372416698,
+              "clusters": 260
+            },
+            "gain": {
+              "mean": -0.000105909001749248,
+              "lo": -0.0003035571484062474,
+              "hi": 6.569583639526758e-05,
+              "clusters": 260
+            }
+          },
+          "later_round": {
+            "points": 47556,
+            "matches": 216,
+            "logloss": {
+              "mean": 0.6505257453793301,
+              "lo": 0.6454133020815839,
+              "hi": 0.6554089340367314,
+              "clusters": 225
+            },
+            "gain": {
+              "mean": -0.00014465823535510849,
+              "lo": -0.00026836992672781186,
+              "hi": -4.353036501521161e-05,
+              "clusters": 225
+            }
+          }
+        },
+        "events": {
+          "2013-520": {
+            "points": 20294,
+            "gain": {
+              "mean": -0.0001418552781614592,
+              "lo": -0.00038885012020323955,
+              "hi": 3.5185202283025965e-05,
+              "clusters": 98
+            }
+          },
+          "2013-540": {
+            "points": 16041,
+            "gain": {
+              "mean": -0.0001982431510402836,
+              "lo": -0.00046513436217610873,
+              "hi": 5.4941334611020066e-05,
+              "clusters": 81
+            }
+          },
+          "2013-560": {
+            "points": 19790,
+            "gain": {
+              "mean": -6.551215680962833e-05,
+              "lo": -0.0001546018921644182,
+              "hi": 2.1072692739979537e-05,
+              "clusters": 91
+            }
+          },
+          "2013-580": {
+            "points": 19598,
+            "gain": {
+              "mean": -0.00012793095768497915,
+              "lo": -0.0003410380368657284,
+              "hi": 4.565089717927728e-05,
+              "clusters": 91
+            }
+          }
+        }
+      }
+    },
+    "online": {
+      "ordinary": {
+        "point_logloss": {
+          "mean": 0.651932654539502,
+          "lo": 0.6476845555598203,
+          "hi": 0.6566641861437406,
+          "clusters": 361
+        },
+        "point_brier": {
+          "mean": 0.229772971744805,
+          "lo": 0.2277444260144295,
+          "hi": 0.23203046164210153,
+          "clusters": 361
+        },
+        "point_accuracy": {
+          "mean": 0.6338364829708278,
+          "lo": 0.6261566274522972,
+          "hi": 0.6406295740716944,
+          "clusters": 361
+        },
+        "point_gain": {
+          "mean": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "clusters": 361
+        },
+        "point_gain_tournament": {
+          "mean": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "clusters": 4
+        },
+        "match_logloss": {
+          "mean": 0.5959399858776965,
+          "lo": 0.45290808273410016,
+          "hi": 0.7546705125370534,
+          "clusters": 4
+        },
+        "match_accuracy": {
+          "mean": 0.7369942196531792,
+          "lo": 0.6890243902439024,
+          "hi": 0.7802197802197802,
+          "clusters": 4
+        },
+        "match_gain": {
+          "mean": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "clusters": 4
+        },
+        "completed_match_logloss": {
+          "mean": 0.5722787478668001,
+          "lo": 0.440184539984205,
+          "hi": 0.7221548683489755,
+          "clusters": 4
+        },
+        "completed_match_gain": {
+          "mean": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "clusters": 4
+        },
+        "subsets": {
+          "both_seen": {
+            "points": 66167,
+            "matches": 300,
+            "logloss": {
+              "mean": 0.6506302573897278,
+              "lo": 0.6461199207859654,
+              "hi": 0.6553292241648863,
+              "clusters": 315
+            },
+            "gain": {
+              "mean": 0.0,
+              "lo": 0.0,
+              "hi": 0.0,
+              "clusters": 315
+            }
+          },
+          "opening_round": {
+            "points": 28167,
+            "matches": 130,
+            "logloss": {
+              "mean": 0.6544430216516691,
+              "lo": 0.6484937882877834,
+              "hi": 0.6601237053789684,
+              "clusters": 260
+            },
+            "gain": {
+              "mean": 0.0,
+              "lo": 0.0,
+              "hi": 0.0,
+              "clusters": 260
+            }
+          },
+          "later_round": {
+            "points": 47556,
+            "matches": 216,
+            "logloss": {
+              "mean": 0.6504457862064121,
+              "lo": 0.6454788715295172,
+              "hi": 0.6553159855659034,
+              "clusters": 225
+            },
+            "gain": {
+              "mean": 0.0,
+              "lo": 0.0,
+              "hi": 0.0,
+              "clusters": 225
+            }
+          }
+        },
+        "events": {
+          "2013-520": {
+            "points": 20294,
+            "gain": {
+              "mean": 0.0,
+              "lo": 0.0,
+              "hi": 0.0,
+              "clusters": 98
+            }
+          },
+          "2013-540": {
+            "points": 16041,
+            "gain": {
+              "mean": 0.0,
+              "lo": 0.0,
+              "hi": 0.0,
+              "clusters": 81
+            }
+          },
+          "2013-560": {
+            "points": 19790,
+            "gain": {
+              "mean": 0.0,
+              "lo": 0.0,
+              "hi": 0.0,
+              "clusters": 91
+            }
+          },
+          "2013-580": {
+            "points": 19598,
+            "gain": {
+              "mean": 0.0,
+              "lo": 0.0,
+              "hi": 0.0,
+              "clusters": 91
+            }
+          }
+        }
+      },
+      "huber_2.5": {
+        "point_logloss": {
+          "mean": 0.6514256516603846,
+          "lo": 0.6473086074232717,
+          "hi": 0.655973148417547,
+          "clusters": 361
+        },
+        "point_brier": {
+          "mean": 0.22953226349909248,
+          "lo": 0.2275568401988121,
+          "hi": 0.23172077485130066,
+          "clusters": 361
+        },
+        "point_accuracy": {
+          "mean": 0.6349457892582174,
+          "lo": 0.6273384401704885,
+          "hi": 0.6415092925396692,
+          "clusters": 361
+        },
+        "point_gain": {
+          "mean": 0.0005070028791173728,
+          "lo": 0.00017455247255824253,
+          "hi": 0.0009243630050946966,
+          "clusters": 361
+        },
+        "point_gain_tournament": {
+          "mean": 0.0005070028791173726,
+          "lo": 0.00023314823218826845,
+          "hi": 0.0008513913533683375,
+          "clusters": 4
+        },
+        "match_logloss": {
+          "mean": 0.5574445211902023,
+          "lo": 0.4147772647859996,
+          "hi": 0.7196966798647458,
+          "clusters": 4
+        },
+        "match_accuracy": {
+          "mean": 0.7427745664739884,
+          "lo": 0.6964856230031949,
+          "hi": 0.7747252747252747,
+          "clusters": 4
+        },
+        "match_gain": {
+          "mean": 0.03849546468749422,
+          "lo": 0.02305720570066889,
+          "hi": 0.05374826174170997,
+          "clusters": 4
+        },
+        "completed_match_logloss": {
+          "mean": 0.5276295414940857,
+          "lo": 0.3987002161150891,
+          "hi": 0.673914737597178,
+          "clusters": 4
+        },
+        "completed_match_gain": {
+          "mean": 0.04464920637271448,
+          "lo": 0.0326456317400887,
+          "hi": 0.056219801966590516,
+          "clusters": 4
+        },
+        "subsets": {
+          "both_seen": {
+            "points": 66167,
+            "matches": 300,
+            "logloss": {
+              "mean": 0.6503436679390497,
+              "lo": 0.6457980760254087,
+              "hi": 0.6551047458442247,
+              "clusters": 315
+            },
+            "gain": {
+              "mean": 0.00028658945067804774,
+              "lo": 6.963588263075977e-05,
+              "hi": 0.0005431716402956902,
+              "clusters": 315
+            }
+          },
+          "opening_round": {
+            "points": 28167,
+            "matches": 130,
+            "logloss": {
+              "mean": 0.6541186347056441,
+              "lo": 0.6481450368204199,
+              "hi": 0.659788003466995,
+              "clusters": 260
+            },
+            "gain": {
+              "mean": 0.0003243869460250385,
+              "lo": -0.00010198998034959995,
+              "hi": 0.000845371806394822,
+              "clusters": 260
+            }
+          },
+          "later_round": {
+            "points": 47556,
+            "matches": 216,
+            "logloss": {
+              "mean": 0.649830621518324,
+              "lo": 0.6448646039571838,
+              "hi": 0.6547100986656658,
+              "clusters": 225
+            },
+            "gain": {
+              "mean": 0.0006151646880880973,
+              "lo": 0.00016030472352172818,
+              "hi": 0.0012104473904984757,
+              "clusters": 225
+            }
+          }
+        },
+        "events": {
+          "2013-520": {
+            "points": 20294,
+            "gain": {
+              "mean": 0.0002488846723923587,
+              "lo": -0.00010313759887619374,
+              "hi": 0.000691479692447384,
+              "clusters": 98
+            }
+          },
+          "2013-540": {
+            "points": 16041,
+            "gain": {
+              "mean": 0.000213239540865919,
+              "lo": -3.5213336807231705e-05,
+              "hi": 0.0004528890864488052,
+              "clusters": 81
+            }
+          },
+          "2013-560": {
+            "points": 19790,
+            "gain": {
+              "mean": 0.0009427067810496917,
+              "lo": 0.0001810513979787359,
+              "hi": 0.002056261576104354,
+              "clusters": 91
+            }
+          },
+          "2013-580": {
+            "points": 19598,
+            "gain": {
+              "mean": 0.0005747612410384059,
+              "lo": -0.00026194131200486115,
+              "hi": 0.0016720733858496767,
+              "clusters": 91
+            }
+          }
+        }
+      },
+      "block_16": {
+        "point_logloss": {
+          "mean": 0.6520402250248825,
+          "lo": 0.6477909355425656,
+          "hi": 0.656742868383157,
+          "clusters": 361
+        },
+        "point_brier": {
+          "mean": 0.22982247711132578,
+          "lo": 0.2277924741347253,
+          "hi": 0.23206380898970375,
+          "clusters": 361
+        },
+        "point_accuracy": {
+          "mean": 0.633902513106982,
+          "lo": 0.6262334730334718,
+          "hi": 0.6406673340190842,
+          "clusters": 361
+        },
+        "point_gain": {
+          "mean": -0.00010757048538050613,
+          "lo": -0.00023148449130590854,
+          "hi": -1.2484407434476637e-05,
+          "clusters": 361
+        },
+        "point_gain_tournament": {
+          "mean": -0.00010757048538050613,
+          "lo": -0.00019794001110911256,
+          "hi": -3.5160172777641365e-05,
+          "clusters": 4
+        },
+        "match_logloss": {
+          "mean": 0.603215970418901,
+          "lo": 0.45996465509940154,
+          "hi": 0.7698086600219592,
+          "clusters": 4
+        },
+        "match_accuracy": {
+          "mean": 0.7369942196531792,
+          "lo": 0.6890243902439024,
+          "hi": 0.7802197802197802,
+          "clusters": 4
+        },
+        "match_gain": {
+          "mean": -0.007275984541204507,
+          "lo": -0.017555045646119375,
+          "hi": 0.001879681907435513,
+          "clusters": 4
+        },
+        "completed_match_logloss": {
+          "mean": 0.5794056837013225,
+          "lo": 0.4483427212779816,
+          "hi": 0.728111737220113,
+          "clusters": 4
+        },
+        "completed_match_gain": {
+          "mean": -0.0071269358345222855,
+          "lo": -0.016576256100598725,
+          "hi": 0.0015352238151662343,
+          "clusters": 4
+        },
+        "subsets": {
+          "both_seen": {
+            "points": 66167,
+            "matches": 300,
+            "logloss": {
+              "mean": 0.6507398518158034,
+              "lo": 0.6462270358265241,
+              "hi": 0.6554551755875401,
+              "clusters": 315
+            },
+            "gain": {
+              "mean": -0.00010959442607565773,
+              "lo": -0.0002506594917889226,
+              "hi": -6.0606194336619475e-06,
+              "clusters": 315
+            }
+          },
+          "opening_round": {
+            "points": 28167,
+            "matches": 130,
+            "logloss": {
+              "mean": 0.6545340914047529,
+              "lo": 0.6485907340240434,
+              "hi": 0.6602712093769272,
+              "clusters": 260
+            },
+            "gain": {
+              "mean": -9.106975308367794e-05,
+              "lo": -0.0002813343239855909,
+              "hi": 7.838950274068963e-05,
+              "clusters": 260
+            }
+          },
+          "later_round": {
+            "points": 47556,
+            "matches": 216,
+            "logloss": {
+              "mean": 0.6505631299302189,
+              "lo": 0.6455402023511588,
+              "hi": 0.655414846162701,
+              "clusters": 225
+            },
+            "gain": {
+              "mean": -0.0001173437238068826,
+              "lo": -0.00026030028802843236,
+              "hi": -1.633950447893053e-05,
+              "clusters": 225
+            }
+          }
+        },
+        "events": {
+          "2013-520": {
+            "points": 20294,
+            "gain": {
+              "mean": -8.445868722421876e-05,
+              "lo": -0.00020973301087779067,
+              "hi": 1.9048279130300984e-05,
+              "clusters": 98
+            }
+          },
+          "2013-540": {
+            "points": 16041,
+            "gain": {
+              "mean": -0.0002457963373339953,
+              "lo": -0.0007204665775116333,
+              "hi": 0.00010363606563041551,
+              "clusters": 81
+            }
+          },
+          "2013-560": {
+            "points": 19790,
+            "gain": {
+              "mean": -7.271154753401523e-06,
+              "lo": -6.220453709139796e-05,
+              "hi": 4.870026398362854e-05,
+              "clusters": 91
+            }
+          },
+          "2013-580": {
+            "points": 19598,
+            "gain": {
+              "mean": -0.00011964690612283575,
+              "lo": -0.00033180182529515557,
+              "hi": 5.436726912094476e-05,
+              "clusters": 91
+            }
+          }
+        }
+      }
+    }
+  }
+}

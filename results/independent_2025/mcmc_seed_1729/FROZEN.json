@@ -1,0 +1,16 @@
+{
+  "utc": "2026-09-23T03:17:41+00:00",
+  "mcmc_seed": 1729,
+  "burst_seed": 4001,
+  "periods": [
+    84,
+    85,
+    86,
+    87,
+    88,
+    89
+  ],
+  "protocol_sha256": "397ca6eaa73b88557ca7f66f6b048298cfe2c8b56bbf8ed64bf7f312f08f5820",
+  "code_sha256": "e8622fbb64fa207f77448c9fbd7e68932be645116ee72e24c82dad33df8fa17f",
+  "base_code_sha256": "c41bd0f6ff670a26c09b4aa559621a66b0c54f547268233b9cd4ce6e80227d56"
+}

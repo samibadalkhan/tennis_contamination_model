@@ -1,0 +1,62 @@
+{
+  "utc": "2026-09-22T22:11:53+00:00",
+  "purpose": "Verify existing Ingram-style iid baseline and burst extension use shared fits and aligned saved cohorts; no refitting or new model variant.",
+  "new_fits_launched": 0,
+  "new_simulations_launched": 0,
+  "frozen_n": 2670,
+  "checks": {
+    "online_sealed_inputs_match": true,
+    "unique_frozen_match_ids": true,
+    "frozen_iid_equals_shared_iid_component": true,
+    "frozen_iid_matches_posterior_prediction_cache": true,
+    "frozen_burst_equals_sealed_mixture": true,
+    "frozen_temperature_equals_sealed_transform": true,
+    "saved_losses_reproduce": true,
+    "completed_online_period_cohorts_match": true,
+    "protected_sources_and_results_unchanged": true
+  },
+  "frozen_log_loss": {
+    "ordinary_iid": 0.6634844094641807,
+    "ordinary_burst": 0.6352112798544577,
+    "ordinary_temperature": 0.6339610812305316
+  },
+  "online_periods": [
+    {
+      "period": 85,
+      "status": "iid_and_burst_components_saved",
+      "matches": 480,
+      "training_matches": 36309,
+      "training_fingerprint": "2e16206643bc08a975b6f41b4f39ca76ff6ff1cdb1fc79140367ee7292c909af",
+      "fit_metadata_sha256": "94a2b667fe31906f417e507d4f4f0c6a4f2f90e72df8cb8b5491961935ed204a"
+    },
+    {
+      "period": 86,
+      "status": "iid_and_burst_components_saved",
+      "matches": 572,
+      "training_matches": 36789,
+      "training_fingerprint": "e8ef92bd34b34d0476baa377c07f2b45ccbfce2a8240c0b421b3d046799c45a7",
+      "fit_metadata_sha256": "e808f6801988cc12c6765c9668f9a39540cddc41017d31add05c858ba236e9ae"
+    },
+    {
+      "period": 87,
+      "status": "pending"
+    },
+    {
+      "period": 88,
+      "status": "pending"
+    },
+    {
+      "period": 89,
+      "status": "pending"
+    }
+  ],
+  "protected_input_sha256": {
+    "results/independent_2025/ONLINE_FROZEN.json": "52f883d5730cd29e91406f74111062b404a6c5753eed08c7982d5fc30dbf3192",
+    "results/independent_2025/FROZEN_BEFORE_2025.json": "213ec9f7c5c37bb7298865f3a511d78b98613ca996e7bdbe16ba7e803237e84c",
+    "results/independent_2025/results.json": "ce8641b743f147c7d5eda3a021d0f1c1711dbdc6efa92b2da2e4e5709ce48b4f",
+    "results/independent_2025/predictions_2025.csv": "6ec780be527560b026c539175f96eac5900dae67dfd7d84d9f74513112a542dd",
+    "src/independent/run_2025.py": "c41bd0f6ff670a26c09b4aa559621a66b0c54f547268233b9cd4ce6e80227d56",
+    "src/independent/run_2025_online.py": "827f5ddde57d0918c3e621f2511b7040bb593e5c00d5237a72173ee1a063b96d"
+  },
+  "limits": "Online season unfinished at audit; this verifies saved cohort alignment and transformations, not sampler convergence or exact equivalence to all original publication conventions."
+}

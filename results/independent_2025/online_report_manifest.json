@@ -1,0 +1,12 @@
+{
+  "inputs": {
+    "online_predictions_2025.csv": "2dc721a123dc7e5cbfb15e91e18cf690a73827fde59b49702d98b9318f62f91c",
+    "online_results.json": "99a0e5a73667834f06459ae9cf86383aa515008f68e9af9f49e6f729d252711c"
+  },
+  "outputs": {
+    "ONLINE_README.md": "a58cccdbfe42bf701b2b71c3b7ed13251ed7258a57cdfed9c9cc3f2b6f720bb2",
+    "online_periods.csv": "98ee6e57e5d2686ea4866bd3422e29e1c186cf6ed5a3975aa469fee2fb7760d9",
+    "online_2025_updates.png": "71acab2689d456b511a89bc2d573d0f23b7c1cd641f2f69eb0eaa8ee084ab808"
+  },
+  "source_sha256": "495543fa7a6241f2364fab0cb56dab505cef9a2b42d212402fe2c48bb32c705d"
+}

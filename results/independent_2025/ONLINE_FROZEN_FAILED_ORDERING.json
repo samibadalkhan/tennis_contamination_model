@@ -1,0 +1,18 @@
+{
+  "utc": "2026-09-22T20:47:20+00:00",
+  "status": "exploratory_post_test",
+  "protocol_sha256": "71ad7bee5fae7160252bda863305ef98bb3807a17040f787265a1724d58f7ae7",
+  "source_sha256": "827f5ddde57d0918c3e621f2511b7040bb593e5c00d5237a72173ee1a063b96d",
+  "frozen_settings_sha256": "213ec9f7c5c37bb7298865f3a511d78b98613ca996e7bdbe16ba7e803237e84c",
+  "frozen_results_sha256": "ce8641b743f147c7d5eda3a021d0f1c1711dbdc6efa92b2da2e4e5709ce48b4f",
+  "frozen_predictions_sha256": "6ec780be527560b026c539175f96eac5900dae67dfd7d84d9f74513112a542dd",
+  "periods": [
+    85,
+    86,
+    87,
+    88,
+    89
+  ],
+  "burst_rate": 0.5,
+  "temperature": 1.5
+}

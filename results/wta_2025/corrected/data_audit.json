@@ -1,0 +1,147 @@
+{
+  "max_source_year": 2025,
+  "hashes": {
+    "2011": "ea0afb5d5e5a1fd230860f722de4f79578f7bd39949358a8b66480f2cae6e101",
+    "2012": "a8e7f92534df31293a5574db3406e6a0d1c2d956ba63610c44c7bb6f3f09f52d",
+    "2013": "0d31dde39e721a683b158c30ffbe612293b06bd2386dfeec47ae28e9bad8d93c",
+    "2014": "4cb59debfa4cbf079c550ee7dfc0ee098237af33376701cd340e112b917f8176",
+    "2015": "9332d0d470c378c8d439553ed7d81379eb3596d04babf39bee7021edae316130",
+    "2016": "17145270279d6bf5d1abec4038d51d6af3aa71a7b40421b9f175205fafa075f7",
+    "2017": "eae2de68b2e87fcac7e2ff1f6168c78d1baba91fb0ffecda455aa329a81437c8",
+    "2018": "6ccfc04baabe536e4260083c2e299c8c36668a8e8276dfc309219df23bf9ea38",
+    "2019": "da251744c6ece2cab4b94df659ee38a81bb4aa50cf532d48f1a6eb0cc66726d4",
+    "2020": "bcbb285ee8a743ce117952bbb99cfe816bfc685412aa3adc7a9913e7799cd70c",
+    "2021": "3f4b865fe9f68aedb3d51597740cf658cf805f676bae652f2bc93cbab4f6e99f",
+    "2022": "f638cf65efefb01a1a10368c1d5217d5f90981fb76193ca3a9c3773c2abc2ba7",
+    "2023": "b73bf74928155b858cdb7045f6334246336cef604286cb361e695df26911ad18",
+    "2024": "d9bba2a0b3793f63c737ef62a809b82b56b3ad0ee94e1f95e78cecfac7615ed2",
+    "2025": "e4eb002bc6d828b0bd21e04ed286e68722ddc8ccbbb27ea980bf62e938377f96"
+  },
+  "years": [
+    {
+      "source_year": 2011,
+      "raw": 2804,
+      "eligible_level": 2467,
+      "excluded_team_event": 0,
+      "complete_required": 2145,
+      "valid": 2145
+    },
+    {
+      "source_year": 2012,
+      "raw": 2849,
+      "eligible_level": 2407,
+      "excluded_team_event": 0,
+      "complete_required": 2122,
+      "valid": 2122
+    },
+    {
+      "source_year": 2013,
+      "raw": 2714,
+      "eligible_level": 2442,
+      "excluded_team_event": 0,
+      "complete_required": 2131,
+      "valid": 2131
+    },
+    {
+      "source_year": 2014,
+      "raw": 2785,
+      "eligible_level": 2476,
+      "excluded_team_event": 0,
+      "complete_required": 2228,
+      "valid": 2228
+    },
+    {
+      "source_year": 2015,
+      "raw": 2651,
+      "eligible_level": 2506,
+      "excluded_team_event": 0,
+      "complete_required": 1945,
+      "valid": 1945
+    },
+    {
+      "source_year": 2016,
+      "raw": 2923,
+      "eligible_level": 2553,
+      "excluded_team_event": 0,
+      "complete_required": 2549,
+      "valid": 2530
+    },
+    {
+      "source_year": 2017,
+      "raw": 2862,
+      "eligible_level": 2562,
+      "excluded_team_event": 0,
+      "complete_required": 2558,
+      "valid": 2544
+    },
+    {
+      "source_year": 2018,
+      "raw": 2756,
+      "eligible_level": 2469,
+      "excluded_team_event": 0,
+      "complete_required": 2459,
+      "valid": 2448
+    },
+    {
+      "source_year": 2019,
+      "raw": 2743,
+      "eligible_level": 2503,
+      "excluded_team_event": 0,
+      "complete_required": 2490,
+      "valid": 2485
+    },
+    {
+      "source_year": 2020,
+      "raw": 1276,
+      "eligible_level": 1086,
+      "excluded_team_event": 0,
+      "complete_required": 1084,
+      "valid": 1078
+    },
+    {
+      "source_year": 2021,
+      "raw": 2597,
+      "eligible_level": 2199,
+      "excluded_team_event": 0,
+      "complete_required": 2169,
+      "valid": 2152
+    },
+    {
+      "source_year": 2022,
+      "raw": 2594,
+      "eligible_level": 2369,
+      "excluded_team_event": 0,
+      "complete_required": 2323,
+      "valid": 2322
+    },
+    {
+      "source_year": 2023,
+      "raw": 2810,
+      "eligible_level": 2538,
+      "excluded_team_event": 48,
+      "complete_required": 2465,
+      "valid": 2465
+    },
+    {
+      "source_year": 2024,
+      "raw": 2689,
+      "eligible_level": 2515,
+      "excluded_team_event": 25,
+      "complete_required": 2470,
+      "valid": 2470
+    },
+    {
+      "source_year": 2025,
+      "raw": 2795,
+      "eligible_level": 2530,
+      "excluded_team_event": 25,
+      "complete_required": 2485,
+      "valid": 2485
+    }
+  ],
+  "n": 33550,
+  "date_min": "2011-01-03",
+  "date_max": "2025-11-01",
+  "period_min": 0,
+  "period_max": 89
+}

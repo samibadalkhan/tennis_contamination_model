@@ -1,0 +1,27 @@
+{
+  "utc": "2026-09-23T04:28:24+00:00",
+  "status": "frozen_before_wta_2025_read",
+  "periods": [
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89
+  ],
+  "levels": [
+    "F",
+    "G",
+    "I",
+    "P",
+    "PM"
+  ],
+  "mcmc_seed": 1729,
+  "burst_seed": 4001,
+  "burst_rate": 0.5,
+  "temperature": 1.5,
+  "protocol_sha256": "d0a06ac8f10575f0fada6c0805495e5fc34d243895c79ffaaecb443c6e27e1bf",
+  "code_sha256": "78f60c4e5a9c8153bf3768686bb02af91f836f780ed9ece2e9990923b1f77ce9",
+  "test_source_sha256": "e4eb002bc6d828b0bd21e04ed286e68722ddc8ccbbb27ea980bf62e938377f96"
+}

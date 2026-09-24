@@ -1,0 +1,34 @@
+{
+  "utc": "2026-09-22T10:42:33+00:00",
+  "protocol": {
+    "train_years": [
+      2011,
+      2012
+    ],
+    "tune_year": 2012,
+    "eval_year": 2013,
+    "arms": [
+      "ordinary",
+      "huber_2.5",
+      "block_16"
+    ],
+    "sigma_grid": [
+      0.03,
+      0.1,
+      0.3,
+      1.0
+    ],
+    "prior_var": 1.0,
+    "block_size": 16,
+    "null_quantile": 0.99,
+    "null_draws": 255,
+    "max_removed_point_fraction": 0.25
+  },
+  "source_sha256": {
+    "src/experiments/early_real.py": "82865a47f585e6ba2bac1d005e09a47d6a5db2bf312b1088c21b83895a62bb05",
+    "src/models/block_filter.py": "544c54c50f690fec0621e285c7e8d8cf261dbccc982e4af43ecc37e8277efa18",
+    "src/models/ability.py": "db20bf2bf0a2591fc1fecfbaf52e3d121b474b0f952372da2213a37b2e352911",
+    "src/independent/scoring.py": "044d51cc0bb30ac9a35b6f63aa4ceb1bb886b5306238d5ef8fbb3411aa9cb3d1",
+    "docs/POINT_ROBUST_EARLY_REAL.md": "2bc52dc788dc036daeb0f7b0302b3c86d36f74abe49600120ed3ac0fee30405d"
+  }
+}

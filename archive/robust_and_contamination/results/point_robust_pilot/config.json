@@ -1,0 +1,31 @@
+{
+  "utc": "2026-09-22T07:33:28+00:00",
+  "config": {
+    "players": 8,
+    "sessions": 64,
+    "points": 192,
+    "onset": 24,
+    "burst_end": 36,
+    "burst_points": 48,
+    "severity": 2.0,
+    "jump": 0.6,
+    "drift": 0.04,
+    "prior_var": 1.0,
+    "seeds": 20
+  },
+  "method": {
+    "block_sizes": [
+      8,
+      16,
+      32
+    ],
+    "max_removal": 0.25,
+    "null_draws": 255,
+    "null_quantile": 0.99
+  },
+  "source_sha256": {
+    "src/experiments/point_robustness.py": "6be4110c15160a5ae2f28e77da7eb42519123f80b0269f60751faf50636b5a8c",
+    "src/models/ability.py": "db20bf2bf0a2591fc1fecfbaf52e3d121b474b0f952372da2213a37b2e352911",
+    "docs/POINT_ROBUST_PILOT.md": "3d240744c57700989cc7508b5f701455122b46df8cbe975bb7e87154be2086fd"
+  }
+}

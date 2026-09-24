@@ -1,0 +1,259 @@
+{
+  "utc": "2026-09-23T03:29:39+00:00",
+  "status": "post_hoc_mechanism_analysis",
+  "source": "/Users/sami/tennis_contamination_model/results/independent_2025/online_predictions_2025.csv",
+  "development": "/Users/sami/tennis_contamination_model/results/independent/ordinary_2013_predictions_4001.csv",
+  "n": 2670,
+  "edge_definition": "absolute online iid probability minus 0.5",
+  "format_temperatures_selected_on_2013": {
+    "3": {
+      "temperature": 1.4792291674358022,
+      "log_loss": 0.601063553088353,
+      "success": true,
+      "development_n": 1968
+    },
+    "5": {
+      "temperature": 1.2872647574109095,
+      "log_loss": 0.5097698058120459,
+      "success": true,
+      "development_n": 487
+    }
+  },
+  "by_format": {
+    "3": {
+      "n": 2154,
+      "burst_vs_global_temperature": {
+        "tournament": {
+          "mean": 0.00047912250813650093,
+          "lo": -0.0003927694233667353,
+          "hi": 0.0013725313212369409,
+          "n": 2154
+        },
+        "player_tournament": {
+          "mean": 0.00047912250813650093,
+          "lo": -0.0011177669541447533,
+          "hi": 0.0023818923312975407,
+          "n": 2154
+        }
+      },
+      "burst_vs_format_temperature": {
+        "tournament": {
+          "mean": 0.0007753060299477356,
+          "lo": -0.0002710880331803232,
+          "hi": 0.0018362134209818702,
+          "n": 2154
+        },
+        "player_tournament": {
+          "mean": 0.0007753060299477356,
+          "lo": -0.0011291577363103113,
+          "hi": 0.002958594160492313,
+          "n": 2154
+        }
+      },
+      "log_loss": {
+        "burst": 0.6400408777756844,
+        "global_temperature": 0.6405200002838208,
+        "format_temperature": 0.6408161838056321
+      }
+    },
+    "5": {
+      "n": 516,
+      "burst_vs_global_temperature": {
+        "tournament": {
+          "mean": -0.007790548447830324,
+          "lo": -0.015589967927674241,
+          "hi": 0.0006399974520286196,
+          "n": 516
+        },
+        "player_tournament": {
+          "mean": -0.007790548447830324,
+          "lo": -0.02407568465003312,
+          "hi": 0.004520390519343367,
+          "n": 516
+        }
+      },
+      "burst_vs_format_temperature": {
+        "tournament": {
+          "mean": -0.003544492610866211,
+          "lo": -0.006264674945075778,
+          "hi": -0.0009786389632503766,
+          "n": 516
+        },
+        "player_tournament": {
+          "mean": -0.003544492610866211,
+          "lo": -0.009202765364171861,
+          "hi": 0.00015615231748865692,
+          "n": 516
+        }
+      },
+      "log_loss": {
+        "burst": 0.5702778737531932,
+        "global_temperature": 0.5624873253053628,
+        "format_temperature": 0.566733381142327
+      }
+    }
+  },
+  "by_edge": {
+    "0.0\u20130.1": {
+      "n": 648,
+      "mean_abs_edge": 0.04973775257958729,
+      "online_burst_vs_temperature": {
+        "tournament": {
+          "mean": 0.00010170114027344066,
+          "lo": -0.00037316858748834037,
+          "hi": 0.0005495068529540632,
+          "n": 648
+        },
+        "player_tournament": {
+          "mean": 0.00010170114027344066,
+          "lo": -0.0010976837749215778,
+          "hi": 0.001212847795746138,
+          "n": 648
+        }
+      },
+      "frozen_burst_vs_temperature": {
+        "tournament": {
+          "mean": 1.478430139772132e-05,
+          "lo": -0.0011495744715166525,
+          "hi": 0.0010365047335028816,
+          "n": 648
+        },
+        "player_tournament": {
+          "mean": 1.478430139772132e-05,
+          "lo": -0.003182177202855856,
+          "hi": 0.002588625763666703,
+          "n": 648
+        }
+      }
+    },
+    "0.1\u20130.2": {
+      "n": 663,
+      "mean_abs_edge": 0.15086298916624472,
+      "online_burst_vs_temperature": {
+        "tournament": {
+          "mean": -0.0004958107386220243,
+          "lo": -0.0027386556361329506,
+          "hi": 0.0013548196142852398,
+          "n": 663
+        },
+        "player_tournament": {
+          "mean": -0.0004958107386220243,
+          "lo": -0.003006517984924089,
+          "hi": 0.0018371021734366634,
+          "n": 663
+        }
+      },
+      "frozen_burst_vs_temperature": {
+        "tournament": {
+          "mean": -0.0025942398687162347,
+          "lo": -0.007582276682131561,
+          "hi": 0.0009628976358906693,
+          "n": 663
+        },
+        "player_tournament": {
+          "mean": -0.0025942398687162347,
+          "lo": -0.007887061442245793,
+          "hi": 0.0012668475197489904,
+          "n": 663
+        }
+      }
+    },
+    "0.2\u20130.3": {
+      "n": 597,
+      "mean_abs_edge": 0.25062007603648384,
+      "online_burst_vs_temperature": {
+        "tournament": {
+          "mean": 0.0005855175233112584,
+          "lo": -0.0015270921595277752,
+          "hi": 0.0027112303669987303,
+          "n": 597
+        },
+        "player_tournament": {
+          "mean": 0.0005855175233112584,
+          "lo": -0.004414610228992621,
+          "hi": 0.005134031847133533,
+          "n": 597
+        }
+      },
+      "frozen_burst_vs_temperature": {
+        "tournament": {
+          "mean": 0.0016607338594454098,
+          "lo": -0.0009946980011785094,
+          "hi": 0.004676493973423857,
+          "n": 597
+        },
+        "player_tournament": {
+          "mean": 0.0016607338594454098,
+          "lo": -0.0040226164391435025,
+          "hi": 0.0062615277600508645,
+          "n": 597
+        }
+      }
+    },
+    "0.3\u20130.4": {
+      "n": 453,
+      "mean_abs_edge": 0.350421653145231,
+      "online_burst_vs_temperature": {
+        "tournament": {
+          "mean": -0.0034870978725669386,
+          "lo": -0.010299693605271752,
+          "hi": 0.0016927819103846663,
+          "n": 453
+        },
+        "player_tournament": {
+          "mean": -0.0034870978725669386,
+          "lo": -0.01358415719632326,
+          "hi": 0.004956953582485575,
+          "n": 453
+        }
+      },
+      "frozen_burst_vs_temperature": {
+        "tournament": {
+          "mean": -0.0010464910988391095,
+          "lo": -0.00851632541193232,
+          "hi": 0.005106903871878614,
+          "n": 453
+        },
+        "player_tournament": {
+          "mean": -0.0010464910988391095,
+          "lo": -0.010365975892946513,
+          "hi": 0.007187887203270752,
+          "n": 453
+        }
+      }
+    },
+    "0.4\u20130.5": {
+      "n": 309,
+      "mean_abs_edge": 0.45151545073260607,
+      "online_burst_vs_temperature": {
+        "tournament": {
+          "mean": -0.00483809566630812,
+          "lo": -0.014030607855873695,
+          "hi": 0.005302486724993141,
+          "n": 309
+        },
+        "player_tournament": {
+          "mean": -0.00483809566630812,
+          "lo": -0.028270088012689577,
+          "hi": 0.012838915026486097,
+          "n": 309
+        }
+      },
+      "frozen_burst_vs_temperature": {
+        "tournament": {
+          "mean": -0.006941835490434284,
+          "lo": -0.014941780350257446,
+          "hi": 0.0007436171290429269,
+          "n": 309
+        },
+        "player_tournament": {
+          "mean": -0.006941835490434284,
+          "lo": -0.03197019986845258,
+          "hi": 0.009357108327914901,
+          "n": 309
+        }
+      }
+    }
+  },
+  "note": "Positive paired log-score gain favors burst."
+}

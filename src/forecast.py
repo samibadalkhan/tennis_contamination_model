@@ -1,11 +1,9 @@
 """Match-win probability from serve-win probabilities (Ingram's iid forecast).
 
 The point -> game -> set -> tiebreak -> match recursion (Klaassen & Magnus 2003 /
-O'Malley 2008), assuming points are i.i.d. given the server. This is the forecast
-used to *reproduce Ingram* and the iid column of the ablation. The robust arm's
-tuned burst forecast (a point-by-point simulator with injected contamination)
-will live alongside this later; the spec forbids the iid formula there, but for
-reproducing Ingram the iid analytic forecast is exactly the target.
+O'Malley 2008), assuming points are i.i.d. given the server. This is an
+independent reference implementation used to test the vectorized scorer in
+`src.independent.scoring`.
 
 Inputs are the two players' probabilities of winning a point ON THEIR OWN SERVE.
 
@@ -69,10 +67,14 @@ def p_set(pa: float, pb: float, a_serves_first: bool) -> float:
                 win_a += pr if ga > gb else 0.0
                 continue
             if ga == 6 and gb == 6:                                 # tiebreak
-                # game 13 (index 12) server: A if a_serves_first == (12 even) == a_serves_first
-                tb_a_first = a_serves_first                          # index 12 is even -> same as game 0
-                win_a += pr * p_tiebreak(pa if tb_a_first else pb,
-                                         pb if tb_a_first else pa)
+                # game 13 (index 12, even) is served by A iff a_serves_first.
+                # p_tiebreak returns P(its FIRST server wins), so when B serves
+                # first we must complement it to get P(A wins) — not doing so
+                # biases the whole forecast toward 0.5.
+                if a_serves_first:
+                    win_a += pr * p_tiebreak(pa, pb)
+                else:
+                    win_a += pr * (1.0 - p_tiebreak(pb, pa))
                 continue
             a_serves = (n % 2 == 0) == a_serves_first
             hold = hold_a if a_serves else hold_b
@@ -119,6 +121,11 @@ def _tests():
     # symmetry: equal servers -> everything 0.5
     chk("p_tiebreak equal=0.5", abs(p_tiebreak(0.64, 0.64) - 0.5) < 1e-6, round(p_tiebreak(0.64, 0.64), 5))
     chk("p_set equal=0.5", abs(p_set(0.64, 0.64, True) - 0.5) < 1e-6, round(p_set(0.64, 0.64, True), 5))
+    # set-win probability is provably independent of who serves the first game
+    # (exact invariance to machine epsilon); catches the tiebreak-orientation bug.
+    chk("p_set first-server invariant",
+        max(abs(p_set(pa, pb, True) - p_set(pa, pb, False))
+            for pa, pb in [(0.68, 0.60), (0.66, 0.62), (0.60, 0.68), (0.72, 0.55)]) < 1e-9)
     chk("p_match equal bo3=0.5", abs(p_match(0.64, 0.64, 3) - 0.5) < 1e-6, round(p_match(0.64, 0.64, 3), 5))
     chk("p_match equal bo5=0.5", abs(p_match(0.64, 0.64, 5) - 0.5) < 1e-6, round(p_match(0.64, 0.64, 5), 5))
     # stronger server wins more; best-of-5 amplifies the edge
